@@ -1,0 +1,85 @@
+
+@import "../../../../../../apps/webapp/src/styles/vc/vc.css";
+
+.more {
+  position: absolute;
+  /* margin: 0px; */
+  /* top: 0px; */
+  margin-top: 2px;
+  /* word-break: break-word; */
+  background: rgba(0, 0, 0, 0.7);
+  height: 50px;
+  width: 50px;
+  padding-left: 0px;
+  padding-top: 2px;
+  padding-top: 2px;
+  text-align: center;
+}
+
+.list-img {
+  height: 50px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.float-left {
+  float: left;
+  margin-right: 5px;
+  color: #ffffff;
+}
+
+.float-left a:hover {
+  color: red;
+  cursor: pointer;
+}
+.ng-thumb{
+  height: 100px;
+  float: left;
+  display: block;
+  cursor: pointer;
+  margin: 4px 4px 0 0;
+}
+
+
+.my-app-custom-plain-container-with-desc {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  figure {
+    margin: 20px;
+    position: relative;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    figcaption {
+      background: rgba(0, 0, 0, .5);
+      color: #fff;
+      font-size: 85%;
+      padding: 5px;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .description {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .my-app-custom-image-with-desc {
+    height: auto;
+    margin-right: 2px;
+    width: 200px;
+    align-self: start;
+  }
+}

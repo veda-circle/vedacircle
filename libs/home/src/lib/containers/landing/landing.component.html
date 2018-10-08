@@ -1,0 +1,428 @@
+<section
+  class="vc-responsive-height vc-cover-background vc-position-relative vc-flex vc-flex-middle vc-overflow-hidden grey_overlay container">
+  <!--<video id="video" class="video" autoplay="autoplay" loop="loop" muted="muted">
+         <source src="./assets/video/RamaMahayagnam.mp4" type="video/mp4">
+       </video>-->
+<div class="video_wrapper">
+
+    <slideshow #slideshow
+               [imageUrls]="imageUrls"
+               [height]="height"
+               [minHeight]="minHeight"
+               [arrowSize]="arrowSize"
+               [showArrows]="showArrows"
+               [disableSwiping]="disableSwiping"
+               [autoPlay]="autoPlay"
+               [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+               [debug]="debug"
+               [backgroundSize]="backgroundSize"
+               [backgroundPosition]="backgroundPosition"
+               [backgroundRepeat]="backgroundRepeat"
+               [showDots]="showDots"
+               [dotColor]="dotColor"
+               [showCaptions]="showCaptions"
+               [captionColor]="captionColor"
+               [captionBackground]="captionBackground"
+               [lazyLoad]="lazyLoad">
+    </slideshow>
+  </div>
+
+  <div class="vc-container vc-container-center vc-width-1-1 vc-text-center vc-position-relative container_block">
+
+    <div class="container_block">
+      <h1 class="vc-h1 container_title">VEDA Circle</h1>
+      <h2 class="vc-h2 container_subtitle"></h2>
+      <div class="vc-h2 container_description">A mission to promote Vedic Education Dissemination and Awareness</div>
+
+      <div class="vc-position-relative vc-margin-large-bottom vc-width-1-1 container_button">
+        <div pageScroll [routerLink]="['/home']" href="#donate"
+             class="vc-button vc-border-rounded orange_button container_button_message">Donate
+        </div>
+        <div pageScroll [routerLink]="['/home']" href="#subscribe"
+             class="vc-button vc-border-rounded container_button_subscribe">
+          Subscribe
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div pageScroll [routerLink]="['/home']" href="#about" class="vc-icon-angle-down container_arrow"></div>
+
+
+</section>
+
+<section class="features  section" id="about">
+
+  <div #about data-vc-scrollspy="vc-active"
+       class="vc-container vc-container-center vc-position-relative  vc-text-center vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+
+    <h3 class="vc-h3 vc-text-center vc-text-contrast  section_title features_title">Mission</h3>
+    <h4 class="vc-h4 vc-text-contrast vc-text-center vc-margin-large-bottom  section_subtitle">VEDA Circle is a
+      501(c) (3) non-profit
+      organization founded with mission to promote Vedic Education Dissemination and Awareness (VEDA) for the benefit of
+      our community. Its Tax ID is 27-3794048</h4>
+
+    <div class="vc-grid vc-grid-large">
+      <div class="vc-width-large-1-4 vc-width-small-1-2 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <div class="vc-icon-hand-peace-o vc-border-circle elements_item_label"></div>
+          <h4 class="vc-h4 elements_item_text">Peace</h4>
+          <p class="elements_item_desc">Promote world peace and harmony through Vedic lifestyle approaches such as yoga,
+            meditation and prayers </p>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-small-1-2 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <div class="vc-icon-book vc-border-circle elements_item_label"></div>
+          <h4 class="vc-h4 elements_item_text">Educate</h4>
+          <p class="elements_item_desc">Educate, Disseminate and create awareness about the values of Vedas</p>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-small-1-2 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <div class="vc-icon-clock-o vc-border-circle elements_item_label"></div>
+          <h4 class="vc-h4 elements_item_text">Service</h4>
+          <p class="elements_item_desc">Provide community service and conduct research in Vedas</p>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-small-1-2 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <div class="vc-icon-home vc-border-circle elements_item_label">
+            <!--<img class="vc-responsive-height logo" src="./assets/img/avatars/om.jpg" alt="">-->
+          </div>
+          <h4 class="vc-h4 elements_item_text">Spirituality</h4>
+          <p class="elements_item_desc">Advancement of spirituality as described in Vedas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section #gallery id="gallery" data-vc-scrollspy="vc-active"
+         class="gallery wide_four_item_gallery section vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+  <h3 class="vc-h3 vc-text-center animated section_title gallery_title">VEDA Gallery</h3>
+  <h4 class="vc-h4 vc-text-center vc-margin-large-bottom animated section_subtitle gallery_subtitle">List of events
+    happened in the year 2018</h4>
+  <div class="my-app-custom-plain-container-with-desc">
+    <div class="vc-grid vc-grid-large">
+      <div class="vc-width-large-1-3 vc-width-medium-1-2 animated vc-text-center vc-margin-large-bottom animated"
+           *ngFor="let img of images;let i = index">
+        <div class="vc-grid vc-grid-collapse features_block">
+          <div class="vc-width-1-1 vc-margin-bottom animated vc-text-center">
+            <div class=" animated features_logo">
+              <figure class="my-app-custom-image-with-desc animated">
+                <img [src]="img.modal.img"
+                     (click)="openImageModalRowDescription(i)"/>
+              </figure>
+            </div>
+          </div>
+          <div class="vc-width-1-1" style="margin-top:30px">
+
+            <figure class="my-app-custom-image-with-desc animated">
+              <figcaption
+                class="description">{{img.modal.title ? img.modal.title : 'No description
+                available'}}
+              </figcaption>
+            </figure>
+            <p class="elements_item_desc animated" style="color:#333;text-align: justify"> {{img.modal.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ks-modal-gallery [modalImages]="imageList"
+                    [plainGalleryConfig]="customPlainGalleryRowDescConfig"></ks-modal-gallery>
+
+</section>
+
+<section id="events" class="events grey_overlay section">
+  <div #events data-vc-scrollspy="vc-active"
+       class="vc-container vc-container-center vc-position-relative vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+    <h3 class="vc-h3 vc-text-center vc-text-contrast animated section_title features_title">Events Gallery</h3>
+    <h4 class="vc-h4 vc-text-contrast vc-text-center vc-margin-large-bottom animated section_subtitle"></h4>
+    <div class="vc-grid vc-grid-large">
+      <div class="vc-width-large-1-8 vc-width-small-1-8 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <ngx-cal-component></ngx-cal-component>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="org" class="team section">
+  <div #org data-vc-scrollspy="vc-active"
+       class="vc-container vc-container-center vc-text-center vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+
+    <div class="vc-grid vc-grid-large">
+      <div class="vc-width-large-1-1 vc-width-medium-1-1 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden animated vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/panditsivaramakrishnan.jpg" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name animated">Agoram Sivaramakrishnan</h4>
+          <div class="vc-margin-bottom team_position">Our Honourable Guru</div>
+          <div class="vc-margin-bottom team_description animated">Pandit Sivaramakrishnan had his Adhyanam from two
+            eminent organizations:
+            H.H. Sri Kanchi Kamakoti Shri Mahaswami Vidya Peeta Trust at Sivasthanam in Thenambakkam, Kanchipuram and
+            Thiruvidaimarthur Prayoga Pathasala attached to the Kanchi Sankara Mutt.
+            Currently, he is the Chief Priest at the Sanatan Dharma Temple.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div #org
+         class="vc-container vc-container-center vc-text-center vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+      <h3 class="vc-h3 animated section_title team_title">Our Organization</h3>
+      <h4 class="vc-h4 vc-margin-large-bottom animated section_subtitle">We have a fantastic team of volunteers</h4>
+    </div>
+    <div class="vc-grid vc-grid-large">
+
+      <div class="vc-width-large-1-4 vc-width-medium-1-2 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/male_person.jpg" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name">Malli Varanasi</h4>
+          <div class="vc-margin-bottom team_position">Board of Director</div>
+          <div class="vc-margin-bottom team_description">Malli Varanasi has been volunteering for almost 10 years</div>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 animated vc-width-medium-1-2 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/board/padmini.png" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name">Padmini Iyer, MD</h4>
+          <div class="vc-margin-bottom team_position">Board of Director</div>
+          <div class="vc-margin-bottom team_description">Padmini Iyer has been volunteering for almost 10 years</div>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-medium-1-2 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/board/savithri.png" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name">Savithri Krishnamurthy, MD</h4>
+          <div class="vc-margin-bottom team_position">Board of Director</div>
+          <div class="vc-margin-bottom team_description">Savithri Krishnamurthy has been volunteering for almost 10
+            years
+          </div>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-medium-1-2 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/board/sridhar.png" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name">Shridar Aiyer</h4>
+          <div class="vc-margin-bottom team_position">Board of Director</div>
+          <div class="vc-margin-bottom team_description">Shridar Aiyer has been volunteering for almost 10 years</div>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-medium-1-2 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/male_person.jpg" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name">Venu Venkataraman</h4>
+          <div class="vc-margin-bottom team_position">Board of Director</div>
+          <div class="vc-margin-bottom team_description">Venu Venkataraman has been volunteering for almost 10 years
+          </div>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-medium-1-2 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/board/Prasad.png" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name">Sivarama Prasad Vinjamury</h4>
+          <div class="vc-margin-bottom team_position">Board of Director</div>
+          <div class="vc-margin-bottom team_description">Sivarama Prasad Vinjamury has been volunteering for almost 10
+            years
+          </div>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 animated vc-width-medium-1-2 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/male_person.jpg" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name">Rajkumar</h4>
+          <div class="vc-margin-bottom team_position">Board of Director</div>
+          <div class="vc-margin-bottom team_description">Raj has been volunteering for almost 10 years</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="subscribe" class="subscribe  section">
+  <div #subscribe data-vc-scrollspy="vc-active"
+       class="vc-container vc-container-center vc-text-center vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+    <h3 class="vc-h3 vc-text-contrast animated section_title subscribe_title">Subscribe to get VEDA Circle Event
+      news</h3>
+    <h4 class="vc-h4 vc-text-contrast vc-margin-large-bottom animated section_subtitle">Stay up to date with all VC
+      Calendar</h4>
+
+    <div class="vc-grid vc-grid-collapse vc-container-center vc-width-medium-2-3 vc-width-large-1-2 vc-margin-bottom">
+      <div class="vc-width-small-3-4 vc-margin-bottom">
+        <input name="EMAIL" class="vc-width-1-1 vc-text-contrast form_input" type="email"
+               placeholder="Enter your e-mail">
+      </div>
+      <div class="vc-width-small-1-4 vc-margin-bottom">
+        <button class="vc-width-1-1 vc-button button_custom_green form_button" type="submit">Subscribe</button>
+      </div>
+    </div>
+
+    <div class="success">E-mail has been added successfully.</div>
+    <div class="success_response"></div>
+
+    <div class="error">E-mail must be valid and message must be longer than 1 character.</div>
+    <div class="error_response"></div>
+
+  </div>
+</section>
+
+<section id="classes" class="classes  section">
+  <div #classes data-vc-scrollspy="vc-active"
+       class="vc-container vc-container-center vc-position-relative vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+    <h3 class="vc-h3 vc-text-center animated section_title gallery_title">Classes</h3>
+    <h5 class="vc-h5 vc-text-center vc-margin-large-bottom animated section_subtitle gallery_subtitle">
+
+      The Vedas are ancient Sanskrit texts of Hinduism.
+      The Vedas are a large body of knowledge texts originating in
+      the ancient Indian subcontinent. Composed in Vedic Sanskrit, the texts constitute the oldest layer of Sanskrit
+      literature and the oldest scriptures of Hinduism. There are four Vedas: the Rigveda, the Yajurveda, the Samaveda
+      and the Atharvaveda.
+      All class are conducted at <b>Sanatan Dharma Temple 15311 Pioneer Blvd., Norwalk, CA 90650 </b>
+    </h5>
+    <div class="vc-grid vc-grid-large">
+
+      <div class="vc-width-large-1-4 vc-width-medium-1-2 animated">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+          <div class="vc-overflow-hidden vc-align-center vc-border-circle team_container">
+            <img class="team_image" src="./assets/img/gallery/panditsivaramakrishnan.jpg" alt="">
+          </div>
+          <h4 class="vc-h4 vc-margin-small-bottom team_name animated">Agoram Sivaramakrishnan</h4>
+          <div class="vc-margin-bottom team_position">Our Honourable Guru</div>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 animated vc-width-medium-1-4 animated" style="width:75%;float:right">
+        <div class="vc-position-relative vc-margin-large-bottom team_block">
+
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width:100%">
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name</th>
+              <td mat-cell *matCellDef="let element"> {{element.name}}</td>
+            </ng-container>
+
+            <!-- Day Column -->
+            <ng-container matColumnDef="day">
+              <th mat-header-cell *matHeaderCellDef> Day</th>
+              <td mat-cell *matCellDef="let element"> {{element.day}}</td>
+            </ng-container>
+
+            <!-- Time Column -->
+            <ng-container matColumnDef="time">
+              <th mat-header-cell *matHeaderCellDef> Time</th>
+              <td mat-cell *matCellDef="let element"> {{element.time}}</td>
+            </ng-container>
+
+            <!-- Lesson Column -->
+            <ng-container matColumnDef="audio">
+              <th mat-header-cell *matHeaderCellDef> Lesson</th>
+              <td mat-cell *matCellDef="let element"> {{element.audio}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class="vc-container vc-container-center vc-position-relative vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+      <div class="vc-margin-large-bottom elements_item" style="float:right">
+
+        <div class="vc-margin-bottom team_description animated">
+          <p style="text-align: justify">
+            Pandit Sivaramakrishnan had his Adhyanam from two eminent organizations: H.H. Sri Kanchi Kamakoti
+            Shri
+            Mahaswami Vidya Peeta Trust at Sivasthanam in Thenambakkam, Kanchipuram and Thiruvidaimarthur
+            Prayoga
+            Pathasala attached to the Kanchi Sankara Mutt. Currently, he is the Chief Priest at the Sanatan
+            Dharma
+            Temple
+          </p>
+          <p style="text-align: justify">
+            He has taught the Sri Rudram, various sukthas and ghanapata to hundreds of students. His students
+            include
+            children as young as 3 to adults in their senior years. Various chanting lessons, bhajan and shloka
+            classes are taught to children and adults, men and women, in all walks of life. In addition to
+            teaching,
+            he led many Vedic yajnas such as several Maharudrams and one Athirudram in the Southern California
+            region
+            for the welfare of the community. Sivaraman Krishnan says – he wants to teach the speech impaired to
+            chant. With the increased cases of Autistic Spectrum Disorder being diagnosed, this service to the
+            community will be well appreciated and received.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="donate" class="address section">
+  <div #donate data-vc-scrollspy="vc-active"
+       class="vc-container vc-container-center vc-position-relative vc-text-center vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+
+    <h3 class="vc-h3 animated section_title address_title">Contacts</h3>
+    <h4 class="vc-h4 animated vc-margin-large-bottom section_subtitle" style="color:#fff">If you require any further
+      information, feel free to contact us</h4>
+    <div class="vc-grid vc-grid-large address_wrapper">
+      <div class="vc-width-medium-1-4 animated">
+        <div class="vc-margin-large-bottom address_item">
+          <div class="vc-icon-map-marker address_label"></div>
+          <h4 class="address_title animated"> Location</h4>
+          <div class="address_text animated"> P.O. Box 333,<br>Norwalk, CA 90651</div>
+        </div>
+      </div>
+      <div class="vc-width-medium-1-4 animated">
+        <div class="vc-margin-large-bottom addr/ess_item">
+          <div class="vc-icon-phone address_label"></div>
+          <h4 class="address_title animated">Call us</h4>
+          <div class="address_text animated">PH : (949) 232-0995</div>
+        </div>
+      </div>
+      <div class="vc-width-medium-1-4 animated">
+        <div class="vc-margin-large-bottom address_item">
+          <div class="vc-icon-envelope-o address_label"></div>
+          <h4 class="address_title animated">Email address</h4>
+          <div class="address_text animated">vedacircleinfo@gmail.com</div>
+        </div>
+      </div>
+      <div class="vc-width-medium-1-4 animated">
+        <div class="vc-margin-large-bottom address_item">
+          <div class="address_label animated">
+            <form [formGroup]="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="JKBBQNKVAVZGL">
+              <input type="image" style="margin-top:30px;width:100%" src="./assets/img/gallery/paypal.png" border="0" name="submit"
+                     alt="PayPal - The safer, easier way to pay online!">
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
