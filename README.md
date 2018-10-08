@@ -1,11 +1,8 @@
-# NgxStarterKit
+# VEDA Circle Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
-live [Demo](https://xmlking.github.io/ngx-starter-kit/index.html)
-
-**MANT** (MongoDB Angular NestJS TypeScript) Stack
-
+ 
 ## Install
 
 ```bash
@@ -17,11 +14,8 @@ npm install
 ## Development server
 
 Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-Run `npm run start:mock` for a mock server.
-
-Run `npm run start -- --proxy-config proxy.conf.js` to start with proxy
-
+ 
+  
 ## Build
 
 Run `npm run build:prod` to build the project. The build artifacts will be stored in the `dist/` directory.
