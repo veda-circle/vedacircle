@@ -6,8 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Install
 
 ```bash
-git clone https://github.com/xmlking/ngx-starter-kit.git my-project
-cd my-project
+git clone https://github.com/veda-circle/vedacircle.git  
 npm install
 ```
 
