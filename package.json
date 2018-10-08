@@ -14,7 +14,7 @@
     "start:mock": "ng serve -c=mock",
     "// - BUILDING": "Build and release Apps for Prod, Mock environments",
     "build:prod": "ng build -c=production",
-    "build:mock": "ng build -c=mock --base-href /ngx-starter-kit/",
+    "build:mock": "ng build -c=mock --base-href /vedacircle/",
     "deploy:mock": "npm run build:mock && ngh --dir dist/apps/webapp",
     "bundle-report": "ng build -c=production --stats-json && webpack-bundle-analyzer dist/apps/webapp/stats.json",
     "release": "standard-version",

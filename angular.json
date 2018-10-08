@@ -114,7 +114,7 @@
                   "with": "apps/webapp/src/environments/environment.mock.ts"
                 }
               ],
-              "baseHref": "/ngx-starter-kit/",
+              "baseHref": "/vedacircle/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
