@@ -19,6 +19,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { ModalGalleryModule } from 'angular-modal-gallery';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { ModalGalleryModule } from 'angular-modal-gallery';
     SvgViewerModule,
     SlideshowModule,
     NgxPageScrollModule,
+    FormsModule,
     ModalGalleryModule.forRoot( { shortcuts: ['ctrl+a', 'ctrl+s', 'meta+s'] } ),
     FlatpickrModule.forRoot(),
     CalendarModule.forRoot({

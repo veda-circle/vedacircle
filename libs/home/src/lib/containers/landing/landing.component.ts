@@ -294,9 +294,7 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
     this._pageTitleService.title = '';
     this.imageList = this.images;
-    this.paypalForm = this.fb.group({
-      name: ['']
-    })
+
     /* this.renderer.listen('window', 'scroll', (event) => {
        const number = window.scrollY;
        if (number > 300 && number < 800) {
