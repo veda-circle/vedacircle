@@ -1,4 +1,4 @@
-import { MenuItemType, MenuItem } from '@ngx-starter-kit/navigator';
+import { MenuItemType, MenuItem } from '@vedacircle/navigator';
 
 export const defaultMenu: MenuItem[] = [
   {

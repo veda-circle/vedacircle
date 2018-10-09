@@ -1,5 +1,5 @@
 import { Moment } from 'moment';
-import { Entity } from '@ngx-starter-kit/shared';
+import { Entity } from '@vedacircle/shared';
 
 export class Notification extends Entity {
   public id: string;

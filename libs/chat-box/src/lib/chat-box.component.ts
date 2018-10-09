@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { scrollFabAnimation } from '@ngx-starter-kit/animations';
+import { scrollFabAnimation } from '@vedacircle/animations';
 import { fromEvent, Observable } from 'rxjs';
 import { filter, take, takeUntil } from 'rxjs/operators';
 import { Select, Store } from '@ngxs/store';

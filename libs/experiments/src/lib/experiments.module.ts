@@ -5,10 +5,10 @@ import { ScrollingModule as ExperimentalScrollingModule } from '@angular/cdk-exp
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { KnobModule } from '@xmlking/ngx-knob';
 
-import { ClapModule } from '@ngx-starter-kit/clap';
-import { LedModule } from '@ngx-starter-kit/led';
-import { SharedModule } from '@ngx-starter-kit/shared';
-import { ContextMenuModule } from '@ngx-starter-kit/context-menu';
+import { ClapModule } from '@vedacircle/clap';
+import { LedModule } from '@vedacircle/led';
+import { SharedModule } from '@vedacircle/shared';
+import { ContextMenuModule } from '@vedacircle/context-menu';
 import { AnimationsComponent } from './containers/animations/animations.component';
 import { FileUploadComponent } from './containers/file-upload/file-upload.component';
 import { HammertimeDirective } from './components/hammertime/hammertime.directive';

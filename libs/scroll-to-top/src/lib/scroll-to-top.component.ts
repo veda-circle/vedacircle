@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Inject, OnDestroy } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { scrollFabAnimation } from '@ngx-starter-kit/animations';
+import { scrollFabAnimation } from '@vedacircle/animations';
 import { PageScrollConfig, PageScrollService, PageScrollInstance } from 'ngx-page-scroll';
 import { map, tap, distinctUntilChanged, throttleTime, takeUntil, share } from 'rxjs/operators';
 import { BehaviorSubject, fromEvent, Subject } from 'rxjs';

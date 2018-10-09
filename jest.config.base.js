@@ -21,7 +21,7 @@ module.exports = {
   },
   "testRegex": ".spec.ts$",
   // "moduleNameMapper": {
-  //   "@ngx-starter-kit/(.*)": "<rootDir>/libs/$1"
+  //   "@vedacircle/(.*)": "<rootDir>/libs/$1"
   // }
   projects: [
     'apps/*',

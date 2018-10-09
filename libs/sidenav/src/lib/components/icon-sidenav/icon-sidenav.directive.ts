@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
-import { MenuItem, MenuService } from '@ngx-starter-kit/navigator';
+import { MenuItem, MenuService } from '@vedacircle/navigator';
 import { Store } from '@ngxs/store';
 
 @Directive({

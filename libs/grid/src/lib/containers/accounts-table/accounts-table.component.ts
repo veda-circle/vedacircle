@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 import { Account, Address, Gender } from '../../models/account.model';
 import { AccountService } from '../../services/account.service';
-import { EntitiesComponent, EntityColumnDef } from '@ngx-starter-kit/shared';
-import { AppConfirmService } from '@ngx-starter-kit/app-confirm';
+import { EntitiesComponent, EntityColumnDef } from '@vedacircle/shared';
+import { AppConfirmService } from '@vedacircle/app-confirm';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { catchError, tap, concatMap, filter, map, mergeMap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
@@ -12,7 +12,7 @@ import { AccountEditComponent } from '../../components/account-edit/account-edit
 import * as moment from 'moment';
 import { Navigate } from '@ngxs/router-plugin';
 import { Store } from '@ngxs/store';
-import { Crumb } from '@ngx-starter-kit/breadcrumbs';
+import { Crumb } from '@vedacircle/breadcrumbs';
 
 @Component({
   selector: 'ngx-accounts-table',

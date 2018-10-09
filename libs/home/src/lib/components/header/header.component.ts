@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { Login, Logout } from '@ngx-starter-kit/auth';
-import { AuthState } from '@ngx-starter-kit/auth';
+import { Login, Logout } from '@vedacircle/auth';
+import { AuthState } from '@vedacircle/auth';
 
 @Component({
   selector: 'ngx-home-header',

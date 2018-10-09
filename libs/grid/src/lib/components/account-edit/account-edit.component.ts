@@ -6,7 +6,7 @@ import { map, startWith } from 'rxjs/operators';
 import { Account, Gender } from '../../models/account.model';
 import { states } from './states';
 import { Observable } from 'rxjs';
-import { EntityFormComponent } from '@ngx-starter-kit/shared';
+import { EntityFormComponent } from '@vedacircle/shared';
 import * as moment from 'moment';
 
 @Component({

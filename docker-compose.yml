@@ -33,7 +33,7 @@ services:
     build:
       context: .
       dockerfile: .deploy/api/dev.dockerfile
-    image: 'ngx-starter-kit-api:latest'
+    image: 'vedacircle-api:latest'
     container_name: api
     env_file:
       - development.env
@@ -45,7 +45,7 @@ services:
     build:
       context: .
       dockerfile: .deploy/webapp/prod.dockerfile
-    image: ngx-starter-kit:latest
+    image: vedacircle:latest
     container_name: web
     command: nginx-debug -g 'daemon off;'
     volumes:

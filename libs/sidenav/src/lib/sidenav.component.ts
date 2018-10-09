@@ -11,8 +11,8 @@ import { Router, NavigationEnd } from '@angular/router';
 import { Observable, Subject, Subscription } from 'rxjs';
 
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
-import { MenuItem, MenuService, SidenavState } from '@ngx-starter-kit/navigator';
-// import { sidenavAnimation } from '@ngx-starter-kit/animations';
+import { MenuItem, MenuService, SidenavState } from '@vedacircle/navigator';
+// import { sidenavAnimation } from '@vedacircle/animations';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({

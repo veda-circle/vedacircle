@@ -5,7 +5,7 @@ import { MatButtonToggleGroup, MatPaginator, MatSort, MatTableDataSource, PageEv
 import { SelectionModel } from '@angular/cdk/collections';
 
 import { RandomAccount, RandomAccountService } from '../../services/random-account.service';
-import { Crumb } from '@ngx-starter-kit/breadcrumbs';
+import { Crumb } from '@vedacircle/breadcrumbs';
 
 @Component({
   selector: 'ngx-accounts-grid-list',

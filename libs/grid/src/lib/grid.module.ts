@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '@ngx-starter-kit/shared';
-import { AppConfirmModule } from '@ngx-starter-kit/app-confirm';
-import { DraggableModule } from '@ngx-starter-kit/draggable';
+import { SharedModule } from '@vedacircle/shared';
+import { AppConfirmModule } from '@vedacircle/app-confirm';
+import { DraggableModule } from '@vedacircle/draggable';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { NgxPipesModule } from '@ngx-starter-kit/ngx-pipes';
+import { NgxPipesModule } from '@vedacircle/ngx-pipes';
 import { AccountsGridListComponent } from './containers/accounts-grid-list/accounts-grid-list.component';
 import { AccountsTableComponent } from './containers/accounts-table/accounts-table.component';
 import { AccountService } from './services/account.service';

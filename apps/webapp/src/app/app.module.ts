@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoreModule } from '@ngx-starter-kit/core';
+import { CoreModule } from '@vedacircle/core';
 
 import { environment } from '@env/environment';
 import { PreloadSelectedModulesList } from './preloading-strategy';
@@ -26,9 +26,9 @@ export class MyHammerConfig extends HammerGestureConfig {
     RouterModule.forRoot(
       [
         { path: '', redirectTo: 'home', pathMatch: 'full' },
-        { path: 'home', loadChildren: '@ngx-starter-kit/home#HomeModule', data: { preload: true } },
-        { path: 'dashboard', loadChildren: '@ngx-starter-kit/dashboard#DashboardModule', data: { preload: true } },
-        { path: '404', loadChildren: '@ngx-starter-kit/not-found#NotFoundModule' },
+        { path: 'home', loadChildren: '@vedacircle/home#HomeModule', data: { preload: true } },
+        { path: 'dashboard', loadChildren: '@vedacircle/dashboard#DashboardModule', data: { preload: true } },
+        { path: '404', loadChildren: '@vedacircle/not-found#NotFoundModule' },
         // 404 should be last
         { path: '**', redirectTo: '404', pathMatch: 'full' },
       ],

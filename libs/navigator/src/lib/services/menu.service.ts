@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { MenuItem } from '../models/menu-item.model';
 
-import { Tree } from '@ngx-starter-kit/tree';
+import { Tree } from '@vedacircle/tree';
 import { NavigationEnd, Router } from '@angular/router';
 import { SidenavState } from './sidenav-state.enum';
 import { MENU_ITEMS } from '../symbols';

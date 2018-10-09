@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MenuItem } from '@ngx-starter-kit/navigator';
+import { MenuItem } from '@vedacircle/navigator';
 
 @Component({
   selector: 'ngx-menu-item',

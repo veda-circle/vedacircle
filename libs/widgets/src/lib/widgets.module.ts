@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '@ngx-starter-kit/shared';
-import {ScrollbarModule} from "@ngx-starter-kit/scrollbar";
-import {LoadingOverlayModule} from "@ngx-starter-kit/loading-overlay";
+import { SharedModule } from '@vedacircle/shared';
+import {ScrollbarModule} from "@vedacircle/scrollbar";
+import {LoadingOverlayModule} from "@vedacircle/loading-overlay";
 
 import {
   ChartWidget,

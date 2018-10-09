@@ -1,7 +1,7 @@
 import {Action, NgxsOnInit, Selector, State, StateContext, Store} from '@ngxs/store';
 import { MenuItem } from '../models/menu-item.model';
 import { MenuService } from '../services/menu.service';
-import { Tree } from '@ngx-starter-kit/tree';
+import { Tree } from '@vedacircle/tree';
 
 export class NextCurrentlyOpened {
   static readonly type = '[Menu] Next Currently Opened';

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { NotificationsComponent } from './notifications.component';
 import { NgxsModule } from '@ngxs/store';
 
-import { SharedModule } from '@ngx-starter-kit/shared';
+import { SharedModule } from '@vedacircle/shared';
 import { NotificationsState } from './notifications.state';
 import { NotificationsService } from './notifications.service';
 @NgModule({

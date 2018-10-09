@@ -5,7 +5,7 @@ import {
   HostBinding
 } from '@angular/core';
 import { Input } from '@angular/core';
-import { MenuItem, MenuService } from '@ngx-starter-kit/navigator';
+import { MenuItem, MenuService } from '@vedacircle/navigator';
 
 @Component({
   selector: 'ngx-sidenav-item',

@@ -18,112 +18,112 @@
       "dom"
     ],
     "paths": {
-      "@ngx-starter-kit/*": [
+      "@vedacircle/*": [
         "libs/*"
       ],
       "@env/*": [
         "apps/webapp/src/environments/*"
       ],
-      "@ngx-starter-kit/core": [
+      "@vedacircle/core": [
         "libs/core/src/index.ts"
       ],
-      "@ngx-starter-kit/shared": [
+      "@vedacircle/shared": [
         "libs/shared/src/index.ts"
       ],
-      "@ngx-starter-kit/navigator": [
+      "@vedacircle/navigator": [
         "libs/navigator/src/index.ts"
       ],
-      "@ngx-starter-kit/socketio-plugin": [
+      "@vedacircle/socketio-plugin": [
         "libs/socketio-plugin/src/index.ts"
       ],
-      "@ngx-starter-kit/tree": [
+      "@vedacircle/tree": [
         "libs/tree/src/index.ts"
       ],
-      "@ngx-starter-kit/home": [
+      "@vedacircle/home": [
         "libs/home/src/index.ts"
       ],
-      "@ngx-starter-kit/dashboard": [
+      "@vedacircle/dashboard": [
         "libs/dashboard/src/index.ts"
       ],
-      "@ngx-starter-kit/not-found": [
+      "@vedacircle/not-found": [
         "libs/not-found/src/index.ts"
       ],
-      "@ngx-starter-kit/experiments": [
+      "@vedacircle/experiments": [
         "libs/experiments/src/index.ts"
       ],
-      "@ngx-starter-kit/widgets": [
+      "@vedacircle/widgets": [
         "libs/widgets/src/index.ts"
       ],
-      "@ngx-starter-kit/material": [
+      "@vedacircle/material": [
         "libs/material/src/index.ts"
       ],
-      "@ngx-starter-kit/animations": [
+      "@vedacircle/animations": [
         "libs/animations/src/index.ts"
       ],
-      "@ngx-starter-kit/utils": [
+      "@vedacircle/utils": [
         "libs/utils/src/index.ts"
       ],
-      "@ngx-starter-kit/auth": [
+      "@vedacircle/auth": [
         "libs/auth/src/index.ts"
       ],
-      "@ngx-starter-kit/app-confirm": [
+      "@vedacircle/app-confirm": [
         "libs/app-confirm/src/index.ts"
       ],
-      "@ngx-starter-kit/draggable": [
+      "@vedacircle/draggable": [
         "libs/draggable/src/index.ts"
       ],
-      "@ngx-starter-kit/breadcrumbs": [
+      "@vedacircle/breadcrumbs": [
         "libs/breadcrumbs/src/index.ts"
       ],
-      "@ngx-starter-kit/scroll-to-top": [
+      "@vedacircle/scroll-to-top": [
         "libs/scroll-to-top/src/index.ts"
       ],
-      "@ngx-starter-kit/scrollbar": [
+      "@vedacircle/scrollbar": [
         "libs/scrollbar/src/index.ts"
       ],
-      "@ngx-starter-kit/context-menu": [
+      "@vedacircle/context-menu": [
         "libs/context-menu/src/index.ts"
       ],
-      "@ngx-starter-kit/theme-picker": [
+      "@vedacircle/theme-picker": [
         "libs/theme-picker/src/index.ts"
       ],
-      "@ngx-starter-kit/quickpanel": [
+      "@vedacircle/quickpanel": [
         "libs/quickpanel/src/index.ts"
       ],
-      "@ngx-starter-kit/ngx-pipes": [
+      "@vedacircle/ngx-pipes": [
         "libs/ngx-pipes/src/index.ts"
       ],
-      "@ngx-starter-kit/svg-viewer": [
+      "@vedacircle/svg-viewer": [
         "libs/svg-viewer/src/index.ts"
       ],
-      "@ngx-starter-kit/led": [
+      "@vedacircle/led": [
         "libs/led/src/index.ts"
       ],
-      "@ngx-starter-kit/chat-box": [
+      "@vedacircle/chat-box": [
         "libs/chat-box/src/index.ts"
       ],
-      "@ngx-starter-kit/json-diff": [
+      "@vedacircle/json-diff": [
         "libs/json-diff/src/index.ts"
       ],
-      "@ngx-starter-kit/toolbar": [
+      "@vedacircle/toolbar": [
         "libs/toolbar/src/index.ts"
       ],
-      "@ngx-starter-kit/sidenav": [
+      "@vedacircle/sidenav": [
         "libs/sidenav/src/index.ts"
       ],
-      "@ngx-starter-kit/loading-overlay": [
+      "@vedacircle/loading-overlay": [
         "libs/loading-overlay/src/index.ts"
       ],
-      "@ngx-starter-kit/grid": [
+      "@vedacircle/grid": [
         "libs/grid/src/index.ts"
       ],
       "notifications/*": [
         "dist/notifications/*"
       ],
-      "@ngx-starter-kit/notifications": [
+      "@vedacircle/notifications": [
         "libs/notifications/src/index.ts"
       ],
-      "@ngx-starter-kit/clap": [
+      "@vedacircle/clap": [
         "libs/clap/src/index.ts"
       ]
     }

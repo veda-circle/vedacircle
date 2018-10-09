@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@env/environment';
 import { Notification } from './notification.model';
-import { EntityService } from '@ngx-starter-kit/shared';
+import { EntityService } from '@vedacircle/shared';
 import {Observable} from "rxjs";
 import {catchError, finalize, map, retry} from "rxjs/operators";
 

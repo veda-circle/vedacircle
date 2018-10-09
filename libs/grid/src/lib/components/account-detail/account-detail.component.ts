@@ -4,7 +4,7 @@ import { BehaviorSubject, Subscription } from 'rxjs';
 
 import { AccountService } from '../../services/account.service';
 import { Account } from '../../models/account.model';
-import { fadeAnimation } from '@ngx-starter-kit/animations';
+import { fadeAnimation } from '@vedacircle/animations';
 
 @Component({
   selector: 'ngx-account-detail',

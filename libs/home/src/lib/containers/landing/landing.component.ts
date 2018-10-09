@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from "@angular/core";
-import { PageTitleService } from "@ngx-starter-kit/core";
+import { PageTitleService } from "@vedacircle/core";
 import {
   AdvancedLayout,
   GridLayout,

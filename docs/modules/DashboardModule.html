@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ngx-starter-kit documentation</title>
+        <title>vedacircle documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">ngx-starter-kit documentation</a>
+            <a href="../" class="navbar-brand">vedacircle documentation</a>
             <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
         </div>
 
@@ -26,7 +26,7 @@
     <ul class="list">
 
         <li class="title">
-            <a href="index.html" data-type="index-link">ngx-starter-kit documentation</a>
+            <a href="index.html" data-type="index-link">vedacircle documentation</a>
         </li>
 
         <li class="divider"></li>
@@ -1502,7 +1502,7 @@
     <ul class="list">
 
         <li class="title">
-            <a href="index.html" data-type="index-link">ngx-starter-kit documentation</a>
+            <a href="index.html" data-type="index-link">vedacircle documentation</a>
         </li>
 
         <li class="divider"></li>
@@ -3201,17 +3201,17 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule } from &#x27;@angular/router&#x27;;
-import { SharedModule } from &#x27;@ngx-starter-kit/shared&#x27;;
+import { SharedModule } from &#x27;@vedacircle/shared&#x27;;
 
-import { AuthGuard } from &#x27;@ngx-starter-kit/auth&#x27;;
-import { ChatBotModule } from &#x27;@ngx-starter-kit/chat-bot&#x27;;
+import { AuthGuard } from &#x27;@vedacircle/auth&#x27;;
+import { ChatBotModule } from &#x27;@vedacircle/chat-bot&#x27;;
 
 import { DashboardLayoutComponent } from &#x27;./containers/dashboard-layout/dashboard-layout.component&#x27;;
 import { OverviewComponent } from &#x27;./containers/overview/overview.component&#x27;;
 import { RainbowComponent } from &#x27;./components/rainbow/rainbow.component&#x27;;
-import { QuickpanelModule } from &#x27;@ngx-starter-kit/quickpanel&#x27;;
-import { ToolbarModule } from &#x27;@ngx-starter-kit/toolbar&#x27;;
-import { SidenavModule } from &#x27;@ngx-starter-kit/sidenav&#x27;;
+import { QuickpanelModule } from &#x27;@vedacircle/quickpanel&#x27;;
+import { ToolbarModule } from &#x27;@vedacircle/toolbar&#x27;;
+import { SidenavModule } from &#x27;@vedacircle/sidenav&#x27;;
 
 @NgModule({
   imports: [
@@ -3235,17 +3235,17 @@ import { SidenavModule } from &#x27;@ngx-starter-kit/sidenav&#x27;;
           },
           {
             path: &#x27;&#x27;,
-            loadChildren: &#x27;@ngx-starter-kit/widgets#WidgetsModule&#x27;,
+            loadChildren: &#x27;@vedacircle/widgets#WidgetsModule&#x27;,
             data: { animation: &#x27;overview&#x27; }
           },
           {
             path: &#x27;grid&#x27;,
-            loadChildren: &#x27;@ngx-starter-kit/grid#GridModule&#x27;,
+            loadChildren: &#x27;@vedacircle/grid#GridModule&#x27;,
             data: { animation: &#x27;grid&#x27; }
           },
           {
             path: &#x27;experiments&#x27;,
-            loadChildren: &#x27;@ngx-starter-kit/experiments#ExperimentsModule&#x27;,
+            loadChildren: &#x27;@vedacircle/experiments#ExperimentsModule&#x27;,
             data: { animation: &#x27;experiments&#x27; }
           }
         ]

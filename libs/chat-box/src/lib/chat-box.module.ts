@@ -21,9 +21,9 @@ import {
   MatExpansionModule,
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { DraggableModule } from '@ngx-starter-kit/draggable';
+import { DraggableModule } from '@vedacircle/draggable';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { LedModule } from '@ngx-starter-kit/led';
+import { LedModule } from '@vedacircle/led';
 
 import { NlpService } from './services/nlp.service';
 import { ChatService } from './services/chat.service';

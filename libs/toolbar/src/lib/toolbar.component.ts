@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { AuthState } from '@ngx-starter-kit/auth';
+import { AuthState } from '@vedacircle/auth';
 import { MatSidenav } from "@angular/material";
 
 @Component({

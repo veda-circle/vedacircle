@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '@ngx-starter-kit/shared';
+import { SharedModule } from '@vedacircle/shared';
 
-import { AuthGuard } from '@ngx-starter-kit/auth';
-import { ChatBoxModule } from '@ngx-starter-kit/chat-box';
+import { AuthGuard } from '@vedacircle/auth';
+import { ChatBoxModule } from '@vedacircle/chat-box';
 
 import { DashboardLayoutComponent } from './containers/dashboard-layout/dashboard-layout.component';
 import { OverviewComponent } from './containers/overview/overview.component';
 import { RainbowComponent } from './components/rainbow/rainbow.component';
-import { QuickpanelModule } from '@ngx-starter-kit/quickpanel';
-import { ToolbarModule } from '@ngx-starter-kit/toolbar';
-import { SidenavModule } from '@ngx-starter-kit/sidenav';
+import { QuickpanelModule } from '@vedacircle/quickpanel';
+import { ToolbarModule } from '@vedacircle/toolbar';
+import { SidenavModule } from '@vedacircle/sidenav';
 import { environment } from '@env/environment';
 
 @NgModule({
@@ -38,17 +38,17 @@ import { environment } from '@env/environment';
           },
           {
             path: '',
-            loadChildren: '@ngx-starter-kit/widgets#WidgetsModule',
+            loadChildren: '@vedacircle/widgets#WidgetsModule',
             data: { animation: 'overview', preload: true }
           },
           {
             path: 'grid',
-            loadChildren: '@ngx-starter-kit/grid#GridModule',
+            loadChildren: '@vedacircle/grid#GridModule',
             data: { animation: 'grid', preload: true }
           },
           {
             path: 'experiments',
-            loadChildren: '@ngx-starter-kit/experiments#ExperimentsModule',
+            loadChildren: '@vedacircle/experiments#ExperimentsModule',
             data: { animation: 'experiments' }
           }
         ]

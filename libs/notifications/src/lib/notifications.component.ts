@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
-import { listFadeAnimation } from '@ngx-starter-kit/animations';
+import { listFadeAnimation } from '@vedacircle/animations';
 
 import { Observable } from 'rxjs';
 import { Notification } from './notification.model';
 import { NotificationsState } from './notifications.state';
 import { DeleteNotification, FetchNotifications, MarkAllAsRead, MarkAsRead } from './notifications.actions';
-import { SendWebSocketAction } from '@ngx-starter-kit/socketio-plugin';
+import { SendWebSocketAction } from '@vedacircle/socketio-plugin';
 
 @Component({
   selector: 'ngx-notifications',

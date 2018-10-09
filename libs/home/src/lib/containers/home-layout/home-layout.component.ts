@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { routerTransition } from '@ngx-starter-kit/animations';
+import { routerTransition } from '@vedacircle/animations';
 
 @Component({
   selector: 'ngx-home-layout',

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ServiceWorkerService } from '@ngx-starter-kit/core';
+import { ServiceWorkerService } from '@vedacircle/core';
 
 @Component({
   selector: 'app-root',

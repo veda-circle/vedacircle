@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { ROUTE_ANIMATIONS_ELEMENTS } from '@ngx-starter-kit/animations';
+import { ROUTE_ANIMATIONS_ELEMENTS } from '@vedacircle/animations';
 // import * as Trianglify from 'trianglify';
 declare var Trianglify: any;
 import { fromEvent, Subject, Subscription } from 'rxjs';

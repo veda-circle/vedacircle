@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Logout } from '@ngx-starter-kit/auth';
+import { Logout } from '@vedacircle/auth';
 import { Store } from '@ngxs/store';
 
 @Component({

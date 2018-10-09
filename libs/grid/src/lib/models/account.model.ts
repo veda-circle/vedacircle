@@ -1,4 +1,4 @@
-import { Entity } from '@ngx-starter-kit/shared';
+import { Entity } from '@vedacircle/shared';
 import * as moment from 'moment';
 
 export class Account extends Entity {

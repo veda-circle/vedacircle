@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { EntityService } from '@ngx-starter-kit/shared';
+import { EntityService } from '@vedacircle/shared';
 import { Account } from '../models/account.model';
 import { environment } from '@env/environment';
 

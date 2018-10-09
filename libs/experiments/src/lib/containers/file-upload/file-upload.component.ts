@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { Crumb } from '@ngx-starter-kit/breadcrumbs';
+import { Crumb } from '@vedacircle/breadcrumbs';
 
 @Component({
   selector: 'ngx-file-upload',

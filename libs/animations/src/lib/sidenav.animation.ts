@@ -5,7 +5,7 @@ import {
   style,
   state
 } from '@angular/animations';
-import { SidenavState } from '@ngx-starter-kit/navigator';
+import { SidenavState } from '@vedacircle/navigator';
 
 export const sidenavAnimation = trigger('sidenavAnimation', [
   state(SidenavState.Collapsed, style({ position: 'absolute', width: '66px' })),

@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { MediaChange, ObservableMedia } from '@angular/flex-layout';
 import { NavigationEnd, Router } from '@angular/router';
-import { routeAnimation } from '@ngx-starter-kit/animations';
+import { routeAnimation } from '@vedacircle/animations';
 import { Actions, Store } from '@ngxs/store';
-import { ConnectWebSocket, DisconnectWebSocket } from '@ngx-starter-kit/socketio-plugin';
+import { ConnectWebSocket, DisconnectWebSocket } from '@vedacircle/socketio-plugin';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { environment } from '@env/environment';
 

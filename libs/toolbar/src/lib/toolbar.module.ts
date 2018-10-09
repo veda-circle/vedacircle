@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { SharedModule } from "@ngx-starter-kit/shared";
-import { ThemePickerModule } from '@ngx-starter-kit/theme-picker';
-import { NotificationsModule } from '@ngx-starter-kit/notifications';
+import { SharedModule } from "@vedacircle/shared";
+import { ThemePickerModule } from '@vedacircle/theme-picker';
+import { NotificationsModule } from '@vedacircle/notifications';
 
 import { ToolbarComponent } from './toolbar.component';
 import { SearchComponent } from './components/search/search.component';

@@ -4,7 +4,7 @@ import { ChartData } from 'chart.js';
 import * as moment from 'moment';
 import { Observable } from 'rxjs/internal/Observable';
 import { ReplaySubject } from 'rxjs/internal/ReplaySubject';
-import { fadeOutAnimation } from "@ngx-starter-kit/animations";
+import { fadeOutAnimation } from "@vedacircle/animations";
 import { AdvancedPieChartWidgetOptions } from '../../components/advanced-pie-chart-widget/advanced-pie-chart-widget-options.interface';
 import { AudienceOverviewWidgetOptions } from '../../components/audience-overview-widget/audience-overview-widget-options.interface';
 import { BarChartWidgetOptions } from '../../components/bar-chart-widget/bar-chart-widget-options.interface';

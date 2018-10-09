@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { cardAnimation } from '@ngx-starter-kit/animations';
-import { Crumb } from '@ngx-starter-kit/breadcrumbs';
+import { cardAnimation } from '@vedacircle/animations';
+import { Crumb } from '@vedacircle/breadcrumbs';
 
 @Component({
   selector: 'ngx-animations',

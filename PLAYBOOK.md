@@ -80,12 +80,12 @@ for nx help `npm run help`
 #### Create Workspace
 ```bash
 # create workspace Ref: https://nrwl.io/nx/guide-nx-workspace
-create-nx-workspace  ngx-starter-kit --prefix=ngx
+create-nx-workspace  vedacircle --prefix=ngx
 # or
-ng new ngx-starter-kit --collection=@nrwl/schematics --prefix=ngx --verbose
+ng new vedacircle --collection=@nrwl/schematics --prefix=ngx --verbose
 # or if you want *bazel* builds instead of *webpack*
-ng new ngx-starter-kit --collection=@nrwl/schematics --prefix=ngx --bazel  --verbose
-cd ngx-starter-kit
+ng new vedacircle --collection=@nrwl/schematics --prefix=ngx --bazel  --verbose
+cd vedacircle
 
 > remove all ngrx NPM pagages from package.json
 
@@ -106,7 +106,7 @@ ng generate jest
 #### Dependencies
 > adding 3rd party modules/libs
 ```bash
-cd ngx-starter-kit
+cd vedacircle
 
 # Add PWA
 ng add @angular/pwa --project webapp
@@ -423,7 +423,7 @@ npx compodoc -s -d docs
 > deploy demo to gh-pages
 ```bash
 # build for gh-pages
-build:mock --base-href /ngx-starter-kit/
+build:mock --base-href /vedacircle/
 # push gh-pages
 npx ngh --dir dist/apps/webapp
 ```

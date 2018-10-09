@@ -3,7 +3,7 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from
 import { OAuthService } from 'angular-oauth2-oidc';
 import { Store } from '@ngxs/store';
 import { Login } from './auth.actions';
-// import { waitUntil } from '@ngx-starter-kit/utils';
+// import { waitUntil } from '@vedacircle/utils';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
