@@ -9185,10 +9185,25 @@ p {
 }
 .video {
   max-width: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
 }
-
+.collapse.show {
+  display: block;
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.collapse {
+  display: none;
+}
 /******* Effects *******/
 
 .water_effect .container {
