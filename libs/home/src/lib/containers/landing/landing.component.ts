@@ -276,7 +276,7 @@ export class LandingComponent implements OnInit {
   lazyLoad: boolean = false;
   width: string = '100%';*/
 
-  constructor(public _pageTitleService: PageTitleService, private renderer: Renderer2, private fb: FormBuilder) {
+  constructor(public _pageTitleService: PageTitleService, private renderer: Renderer2) {
 
   }
 

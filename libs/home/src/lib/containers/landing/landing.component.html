@@ -7,7 +7,7 @@
         <!--<video id="video" class="video" autoplay="autoplay" loop="loop" muted="muted">
           <source src="./assets/video/RamaMahayagnam.mp4" type="video/mp4">
         </video>-->
-        <video   class="video" autoplay="true" loop="true" muted="true">
+        <video   class="video" autoplay="autoplay" loop="loop" muted="muted">
 
             <source src="./assets/video/RamaMahayagnam.mp4" media="only screen and (max-device-width: 568px)"/>
             <source src="./assets/video/RamaMahayagnam.mp4"/>
@@ -444,7 +444,7 @@
             <div class="vc-width-medium-1-4 animated">
                 <div class="vc-margin-large-bottom address_item">
                     <div class="address_label animated">
-                        <form  action="https://www.paypal.com/cgi-bin/webscr" method="post"
+                        <form [formGroup]="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post"
                               target="_blank">
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input type="hidden" name="hosted_button_id" value="JKBBQNKVAVZGL">
