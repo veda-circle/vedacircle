@@ -1460,10 +1460,10 @@ THE SOFTWARE.
 MIT
 MIT
 
-@ngxs/store@3.2.0
+angular-oauth2-oidc@4.0.2
 MIT
 MIT
 
-angular-oauth2-oidc@4.0.2
+@ngxs/store@3.2.0
 MIT
 MIT

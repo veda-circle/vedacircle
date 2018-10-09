@@ -9,7 +9,7 @@
       "urls": [
         "/vedacircle/1.b4e7eba8033c0c7bda71.js",
         "/vedacircle/10.ba0a4286108a473004cb.js",
-        "/vedacircle/11.f8211bc7522d02559767.js",
+        "/vedacircle/11.4ad22edbdb8687fdd7a5.js",
         "/vedacircle/2.c1b69ece15d57222f7c2.js",
         "/vedacircle/3.75e48895cfce9752af56.js",
         "/vedacircle/4.9a8db3a3f17590caa5a9.js",
@@ -21,9 +21,9 @@
         "/vedacircle/common.cdb8ca103636f98a25e8.js",
         "/vedacircle/favicon.ico",
         "/vedacircle/index.html",
-        "/vedacircle/main.6c41253c25ed6225687d.js",
+        "/vedacircle/main.a60806cb00361933415b.js",
         "/vedacircle/polyfills.f0eb008a322d837d9530.js",
-        "/vedacircle/runtime.73aa98fdde37345bb65e.js",
+        "/vedacircle/runtime.a29656d2fc376efaf8c8.js",
         "/vedacircle/styles.24b49cd92a2085408b19.css"
       ],
       "patterns": []
@@ -183,7 +183,8 @@
         "/vedacircle/assets/themes/deeppurple-amber.css",
         "/vedacircle/assets/themes/indigo-pink.css",
         "/vedacircle/assets/themes/pink-bluegrey.css",
-        "/vedacircle/assets/themes/purple-green.css"
+        "/vedacircle/assets/themes/purple-green.css",
+        "/vedacircle/assets/video/RamaMahayagnam.mp4"
       ],
       "patterns": []
     },
@@ -202,7 +203,7 @@
   "hashTable": {
     "/vedacircle/1.b4e7eba8033c0c7bda71.js": "cb5a311a93b1f75d53c3bf691f66d6bbc81234f6",
     "/vedacircle/10.ba0a4286108a473004cb.js": "f785104ea44e12c981c6a66a389d17cfde5d12f1",
-    "/vedacircle/11.f8211bc7522d02559767.js": "6945475d11d402fa89b3835837fcd7b7b04c0a65",
+    "/vedacircle/11.4ad22edbdb8687fdd7a5.js": "b25cbab12547b207eaf03f58c8a601f5929a5772",
     "/vedacircle/2.c1b69ece15d57222f7c2.js": "ac6aedcebb8ed20b7513515f4504f691939c1973",
     "/vedacircle/3.75e48895cfce9752af56.js": "72f4db7ccc11dac3da10ae9239d62a8c8a73b559",
     "/vedacircle/4.9a8db3a3f17590caa5a9.js": "883c786b950313911bebe54a4d5faff00cf6fab4",
@@ -362,12 +363,13 @@
     "/vedacircle/assets/themes/indigo-pink.css": "4dbfec0caace5bae5e5f1e371a61edf7ae347472",
     "/vedacircle/assets/themes/pink-bluegrey.css": "57fb4770d166f1f665af3ddcd24903c7ecd644c3",
     "/vedacircle/assets/themes/purple-green.css": "e096206fcbf681ff61c096b6023e90e11d456db1",
+    "/vedacircle/assets/video/RamaMahayagnam.mp4": "d1c319ac7b0a606200e99efd5d7cfec69dfec3d5",
     "/vedacircle/common.cdb8ca103636f98a25e8.js": "83322cddc14559f3ac94321fb402dbaa80f76322",
     "/vedacircle/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/vedacircle/index.html": "7773f783a45787c1f40e48ff8bcb66e2d343d684",
-    "/vedacircle/main.6c41253c25ed6225687d.js": "f547d365812bae36d1909d885060e9c1b9986fec",
+    "/vedacircle/index.html": "d6a7f93a9e5e39dab22a5b8c95b468575abe7000",
+    "/vedacircle/main.a60806cb00361933415b.js": "f547d365812bae36d1909d885060e9c1b9986fec",
     "/vedacircle/polyfills.f0eb008a322d837d9530.js": "8384154060895c0d45ce448b6f5b4ac06ba69b7b",
-    "/vedacircle/runtime.73aa98fdde37345bb65e.js": "ce0d229974690039743926cfbf2a89b3a7fd463c",
+    "/vedacircle/runtime.a29656d2fc376efaf8c8.js": "5e4a533e39016ad401a7d167e64b5c867a4545f0",
     "/vedacircle/styles.24b49cd92a2085408b19.css": "bd1c0954d375da0a6d9de9c1f7e125e45a4f8cb0"
   },
   "navigationUrls": [
