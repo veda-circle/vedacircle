@@ -9267,7 +9267,8 @@ p {
 }
 .header.active {
  // background: orange;
-  background-image: linear-gradient(grey, orange);
+  //background-image: linear-gradient(grey, orange);
+  background-color:rgba(74, 55, 50, .5);
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
 }
 .logo_link {

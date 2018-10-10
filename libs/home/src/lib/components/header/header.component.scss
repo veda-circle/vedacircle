@@ -14,7 +14,7 @@ header.fixed, header.fixed_hiding, header.fixed_top_header .top_header {
 }
 
 @media only screen and (max-width: 1000px) {
-  .header_inner_left, footer.uncover, header {
+  .header_view_left, footer.uncover, header {
     position: relative !important;
     left: 0 !important;
     margin-bottom: 0;
@@ -55,13 +55,13 @@ header {
   }
 }
 
-header .header_inner_left {
+header .header_view_left {
   position: absolute;
   left: 45px;
   top: 0;
 }
 @media only screen and (max-width: 1000px) {
-  .header_inner_left, footer.uncover, header {
+  .header_view_left, footer.uncover, header {
     position: relative !important;
     left: 0 !important;
     margin-bottom: 0;
