@@ -1,6 +1,5 @@
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.1/flatpickr.min.css');
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://unpkg.com/angular-calendar@0.26.0/css/angular-calendar.css');
 @import "~bootstrap/dist/css/bootstrap.css";
 
 h3 {
@@ -22,5 +21,17 @@ pre {
   color: #fff;
 }
 
+.cal-month-view .cal-cell-top .cal-day-number{
 
-@import url('https://unpkg.com/angular-calendar@0.26.0/css/angular-calendar.css');
+  color: #fff;
+}
+
+.cal-day-selected {
+  background-color: red !important;
+}
+.cal-day-weekend {
+  background-color: red;
+}
+.cal-day-weekend span[data-cal-date] {
+  color: white !important;
+}

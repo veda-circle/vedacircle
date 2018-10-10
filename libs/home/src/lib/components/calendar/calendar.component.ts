@@ -70,7 +70,7 @@ export class CalendarComponent {
 
   events: CalendarEvent[] = [
     {
-      start: startOfDay(new Date('10-06-2018')),
+      start: startOfDay(new Date('2018-10-07T00:15:00-00:00')),
       //end: addDays(new Date(), 0),
       title: 'Lord Venkateswara - Puratassi Abhishekam: Between 3pm to 7:30pm',
       color: colors.red,
@@ -79,7 +79,7 @@ export class CalendarComponent {
       draggable: false,
     },
     {
-      start: startOfDay(new Date('10-07-2018')),
+      start: startOfDay(new Date('2018-10-08T00:15:00-00:00')),
       //end: addDays(new Date(), 1),
       title: 'Aarupadai Veedu Utsvam 2018 (Pazhani) - Pasadena Temple: Between 3pm to 7:30pm',
       color: colors.red,
@@ -88,7 +88,7 @@ export class CalendarComponent {
       draggable: false,
     },
     {
-      start: startOfDay(new Date('10-28-2018')),
+      start: startOfDay(new Date('2018-10-29T00:00:00-00:00')),
       //end: addDays(new Date(), 1),
       title: 'Aarupadai Veedu Utsvam 2018 (Soorasamharam) - Bolsa Chica Beach: Between 12pm to 4pm',
       color: colors.red,
@@ -97,7 +97,7 @@ export class CalendarComponent {
       draggable: false,
     },
     {
-      start: startOfDay(new Date('11-03-2018')),
+      start: startOfDay(new Date('2018-11-04T00:00:00-00:00')),
       //end: addDays(new Date(), 1),
       title: 'Aarupadai Veedu Utsvam 2018 (Pazhamudir Cholai) - Lakshmi Narayan Mandir( Riverside): Between 2:30pm to 7:30pm',
       color: colors.red,
@@ -106,7 +106,7 @@ export class CalendarComponent {
       draggable: false,
     },
     {
-      start: startOfDay(new Date('11-11-2018')),
+      start: startOfDay(new Date('2018-11-12T00:00:00-00:00')),
       //end: addDays(new Date(), 1),
       title: 'Aarupadai Veedu Utsvam 2018 (Swami Malai) - Mahaganpathi Temple(Arizona): Between 8:30am to 2:30pm',
       color: colors.red,
@@ -156,9 +156,9 @@ export class CalendarComponent {
   handleEvent(action: string, event: CalendarEvent): void {
 
   }
-
+/*
   addEvent(): void {
-    this.events.push({
+    this.calEvents.push({
       title: 'New event',
       start: startOfDay(new Date()),
       end: endOfDay(new Date()),
@@ -170,5 +170,5 @@ export class CalendarComponent {
       },
     });
     this.refresh.next();
-  }
+  }*/
 }

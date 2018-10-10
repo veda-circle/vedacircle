@@ -250,7 +250,7 @@ export class LandingComponent implements OnInit {
 
   @ViewChild('about') about: ElementRef;
   @ViewChild('gallery') gallery: ElementRef;
-  @ViewChild('events') events: ElementRef;
+  @ViewChild('calEvents') calEvents: ElementRef;
   @ViewChild('org') org: ElementRef;
   @ViewChild('donate') donate: ElementRef;
   @ViewChild('classes') classes: ElementRef;
