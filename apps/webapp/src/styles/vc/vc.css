@@ -6976,7 +6976,8 @@ a.vc-thumbnail:hover, a.vc-thumbnail:focus {
 
 .vc-responsive-height {
   max-height: 100%;
-  height: 100vh;
+  //height: 100vh;
+  height: 850px;
   width: auto
 }
 
@@ -8435,7 +8436,7 @@ html[dir="rtl"] .vc-slider > * {
 }
 
 .vc-slider-fullscreen, .vc-slider-fullscreen > li {
-  height: 100vh
+  //height: 100vh
 }
 
 .vc-slideshow {
@@ -9538,7 +9539,7 @@ p {
 
 .features {
   padding: 100px 0 50px;
-  background: url('../../assets/img/bg/mission-bg.jpg') no-repeat center center;
+  background: url('../../assets/img/bg/mission-bg.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   border: 0;
@@ -9569,15 +9570,15 @@ p {
 
 .events {
   padding: 100px 0 50px;
-  background: url('../../assets/img/bg/greenbg.jpeg') no-repeat center center;
+  background: url('../../assets/img/bg/background.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   border: 0;
 }
 
 .classes {
-  padding: 100px 0 50px;
-  background: url('../../assets/img/bg/background.jpg') no-repeat center center;
+  padding: 100px 0;
+  background: url('../../assets/img/bg/background.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   border: 0;
@@ -10208,9 +10209,8 @@ p {
 
 
 .subscribe {
-  padding: 350px 0 400px;
-  background: #fff;
-  background: url('../../assets/img/bg/tree-bg.jpg') no-repeat center center;
+  padding: 100px 0;
+  background: url('../../assets/img/bg/tree-bg.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   border: 0;
@@ -10331,7 +10331,7 @@ p {
 .address {
   padding: 150px 0 100px;
   background: #fff;
-  background: url('../../../../../apps/webapp/src/assets/img/bg/contact.jpg') no-repeat center center;
+  background: url('../../../../../apps/webapp/src/assets/img/bg/contact.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   border: 0;
@@ -11131,6 +11131,17 @@ p {
   }
   .subscribe_window_title {
     font-size: 18px;
+  }
+  .video{
+    max-width: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
   }
 }
 @media screen and (max-width: 359px) {
