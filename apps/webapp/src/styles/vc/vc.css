@@ -10209,7 +10209,7 @@ p {
 
 
 .subscribe {
-  padding: 100px 0;
+  padding: 100px 0 300px;
   background: url('../../assets/img/bg/tree-bg.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -11197,5 +11197,4 @@ p {
 .vc-active[data-vc-scrollspy] .animated:nth-child(10) {
   transition: top 0.5s linear 1.8s, opacity 0.5s linear 1.8s;
 }
-
 
