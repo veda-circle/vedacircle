@@ -1,8 +1,8 @@
 <section
         class="vc-responsive-height vc-cover-background vc-position-relative vc-flex vc-flex-middle vc-overflow-hidden grey_overlay container">
 
-<div>
-        <video width="100%"    onloadedmetadata="this.muted=true"  autoplay loop class="video" id="video" playsinline>
+    <div>
+        <video width="100%" onloadedmetadata="this.muted=true" autoplay loop class="video" id="video" playsinline>
             <source src="./assets/video/RamaMahayagnam.mp4" type="video/mp4">
             Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
@@ -37,13 +37,17 @@
             </div>
 
             <div class="vc-position-relative vc-margin-large-bottom vc-width-1-1 container_button">
-                <div pageScroll [routerLink]="['/home']" href="#donate"
-                     class="vc-button vc-border-rounded orange_button container_button_message">Donate
-                </div>
-                <div pageScroll [routerLink]="['/home']" href="#subscribe"
-                     class="vc-button vc-border-rounded container_button_subscribe">
-                    Subscribe
-                </div>
+                <button pageScroll href="#donate" type="button"
+                        class="vc-button vc-border-rounded orange_button container_button_message">Donate</button>
+                <button  href="#subscribe" type="button"
+                        class="vc-button vc-border-rounded  container_button_message">Explore</button>
+                    <!-- <div pageScroll href="#donate"
+                          class="vc-button vc-border-rounded orange_button container_button_message">Donate
+                     </div>-->
+                   <!-- <div pageScroll [routerLink]="['/home']" href="#subscribe"
+                         class="vc-button vc-border-rounded container_button_subscribe">
+                        Subscribe
+                    </div>-->
             </div>
         </div>
 
@@ -430,14 +434,8 @@
             </div>
             <div class="vc-width-medium-1-4 animated">
                 <div class="vc-margin-large-bottom address_item">
-                    <div class="vc-icon-envelope-o address_label"></div>
-                    <h4 class="address_title animated">Email address</h4>
-                    <div class="address_text animated">vedacircleinfo@gmail.com</div>
-                </div>
-            </div>
-            <div class="vc-width-medium-1-4 animated">
-                <div class="vc-margin-large-bottom address_item">
-                    <div class="address_label animated">
+                    <div class="vc-icon-money address_label"></div>
+                    <div class="address_text animated">
                         <form [formGroup]="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post"
                               target="_blank">
                             <input type="hidden" name="cmd" value="_s-xclick">
@@ -447,9 +445,16 @@
                                    alt="PayPal - The safer, easier way to pay online!">
                         </form>
                     </div>
-
                 </div>
             </div>
+            <div class="vc-width-medium-1-4 animated">
+                <div class="vc-margin-large-bottom address_item">
+                    <div class="vc-icon-envelope-o address_label"></div>
+                    <h4 class="address_title animated">Email address</h4>
+                    <div class="address_text animated">vedacircleinfo@gmail.com</div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

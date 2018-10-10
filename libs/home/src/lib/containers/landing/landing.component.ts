@@ -248,33 +248,33 @@ export class LandingComponent implements OnInit {
   };
 
 
-  @ViewChild('about') about: ElementRef;
-  @ViewChild('gallery') gallery: ElementRef;
-  @ViewChild('calEvents') calEvents: ElementRef;
-  @ViewChild('org') org: ElementRef;
-  @ViewChild('donate') donate: ElementRef;
-  @ViewChild('classes') classes: ElementRef;
-  @ViewChild('subscribe') subscribe: ElementRef;
+  @ViewChild("about") about: ElementRef;
+  @ViewChild("gallery") gallery: ElementRef;
+  @ViewChild("calEvents") calEvents: ElementRef;
+  @ViewChild("org") org: ElementRef;
+  @ViewChild("donate") donate: ElementRef;
+  @ViewChild("classes") classes: ElementRef;
+  @ViewChild("subscribe") subscribe: ElementRef;
 
- /* height: string = '100%';
-  minHeight: string;
-  arrowSize: string = '30px';
-  showArrows: boolean = true;
-  disableSwiping: boolean = false;
-  autoPlay: boolean = true;
-  autoPlayInterval: number = 3333;
-  stopAutoPlayOnSlide: boolean = true;
-  debug: boolean = false;
-  backgroundSize: string = 'cover';
-  backgroundPosition: string = 'center center';
-  backgroundRepeat: string = 'no-repeat';
-  showDots: boolean = true;
-  dotColor: string = '#FFF';
-  showCaptions: boolean = true;
-  captionColor: string = '#FFF';
-  captionBackground: string = 'rgba(0, 0, 0, .35)';
-  lazyLoad: boolean = false;
-  width: string = '100%';*/
+  /* height: string = '100%';
+   minHeight: string;
+   arrowSize: string = '30px';
+   showArrows: boolean = true;
+   disableSwiping: boolean = false;
+   autoPlay: boolean = true;
+   autoPlayInterval: number = 3333;
+   stopAutoPlayOnSlide: boolean = true;
+   debug: boolean = false;
+   backgroundSize: string = 'cover';
+   backgroundPosition: string = 'center center';
+   backgroundRepeat: string = 'no-repeat';
+   showDots: boolean = true;
+   dotColor: string = '#FFF';
+   showCaptions: boolean = true;
+   captionColor: string = '#FFF';
+   captionBackground: string = 'rgba(0, 0, 0, .35)';
+   lazyLoad: boolean = false;
+   width: string = '100%';*/
 
   constructor(public _pageTitleService: PageTitleService, private renderer: Renderer2) {
 
@@ -292,7 +292,7 @@ export class LandingComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this._pageTitleService.title = '';
+    this._pageTitleService.title = "";
     this.imageList = this.images;
 
     /* this.renderer.listen('window', 'scroll', (event) => {
