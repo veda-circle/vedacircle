@@ -24,14 +24,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    this.renderer.listen('window', 'scroll', (event) => {
+   /* this.renderer.listen('window', 'scroll', (event) => {
       const number = window.scrollY;
       if (number > 150 || window.pageYOffset > 150) {
         this.navbar.nativeElement.classList.add('active');
       } else {
         this.navbar.nativeElement.classList.remove('active');
       }
-    });
+    });*/
   }
 
   public login() {

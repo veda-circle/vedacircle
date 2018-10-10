@@ -9295,7 +9295,7 @@ p {
 .vc-navbar-nav > li > a {
   padding: 0 14px;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'robotoregular', sans-serif;
   letter-spacing: 0.65px;
   text-shadow: 1px 1px 20px rgba(0,0,0,0.5);
@@ -9888,8 +9888,8 @@ p {
   height: 75px;
 }
 .top_team_image {
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
 }
 .logo_image {
   width: 75px;

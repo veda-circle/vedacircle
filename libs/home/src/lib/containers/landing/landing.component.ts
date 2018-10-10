@@ -256,6 +256,7 @@ export class LandingComponent implements OnInit {
   @ViewChild("classes") classes: ElementRef;
   @ViewChild("subscribe") subscribe: ElementRef;
 
+
   /* height: string = '100%';
    minHeight: string;
    arrowSize: string = '30px';
@@ -319,6 +320,10 @@ export class LandingComponent implements OnInit {
          this.renderer.setAttribute(this.donate.nativeElement, 'data-vc-scrollspy', '{cls:"vc-active"}');
        }
      });*/
+  }
+
+  gotoDonateAnchor() {
+    this.donate.nativeElement.scrollIntoView();
   }
 
 }
