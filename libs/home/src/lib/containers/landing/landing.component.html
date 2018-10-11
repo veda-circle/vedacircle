@@ -116,7 +116,7 @@
 
             <ngx-slick class="regular slick-slider" #slickModal="slick-modal" [config]="slideConfig"
                        style="margin-left:50px;margin-right:50px">
-                <div ngxSlickItem *ngFor="let slide of slides" class="slide" id="eventId" width="200px">
+                <div ngxSlickItem *ngFor="let slide of slides" class="slide" id="eventId">
                     <img class="imageEvent" src="{{ slide.img }}" alt=""/>
                     <h3 class="nameEvent" style="text-align: center;">
                         {{slide.name}} <br/>{{ slide.date }}
@@ -371,16 +371,7 @@
             <div class="vc-margin-large-bottom elements_item" style="float:right">
 
                 <div class="vc-margin-bottom team_description animated">
-                    <p style="text-align: justify">
-                        Pandit Sivaramakrishnan had his Adhyanam from two eminent organizations: H.H. Sri Kanchi
-                        Kamakoti
-                        Shri
-                        Mahaswami Vidya Peeta Trust at Sivasthanam in Thenambakkam, Kanchipuram and Thiruvidaimarthur
-                        Prayoga
-                        Pathasala attached to the Kanchi Sankara Mutt. Currently, he is the Chief Priest at the Sanatan
-                        Dharma
-                        Temple
-                    </p>
+
                     <p style="text-align: justify">
                         He has taught the Sri Rudram, various sukthas and ghanapata to hundreds of students. His
                         students

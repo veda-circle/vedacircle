@@ -247,9 +247,9 @@ iframe {
 }
 
 @media screen and (max-width: 400px) {
-  @-ms-viewport {
+ /* @-ms-viewport {
     width: device-width
-  }
+  }*/
 }
 
 .vc-grid {
