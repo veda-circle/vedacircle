@@ -854,6 +854,10 @@ prospectively choose to deem waived or otherwise exclude such Section(s) of
 the License, but only in their entirety and only with respect to the Combined
 Software.
 
+ngx-slick@0.2.1
+MIT
+MIT
+
 util@0.10.4
 MIT
 Copyright Joyent, Inc. and other Node contributors. All rights reserved.
@@ -1492,10 +1496,10 @@ THE SOFTWARE.
 MIT
 MIT
 
-angular-oauth2-oidc@4.0.2
+@ngxs/store@3.2.0
 MIT
 MIT
 
-@ngxs/store@3.2.0
+angular-oauth2-oidc@4.0.2
 MIT
 MIT
