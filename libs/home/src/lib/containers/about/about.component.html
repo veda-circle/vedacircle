@@ -1,42 +1,50 @@
-<!--<div class="default-primary-header">-->
-  <!--<h1>About</h1>-->
-<!--if enabled, set parentNode.offsetHeight -80 in  renderCanvas()-->
-<!--</div>-->
-<div class="about-container">
-  <div class="gradient">
-    <div fxLayout="column">
-      <canvas #trianglify></canvas>
-      <h1>Angular Nx Material Starter Kit</h1>
-      <div class="actions">
-        <a [ngClass]="routeAnimationsElements"
-           mat-raised-button class="actions-main" color="primary" routerLink="../features">
-          Check Features
-        </a>
-        <a mat-raised-button class="actions-main" color="accent" routerLink="/dashboard"
-           [ngClass]="routeAnimationsElements">
-          Check Examples
-        </a>
-        <a mat-raised-button class="actions-main" routerLink="../settings"
-           [ngClass]="routeAnimationsElements">
-          Change Theme
-        </a>
-        <a mat-raised-button class="actions-main" color="warn" (click)="color= 'random'; renderCanvas()"
-           [ngClass]="routeAnimationsElements">
-          Refresh Background
-        </a>
+
+<section class="features  section" id="about">
+
+  <div #about
+       class="vc-container vc-container-center vc-position-relative  vc-text-center vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+
+    <h3 class="vc-h3 vc-text-center vc-text-contrast  section_title features_title">Mission</h3>
+    <h4 class="vc-h4 vc-text-contrast vc-text-center vc-margin-large-bottom  section_subtitle">VEDA Circle is a
+      501(c) (3) non-profit
+      organization founded with mission to promote Vedic Education Dissemination and Awareness (VEDA) for the
+      benefit of
+      our community. Its Tax ID is 27-3794048</h4>
+
+    <div class="vc-grid vc-grid-large">
+      <div class="vc-width-large-1-4 vc-width-small-1-2 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <div class="vc-icon-hand-peace-o vc-border-circle elements_item_label"></div>
+          <h4 class="vc-h4 elements_item_text">Peace</h4>
+          <p class="elements_item_desc">Promote world peace and harmony through Vedic lifestyle approaches
+            such as yoga,
+            meditation and prayers </p>
+        </div>
       </div>
-      <div class="get-started" [ngClass]="routeAnimationsElements">
-        <h2>Getting started</h2>
-        <code>git clone
-          https://github.com/xmlking/vedacircle.git
-          my-project</code><br>
-        <code>cd my-project</code><br>
-        <code>npm install</code><br>
-        <code>npm start</code>
+      <div class="vc-width-large-1-4 vc-width-small-1-2 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <div class="vc-icon-book vc-border-circle elements_item_label"></div>
+          <h4 class="vc-h4 elements_item_text">Educate</h4>
+          <p class="elements_item_desc">Educate, Disseminate and create awareness about the values of
+            Vedas</p>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-small-1-2 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <div class="vc-icon-clock-o vc-border-circle elements_item_label"></div>
+          <h4 class="vc-h4 elements_item_text">Service</h4>
+          <p class="elements_item_desc">Provide community service and conduct research in Vedas</p>
+        </div>
+      </div>
+      <div class="vc-width-large-1-4 vc-width-small-1-2 animated">
+        <div class="vc-margin-large-bottom elements_item">
+          <div class="vc-icon-home vc-border-circle elements_item_label">
+            <!--<img class="vc-responsive-height logo" src="./assets/img/avatars/om.jpg" alt="">-->
+          </div>
+          <h4 class="vc-h4 elements_item_text">Spirituality</h4>
+          <p class="elements_item_desc">Advancement of spirituality as described in Vedas</p>
+        </div>
       </div>
     </div>
-
   </div>
-</div>
-
-
+</section>

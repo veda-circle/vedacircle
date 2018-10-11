@@ -24,6 +24,12 @@ import { GalleryModule } from "@ngx-gallery/core";
 import { LightboxModule } from "@ngx-gallery/lightbox";
 import { GallerizeModule } from "@ngx-gallery/gallerize";
 import { SlickModule } from 'ngx-slick';
+import { GalleryComponent } from "@vedacircle/home/src/lib/containers/gallery/gallery.component";
+import { EventsComponent } from "@vedacircle/home/src/lib/containers/events/events.component";
+import { OrganizationComponent } from "@vedacircle/home/src/lib/containers/organization/organization.component";
+import { ClassesComponent } from "@vedacircle/home/src/lib/containers/classes/classes.component";
+import { ContactusComponent } from "@vedacircle/home/src/lib/containers/contactus/contactus.component";
+import { SubscribeComponent } from "@vedacircle/home/src/lib/containers/subscribe/subscribe.component";
 
 @NgModule({
   imports: [
@@ -83,7 +89,13 @@ import { SlickModule } from 'ngx-slick';
     HomeLayoutComponent,
     LandingComponent,
     BlogComponent,
+    OrganizationComponent,
+    ContactusComponent,
     AboutComponent,
+    GalleryComponent,
+    SubscribeComponent,
+    ClassesComponent,
+    EventsComponent,
     FeaturesComponent
   ]
 })

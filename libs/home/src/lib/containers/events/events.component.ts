@@ -3,14 +3,14 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, Vie
 import "rxjs/add/observable/fromEvent";
 
 @Component({
-  selector: "ngx-about",
-  templateUrl: "./about.component.html",
-  styleUrls: ["./about.component.scss"]
+  selector: "ngx-events",
+  templateUrl: "./events.component.html",
+  styleUrls: ["./events.component.scss"]
 })
-export class AboutComponent implements OnInit {
+export class EventsComponent implements OnInit{
 
 
-  @ViewChild("about") about: ElementRef;
+  @ViewChild("calEvents") calEvents: ElementRef;
 
   constructor(private renderer: Renderer2) {
   }
@@ -19,8 +19,8 @@ export class AboutComponent implements OnInit {
 
     this.renderer.listen("window", "scroll", (event) => {
       const number = window.scrollY;
-      if (number > 300 && number < 800) {
-        this.renderer.setAttribute(this.about.nativeElement, "data-vc-scrollspy", "{cls:'vc-active'}");
+      if (number > 2300 && number < 2800) {
+        this.renderer.setAttribute(this.calEvents.nativeElement, "data-vc-scrollspy", "{cls:'vc-active'}");
       }
 
     });
