@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from "@angular/core";
 
 import "rxjs/add/observable/fromEvent";
-import { FormGroup } from "@angular/forms";
 
 export interface ClassesElement {
   name: string;
@@ -57,8 +56,6 @@ export class ClassesComponent implements OnInit {
 
   displayedColumns: string[] = ["name", "day", "time", "audio"];
   dataSource = ELEMENT_DATA;
-
-  paypalForm: FormGroup;
 
   constructor(private renderer: Renderer2) {
   }
