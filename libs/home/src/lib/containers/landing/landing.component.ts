@@ -172,7 +172,7 @@ export class LandingComponent implements OnInit {
     {img: './assets/img/gallery/2018/skandashasti/IMG_4320.jpg', name:'Arupadiveedu Skanda Shasti Event 2018', date: '2018-09-02 to 2018-11-18', description: '', time:'' },
 
   ];
-  slideConfig = {'slidesToShow': 3, 'slidesToScroll': 4};
+  slideConfig = {slidesToShow: 3,autoplay: true, autoplaySpeed: 2000,slidesToScroll: 1,centerMode: true,draggable:false,infinite:false,dots: false, focusOnSelect: true, adaptiveHeight: true};
 
 
   /*images: Image[] = [

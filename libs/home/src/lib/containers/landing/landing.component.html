@@ -116,7 +116,7 @@
 
             <ngx-slick class="regular slick-slider" #slickModal="slick-modal" [config]="slideConfig"
                        style="margin-left:50px;margin-right:50px">
-                <div ngxSlickItem *ngFor="let slide of slides" class="slide" id="eventId">
+                <div ngxSlickItem *ngFor="let slide of slides" class="slide" id="eventId" width="200px">
                     <img class="imageEvent" src="{{ slide.img }}" alt=""/>
                     <h3 class="nameEvent" style="text-align: center;">
                         {{slide.name}} <br/>{{ slide.date }}
