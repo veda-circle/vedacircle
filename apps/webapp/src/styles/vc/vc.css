@@ -6976,8 +6976,8 @@ a.vc-thumbnail:hover, a.vc-thumbnail:focus {
 
 .vc-responsive-height {
   max-height: 100%;
-  //height: 100vh;
-  height: 850px;
+  height: 100vh;
+  //height: 850px;
   width: auto
 }
 
