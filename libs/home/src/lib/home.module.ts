@@ -23,6 +23,7 @@ import { FlatpickrModule } from "angularx-flatpickr";
 import { GalleryModule } from "@ngx-gallery/core";
 import { LightboxModule } from "@ngx-gallery/lightbox";
 import { GallerizeModule } from "@ngx-gallery/gallerize";
+import { SlickModule } from 'ngx-slick';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { GallerizeModule } from "@ngx-gallery/gallerize";
     ModalGalleryModule.forRoot({ shortcuts: ["ctrl+a", "ctrl+s", "meta+s"] }),
     FormsModule,
     GalleryModule,
+    SlickModule.forRoot(),
     LightboxModule,
     GallerizeModule,
     CalendarModule.forRoot({

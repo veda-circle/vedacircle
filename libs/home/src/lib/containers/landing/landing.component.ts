@@ -162,7 +162,18 @@ export class LandingComponent implements OnInit {
   displayedColumns: string[] = ["name", "day", "time", "audio"];
   dataSource = ELEMENT_DATA;
   paypalForm: FormGroup;
-  size: 5;
+
+  slides = [
+    {img: './assets/img/gallery/MR-2018/MR-Page1.png', name:'125th MahaPeriyavva Maharudra Utsavam', date: '2018-12-22 to 2018-12-24', description: '', time:'' },
+    {img: './assets/img/gallery/MR-2018/MR-Page2.png', name:'125th MahaPeriyavva Maharudra Utsavam', date: '2018-12-22 to 2018-12-24', description: '', time:'' },
+    {img: './assets/img/gallery/2018/skandashasti/IMG_4320.jpg', name:'Arupadiveedu Skanda Shasti Event 2018', date: '2018-09-02 to 2018-11-18', description: '', time:'' },
+    {img: './assets/img/gallery/MR-2018/MR-Page1.png', name:'125th MahaPeriyavva Maharudra Utsavam', date: '2018-12-22 to 2018-12-24', description: '', time:'' },
+    {img: './assets/img/gallery/MR-2018/MR-Page2.png', name:'125th MahaPeriyavva Maharudra Utsavam', date: '2018-12-22 to 2018-12-24', description: '', time:'' },
+    {img: './assets/img/gallery/2018/skandashasti/IMG_4320.jpg', name:'Arupadiveedu Skanda Shasti Event 2018', date: '2018-09-02 to 2018-11-18', description: '', time:'' },
+
+  ];
+  slideConfig = {'slidesToShow': 3, 'slidesToScroll': 4};
+
 
   /*images: Image[] = [
     new Image(
@@ -276,10 +287,10 @@ export class LandingComponent implements OnInit {
     return image ? images.indexOf(image) : -1;
   }
 
+
   ngOnInit(): void {
     this._pageTitleService.title = "";
     this.items = this.imagesData.map(item => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl }));
-    console.log(this.items);
 
     /* this.renderer.listen('window', 'scroll', (event) => {
        const number = window.scrollY;
