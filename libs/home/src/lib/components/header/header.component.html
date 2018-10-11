@@ -1,17 +1,16 @@
-
 <header class="vc-small-hidden header" #navbar>
     <nav class="vc-navbar header-nav">
         <div>
             <div class="header_view clearfix">
                 <div class="header_view">
-                    <div class="header_bottom clearfix" >
+                    <div class="header_bottom clearfix">
                         <div class="header_view_left">
-                            <div class="mobile_menu_button">
+                            <div class="menu_btn" (click)="toggleMobileNav($event)">
                                 <span>
                                     <i class="fa fa-bars "></i>
                                 </span>
                             </div>
-                            <div class="logo_wrapper" style="margin-top:5px;height: 75px;">
+                            <div class="vc_logo_wrap" style="margin-top:5px;height: 75px;">
                                 <div class="vc_logo">
                                     <a href="https://www.veda-circle.org/" style="height: 80px; visibility: visible;">
 
@@ -20,16 +19,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="header_rht">
-                            <div class="side_menu_button_wrapper right">
-                                <div class="side_menu_button" style="height: 75px;">
+                        <!-- <div class="header_rht">
+                             <div class="side_menu_button_wrapper right">
+                                 <div class="side_menu_button" style="height: 75px;">
 
-                                    <a class="vc-hidden-large"
-                                       href="javascript:void(0)">
-                                        <i class="fa fa-search "></i> </a>
-                                </div>
-                            </div>
-                        </div>
+                                     <a class="vc-hidden-large"
+                                        href="javascript:void(0)">
+                                         <i class="fa fa-search "></i> </a>
+                                 </div>
+                             </div>
+                         </div>-->
                     </div>
                 </div>
             </div>
@@ -76,13 +75,42 @@
                   </div>-->
             </div>
 
-            <div class="vc-navbar-flip vc-hidden-large header_navbar_mobile_block" style="margin-left:10px">
-                <div data-ng-click="toggleMobileNav($event)" class="vc-navbar-toggle header_navbar_mobile"></div>
-            </div>
+            <!-- <div class="vc-navbar-flip vc-hidden-large header_navbar_mobile_block" style="margin-left:10px">
+                 <div data-ng-click="toggleMobileNav($event)" class="vc-navbar-toggle header_navbar_mobile"></div>
+             </div>-->
 
         </div>
     </nav>
-
+    <nav class="mobile">
+        <ul #mobileNav  style="display:none">
+            <li class="linkitem">
+                <a pageScroll   [routerLink]="['/home']" >Home</a>
+            </li>
+            <li class="linkitem">
+                <a pageScroll [routerLink]="['/home']"
+                   href="#about">About</a>
+            </li>
+            <li class="linkitem">
+                <a pageScroll [routerLink]="['/home']"
+                   href="#calEvents">Events</a>
+            </li>
+            <li class="linkitem">
+                <a pageScroll [routerLink]="['/home']"
+                   href="#vcgallery">Gallery</a>
+            </li>
+            <li class="linkitem">
+                <a pageScroll [routerLink]="['/home']" href="#org">Organization</a>
+            </li>
+            <li class="linkitem">
+                <a pageScroll [routerLink]="['/home']"
+                   href="#classes">Classes</a>
+            </li>
+            <li class="linkitem">
+                <a pageScroll [routerLink]="['/home']"
+                   href="#donate">Donate</a>
+            </li>
+        </ul>
+    </nav>
 
 </header>
 

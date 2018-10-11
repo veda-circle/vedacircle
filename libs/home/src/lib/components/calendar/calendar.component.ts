@@ -4,10 +4,6 @@ import {
 } from '@angular/core';
 import {
   startOfDay,
-  endOfDay,
-  subDays,
-  addDays,
-  endOfMonth,
   isSameDay,
   isSameMonth,
   addHours,
@@ -123,7 +119,7 @@ export class CalendarComponent {
     }*/
   ];
 
-  activeDayIsOpen: boolean = true;
+  activeDayIsOpen: boolean = false;
 
   constructor() {
   }

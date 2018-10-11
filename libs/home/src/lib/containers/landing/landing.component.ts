@@ -149,14 +149,7 @@ export class LandingComponent implements OnInit {
       url: "./assets/img/gallery/dp2015/IMG_1263.JPG",
       caption: "Deepa Pooja 2015"
     }
-    /* {
-       url: './assets/img/gallery/MR-2018/MR-Page1.png',
-       caption: 'Maharudram 2018',
-     },
-     {
-       url: './assets/img/gallery/MR-2018/MR-Page2.png',
-       caption: 'Maharudram 2018',
-     },*/
+
   ];
 
   displayedColumns: string[] = ["name", "day", "time", "audio"];
@@ -164,15 +157,33 @@ export class LandingComponent implements OnInit {
   paypalForm: FormGroup;
 
   slides = [
-    {img: './assets/img/gallery/MR-2018/MR-Page1.png', name:'Shri Kanchi MahaPeriyavva 125th Jayanthi Maharudra Mahotsavam', date: '2018-12-22 to 2018-12-24', description: '', time:'' },
-    {img: './assets/img/gallery/MR-2018/MR-Page2.png', name:'Shri Kanchi MahaPeriyavva 125th Jayanthi Maharudra Mahotsavam', date: '2018-12-22 to 2018-12-24', description: '', time:'' },
-    {img: './assets/img/gallery/2018/skandashasti/IMG_4320.jpg', name:'Arupadiveedu Skanda Shasti Event 2018', date: '2018-09-02 to 2018-11-18', description: '', time:'' },
-   /* {img: './assets/img/gallery/MR-2018/MR-Page1.png', name:'Shri Kanchi MahaPeriyavva 125th Jayanthi Maharudra Mahotsavam', date: '2018-12-22 to 2018-12-24', description: '', time:'' },
-    {img: './assets/img/gallery/MR-2018/MR-Page2.png', name:'Shri Kanchi MahaPeriyavva 125th Jayanthi Maharudra Mahotsavam', date: '2018-12-22 to 2018-12-24', description: '', time:'' },
-    {img: './assets/img/gallery/2018/skandashasti/IMG_4320.jpg', name:'Arupadiveedu Skanda Shasti Event 2018', date: '2018-09-02 to 2018-11-18', description: '', time:'' },
-*/
+    {
+      img: "./assets/img/gallery/MR-2018/MR-Page1.png",
+      name: "Shri Kanchi MahaPeriyavva 125th Jayanthi Maharudra Mahotsavam",
+      date: "2018-12-22 to 2018-12-24",
+      description: "",
+      time: ""
+    },
+    {
+      img: "./assets/img/gallery/MR-2018/MR-Page2.png",
+      name: "Shri Kanchi MahaPeriyavva 125th Jayanthi Maharudra Mahotsavam",
+      date: "2018-12-22 to 2018-12-24",
+      description: "",
+      time: ""
+    },
+    {
+      img: "./assets/img/gallery/2018/skandashasti/IMG_4320.jpg",
+      name: "Arupadiveedu Skanda Shasti Event 2018",
+      date: "2018-09-02 to 2018-11-18",
+      description: "",
+      time: ""
+    }
+
   ];
-  slideConfig = {slidesToShow: 1,autoplay: true, autoplaySpeed: 2000,
+  slideConfig = {
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 375,
@@ -181,57 +192,16 @@ export class LandingComponent implements OnInit {
         }
       }
     ],
-    slidesToScroll: 1,centerMode: true,draggable:false,infinite:false,dots: false, focusOnSelect: true, adaptiveHeight: true};
+    slidesToScroll: 1,
+    centerMode: true,
+    draggable: false,
+    infinite: false,
+    dots: false,
+    focusOnSelect: true,
+    adaptiveHeight: true
+  };
 
 
-  /*images: Image[] = [
-    new Image(
-      0,
-      {
-        srcUrl: './assets/img/gallery/athirudram2011/IMG_4002.jpg',
-        description: 'The Athirudram: The offering of 11 Maharudrams in 11 consecutive days is known as The Athirudram' +
-          '121 Ritwiks participate for 11 days and chant “The Rudram” on all eleven days. ' +
-          'The Athirudram consists of 14,641 Namakam chants and 1,331 Chamakam chants ',
-        title: 'Athirudram 2011'
-      }
-    ),
-    new Image(
-      1,
-      {
-        srcUrl: './assets/img/gallery/dp2017/img2.jpg',
-        description: 'Participants who came in were ushered in with all that was needed for the conduct of the worship.' +
-          'The puja committee volunteer effort was led by Savithri Krishnamurthy with the support of Rukmini Raghunathan.',
-        title: 'Deepa Pooja 2017'
-      }
-    ),
-    new Image(
-      2,
-      {
-        srcUrl: './assets/img/gallery/dp2015/IMG_1251.JPG',
-        description: 'Participants who came in were ushered in with all that was needed for the conduct of the worship.' +
-          'The puja committee volunteer effort was led by Savithri Krishnamurthy with the support of Rukmini Raghunathan.',
-        title: 'Deepa Pooja 2015'
-      }
-    ),
-    new Image(
-      3,
-      {
-        srcUrl: './assets/img/gallery/ayappa2017/IMG_4314.jpg',
-        title: 'Ayappa Pooja 2017',
-        description: 'Ayyappan is the Hindu god of growth, particularly popular in Kerala and the rest of South India.' +
-          'He is a synthetic deity, the son of Shiva and Mohini – the female avatar of Vishnu'
-      }
-    ),
-    new Image(
-      4,
-      {
-        srcUrl: './assets/img/gallery/2018/venkateshwara/IMG_0.JPG',
-        title: 'Lord Venkateshware Pooja 2018',
-        description: 'Purattasi Sani or Tirumala Shanivara is a Hindu festival celebrated in some parts of South India including Andhra Pradesh, ' +
-          'Karnataka, Tamil Nadu and Kerala'
-      }
-    )
-  ];*/
   imageList: any = [];
 
   items: GalleryItem[];
@@ -259,25 +229,6 @@ export class LandingComponent implements OnInit {
   @ViewChild("classes") classes: ElementRef;
   @ViewChild("subscribe") subscribe: ElementRef;
 
-  /* height: string = '100%';
-   minHeight: string;
-   arrowSize: string = '30px';
-   showArrows: boolean = true;
-   disableSwiping: boolean = false;
-   autoPlay: boolean = true;
-   autoPlayInterval: number = 3333;
-   stopAutoPlayOnSlide: boolean = true;
-   debug: boolean = false;
-   backgroundSize: string = 'cover';
-   backgroundPosition: string = 'center center';
-   backgroundRepeat: string = 'no-repeat';
-   showDots: boolean = true;
-   dotColor: string = '#FFF';
-   showCaptions: boolean = true;
-   captionColor: string = '#FFF';
-   captionBackground: string = 'rgba(0, 0, 0, .35)';
-   lazyLoad: boolean = false;
-   width: string = '100%';*/
 
   constructor(
     public _pageTitleService: PageTitleService,
@@ -285,12 +236,6 @@ export class LandingComponent implements OnInit {
   ) {
   }
 
-  getImageItems(idx: number) {
-    /* this.imageList = Object.assign(this.imageGroup[idx + 1]);
-    const index: number = this.getCurrentIndexCustomLayout(this.imageGroup[idx + 1][0], this.imageGroup[idx + 1]);
-    this.customPlainGalleryRowDescConfig = Object.assign({}, this.customPlainGalleryRowDescConfig, { layout: new AdvancedLayout(index, true) });
-*/
-  }
 
   getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
     return image ? images.indexOf(image) : -1;
@@ -301,29 +246,29 @@ export class LandingComponent implements OnInit {
     this._pageTitleService.title = "";
     this.items = this.imagesData.map(item => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl }));
 
-    /* this.renderer.listen('window', 'scroll', (event) => {
+      this.renderer.listen('window', 'scroll', (event) => {
        const number = window.scrollY;
        if (number > 300 && number < 800) {
-         this.renderer.setAttribute(this.about.nativeElement, 'data-vc-scrollspy', '{cls:'vc-active'}');
+         this.renderer.setAttribute(this.about.nativeElement, 'data-vc-scrollspy', "{cls:'vc-active'}");
        }
        else if (number > 800 && number < 1400) {
-         this.renderer.setAttribute(this.gallery.nativeElement, 'data-vc-scrollspy', '{cls:'vc-active'}');
+         this.renderer.setAttribute(this.vcgallery.nativeElement, 'data-vc-scrollspy', "{cls:'vc-active'}");
        }
        else if (number > 2300 && number < 2800) {
-         this.renderer.setAttribute(this.events.nativeElement, 'data-vc-scrollspy', '{cls:'vc-active'}');
+         this.renderer.setAttribute(this.calEvents.nativeElement, 'data-vc-scrollspy', "{cls:'vc-active'}");
        }
        else if (number > 3000 && number < 4000) {
-         this.renderer.setAttribute(this.org.nativeElement, 'data-vc-scrollspy', '{cls:'vc-active'}');
+         this.renderer.setAttribute(this.org.nativeElement, 'data-vc-scrollspy', "{cls:'vc-active'}");
        }
        else if (number > 4000 && number < 5000) {
-         this.renderer.setAttribute(this.subscribe.nativeElement, 'data-vc-scrollspy', '{cls:'vc-active'}');
+         this.renderer.setAttribute(this.subscribe.nativeElement, 'data-vc-scrollspy', "{cls:'vc-active'}");
        }
        else if (number > 5000 && number < 6000) {
-         this.renderer.setAttribute(this.classes.nativeElement, 'data-vc-scrollspy', '{cls:'vc-active'}');
+         this.renderer.setAttribute(this.classes.nativeElement, 'data-vc-scrollspy', "{cls:'vc-active'}");
        }
        else if (number > 6000) {
-         this.renderer.setAttribute(this.donate.nativeElement, 'data-vc-scrollspy', '{cls:'vc-active'}');
+         this.renderer.setAttribute(this.donate.nativeElement, 'data-vc-scrollspy', "{cls:'vc-active'}");
        }
-     });*/
+     });
   }
 }
