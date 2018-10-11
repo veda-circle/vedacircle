@@ -37,8 +37,10 @@
             </div>
 
             <div class="vc-position-relative vc-margin-large-bottom vc-width-1-1 container_button">
+
                 <div pageScroll [routerLink]="['/home']" href="#donate"
-                     class="vc-button vc-border-rounded orange_button container_button_message"><a href="#donate">Donate</a>
+                     class="vc-button vc-border-rounded orange_button container_button_subscribe">
+                    Subscribe
                 </div>
                 <div pageScroll [routerLink]="['/home']" href="#subscribe"
                      class="vc-button vc-border-rounded container_button_subscribe">
@@ -103,41 +105,32 @@
     </div>
 </section>
 
-<section #gallery id="gallery" data-vc-scrollspy="vc-active"
-         class="gallery wide_four_item_gallery section vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
-    <h3 class="vc-h3 vc-text-center animated section_title gallery_title">VEDA Gallery</h3>
-    <h4 class="vc-h4 vc-text-center vc-margin-large-bottom animated section_subtitle gallery_subtitle">List of events
+<section #vcgallery id="vcgallery" data-vc-scrollspy="vc-active"
+         class="vcgallery wide_four_item_vcgallery section vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+    <h3 class="vc-h3 vc-text-center animated section_title vcgallery_title">VEDA Gallery</h3>
+    <h4 class="vc-h4 vc-text-center vc-margin-large-bottom animated section_subtitle vcgallery_subtitle">List of events
         happened in the year 2018</h4>
+    <gallery id="vcImages"  [items]="items" thumbPosition="left"></gallery>
     <div class="my-app-custom-plain-container-with-desc">
+
         <div class="vc-grid vc-grid-large">
-            <div class="vc-width-large-1-3 vc-width-medium-1-2 animated vc-text-center vc-margin-large-bottom animated"
-                 *ngFor="let img of images;let i = index">
+            <div class="vc-width-large-1-3 vc-width-medium-1-3 animated vc-text-center vc-margin-large-bottom animated">
+
                 <div class="vc-grid vc-grid-collapse features_block">
                     <div class="vc-width-1-1 vc-margin-bottom animated vc-text-center">
                         <div class=" animated features_logo">
                             <figure class="my-app-custom-image-with-desc animated">
-                                <img [src]="img.modal.img"
-                                     (click)="openImageModalRowDescription(i)"/>
+                               <!-- <img [src]="img.modal.img"
+                                     (click)="openImageModalRowDescription(i)"/>-->
                             </figure>
                         </div>
                     </div>
-                    <div class="vc-width-1-1" style="margin-top:30px">
 
-                        <figure class="my-app-custom-image-with-desc animated">
-                            <figcaption
-                                    class="description">{{img.modal.title ? img.modal.title : 'No description
-                              available'}}
-                            </figcaption>
-                        </figure>
-                        <p class="elements_item_desc animated"
-                           style="color:#333;text-align: justify"> {{img.modal.description}}</p>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <ks-modal-gallery [modalImages]="imageList"
-                      [plainGalleryConfig]="customPlainGalleryRowDescConfig"></ks-modal-gallery>
+
 
 </section>
 

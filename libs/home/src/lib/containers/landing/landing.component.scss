@@ -1,4 +1,3 @@
-
 @import "../../../../../../apps/webapp/src/styles/vc/vc.css";
 
 .more {
@@ -32,7 +31,8 @@
   color: red;
   cursor: pointer;
 }
-.ng-thumb{
+
+.ng-thumb {
   height: 100px;
   float: left;
   display: block;
@@ -82,4 +82,341 @@
     width: 200px;
     align-self: start;
   }
+}
+
+gallery-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+.g-dot {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  z-index: 20
+}
+
+.g-dot-active .g-dot-inner {
+  opacity: 1;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6)
+}
+
+.g-dot-inner {
+  background-color: #fff;
+  margin: 20px 15px;
+  opacity: .6;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  box-shadow: 0 0 1px #000;
+  transition: all ease .2s
+}
+
+.g-nav-next, .g-nav-prev {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 999
+}
+
+.g-nav-next {
+  right: .5em;
+  -webkit-transform: translateY(-50%) perspective(1px);
+  transform: translateY(-50%) perspective(1px)
+}
+
+.g-nav-prev {
+  left: .5em;
+  -webkit-transform: translateY(-50%) perspective(1px) scale(-1, -1);
+  transform: translateY(-50%) perspective(1px) scale(-1, -1)
+}
+
+@media only screen and (max-width: 480px) {
+  .g-nav-next {
+    right: .2em
+  }
+  .g-nav-prev {
+    left: .2em
+  }
+}
+
+.g-items-container {
+  height: 100%
+}
+
+.g-slider {
+  position: absolute;
+  transition: -webkit-transform .4s cubic-bezier(.5, 0, .5, 1);
+  transition: transform .4s cubic-bezier(.5, 0, .5, 1);
+  transition: transform .4s cubic-bezier(.5, 0, .5, 1), -webkit-transform .4s cubic-bezier(.5, 0, .5, 1)
+}
+
+gallery-core[slidingDirection=horizontal] .g-slider {
+  flex-direction: row
+}
+
+gallery-core[slidingDirection=vertical] .g-slider {
+  flex-direction: column
+}
+
+gallery-thumbs {
+  display: block;
+  z-index: 1;
+  overflow: unset
+}
+
+.g-thumbs-container {
+  position: relative;
+  z-index: 206;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  overflow: unset
+}
+
+gallery-core[disableThumb=true] gallery-thumb {
+  cursor: default
+}
+
+gallery-core[thumbPosition=bottom] gallery-thumbs .g-slider, gallery-core[thumbPosition=top] gallery-thumbs .g-slider {
+  flex-direction: row;
+  top: 0;
+  left: 50%
+}
+
+gallery-core[thumbPosition=bottom] gallery-thumb, gallery-core[thumbPosition=top] gallery-thumb {
+  padding: 1px 0 1px 1px
+}
+
+gallery-core[thumbPosition=left] gallery-thumbs .g-slider, gallery-core[thumbPosition=right] gallery-thumbs .g-slider {
+  flex-direction: column;
+  top: 50%;
+  left: 0
+}
+
+gallery-core[thumbPosition=left] gallery-thumb, gallery-core[thumbPosition=right] gallery-thumb {
+  padding: 0 1px 1px
+}
+
+gallery-core[thumbPosition=top] {
+  flex-direction: column
+}
+
+gallery-core[thumbPosition=left] {
+  flex-direction: row
+}
+
+gallery-core[thumbPosition=right] {
+  flex-direction: row-reverse
+}
+
+gallery-core[thumbPosition=bottom] {
+  flex-direction: column-reverse
+}
+
+.g-thumb-loading {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background-color: #ced4da
+}
+
+.g-thumb-loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 1;
+  width: 500%;
+  margin-left: -250%;
+  -webkit-animation: .8s linear infinite phAnimation;
+  animation: .8s linear infinite phAnimation;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, .35) 50%, rgba(255, 255, 255, 0) 54%) 50% 50%
+}
+
+@-webkit-keyframes phAnimation {
+  0% {
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0)
+  }
+  100% {
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0)
+  }
+}
+
+@keyframes phAnimation {
+  0% {
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0)
+  }
+  100% {
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0)
+  }
+}
+
+.g-counter {
+  z-index: 50;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) perspective(1px);
+  transform: translateX(-50%) perspective(1px);
+  bottom: 0;
+  font-size: 10px;
+  padding: 4px 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .5);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px
+}
+
+gallery[gallerize] gallery-item {
+  cursor: pointer
+}
+
+gallery-item, gallery-thumb {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden
+}
+
+gallery-item {
+  z-index: 10
+}
+
+gallery-item video {
+  position: absolute;
+  width: 100%;
+  height: 100%
+}
+
+gallery-item iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%
+}
+
+gallery-thumb {
+  opacity: .5;
+  cursor: pointer;
+  transition: opacity .3s cubic-bezier(.5, 0, .5, 1)
+}
+
+gallery-thumb.g-active-thumb {
+  opacity: 1
+}
+
+.g-image-item {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%
+}
+
+.g-template {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.g-loading {
+  position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  left: 50%;
+  top: 50%;
+  width: 80px;
+  height: 80px
+}
+
+gallery-core[imageSize=contain] gallery-slider .g-image-item {
+  background-size: contain
+}
+
+gallery {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: block;
+  height: 500px;
+  background-color: #000
+}
+
+gallery * {
+  box-sizing: border-box
+}
+
+gallery, gallery-core {
+  position: relative;
+  overflow: hidden
+}
+
+.g-box, .g-slider, gallery-core {
+  display: flex;
+  height: 100%;
+  width: 100%
+}
+
+gallery[fluid] {
+  -webkit-transform: translateX(-50vw);
+  transform: translateX(-50vw);
+  width: 100vw;
+  left: 50%
+}
+
+gallery[fluid][fluid=false] {
+  -webkit-transform: none;
+  transform: none;
+  width: initial;
+  left: initial
+}
+
+.g-no-transition {
+  transition: unset !important
+}
+
+.g-box, gallery-slider {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  order: 1;
+  height: 100%
+}
+
+.g-btn-close svg, gallery-nav svg {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: drop-shadow(0 0 1px #000);
+  filter: drop-shadow(0 0 1px #000);
+  transition: opacity linear .2s;
+  opacity: .6
+}
+
+.g-btn-close svg:hover, gallery-nav svg:hover {
+  opacity: 1
 }

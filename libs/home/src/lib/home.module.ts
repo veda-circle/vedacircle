@@ -13,13 +13,16 @@ import { ScrollToTopModule } from '@vedacircle/scroll-to-top';
 import { SvgViewerModule } from '@vedacircle/svg-viewer';
 import { FeaturesComponent } from './containers/features/features.component';
 import { StickyHeaderDirective } from './components/header/sticky-header.directive';
-import { SlideshowModule } from 'ng-simple-slideshow';
-import { CalendarModule, DateAdapter } from 'angular-calendar';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-import { FlatpickrModule } from 'angularx-flatpickr';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
-import { ModalGalleryModule } from 'angular-modal-gallery';
+import { SlideshowModule } from 'ng-simple-slideshow'; 
+import { NgxPageScrollModule } from 'ngx-page-scroll'; 
 import { FormsModule } from '@angular/forms';
+import { CalendarModule, DateAdapter } from "angular-calendar";
+import { adapterFactory } from "angular-calendar/date-adapters/date-fns";
+import { ModalGalleryModule } from "angular-modal-gallery";
+import { FlatpickrModule } from "angularx-flatpickr";
+import { GalleryModule } from "@ngx-gallery/core";
+import { LightboxModule } from "@ngx-gallery/lightbox";
+import { GallerizeModule } from "@ngx-gallery/gallerize";
 
 @NgModule({
   imports: [
@@ -29,9 +32,12 @@ import { FormsModule } from '@angular/forms';
     SvgViewerModule,
     SlideshowModule,
     NgxPageScrollModule,
-    FormsModule,
-    ModalGalleryModule.forRoot( { shortcuts: ['ctrl+a', 'ctrl+s', 'meta+s'] } ),
     FlatpickrModule.forRoot(),
+    ModalGalleryModule.forRoot({ shortcuts: ["ctrl+a", "ctrl+s", "meta+s"] }),
+    FormsModule,
+    GalleryModule,
+    LightboxModule,
+    GallerizeModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
