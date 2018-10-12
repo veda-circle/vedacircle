@@ -13,14 +13,9 @@ export class HeaderComponent implements OnInit {
   @Select(AuthState.isLoggedIn) isLoggedIn$: Observable<boolean>;
   @ViewChild("navbar") navbar: ElementRef;
   @ViewChild("mobileNav") mobileNav: ElementRef;
+  @ViewChild("newsheader") newsheader: ElementRef;
 
   mobileInitVal = false;
-
-  navigation = [
-    { link: "about", label: "About" },
-    { link: "blog", label: "Blog" },
-    { link: "features", label: "Features" }
-  ];
 
   constructor(private store: Store, private renderer: Renderer2) {
   }
@@ -29,10 +24,15 @@ export class HeaderComponent implements OnInit {
 
     this.renderer.listen("window", "scroll", (event) => {
       const number = window.scrollY;
+
       if (number > 150 || window.pageYOffset > 150) {
+        this.newsheader.nativeElement.style.display = "none";
         this.navbar.nativeElement.classList.add("active");
       } else {
         this.navbar.nativeElement.classList.remove("active");
+      }
+      if (number <= 5 ){
+        this.newsheader.nativeElement.style.display = "block";
       }
     });
   }
@@ -41,11 +41,15 @@ export class HeaderComponent implements OnInit {
     this.mobileInitVal = !this.mobileInitVal;
     if (this.mobileInitVal) {
       this.mobileNav.nativeElement.style.display = "block";
-      this.renderer.setAttribute(this.mobileNav.nativeElement, 'data-vc-scrollspy', "{cls:'vc-active'}");
+      this.renderer.setAttribute(this.mobileNav.nativeElement, "data-vc-scrollspy", "{cls:'vc-active'}");
     } else {
       this.mobileNav.nativeElement.style.display = "none";
-      this.renderer.setAttribute(this.mobileNav.nativeElement, 'data-vc-scrollspy', "{cls:''}");
+      this.renderer.setAttribute(this.mobileNav.nativeElement, "data-vc-scrollspy", "{cls:''}");
     }
+  }
+
+  closeNewsHeader() {
+    this.newsheader.nativeElement.style.display = "none";
   }
 
   public login() {

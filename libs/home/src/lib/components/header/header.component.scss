@@ -79,6 +79,14 @@ header .header_view_left {
   height: 100px;
   margin: 0 20px 0 0;
 }
+
+.close_btn {
+  float: left;
+  height: 100px;
+  color: #000000;
+  background-color:rgba(74, 55, 50, .5);
+  margin: 10px 0px 0px 30px;
+}
 .menu_btn span, .fixed_top_header .side_menu_button > a, .fixed_top_header .popup_menu .line, .fixed_top_header .menu_btn span {
   color: #000000;
 }
@@ -292,4 +300,144 @@ nav.mobile ul li a, nav.mobile ul li h3 {
   text-transform: none;
   line-height: 26px;
   letter-spacing: 0;
+}
+#nav-news-header {
+  z-index: 20000000 !important;
+  height: 275px !important;
+}
+.adjustmargin {
+  //position: relative !important;
+  /* margin-top: 0px !important; */
+  top: auto !important;
+}
+.addcolortonav {
+  //background-color: #ffffff;
+}
+
+.nav--news-header {
+  height: auto;
+  left: 0;
+  position: fixed; background:orange;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: auto;
+  -webkit-touch-callout: none;
+  z-index: 26;
+}
+
+.container_close {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  line-height: 35px;
+  text-align: center;
+  color:rgba(74, 55, 50, .5);
+  font-size: 21px;
+  border: 2px solid rgba(74, 55, 50, .5);
+  border-radius: 100%;
+  transition: opacity 0.3s;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.banner {
+  position: absolute;
+  left: 50%;
+  display: block;
+  margin: 30px -200px;
+  width: 400px;
+  height: 60px;
+  border: 1px solid #8a1;
+  font: normal 30px/60px 'Rye';
+  text-align: center;
+  color: #fff;
+  background: #9b2;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0,0,0,.15) inset,
+  0 6px 10px rgba(0,0,0,.15);
+}
+
+.banner::before,
+.banner::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -70px;
+  top: 24px;
+  display: block;
+  width: 40px;
+  height: 0px;
+  border: 30px solid #9b2;
+  border-right: 20px solid #791;
+  border-bottom-color: #94b81e;
+  border-left-color: transparent;
+  transform: rotate(-5deg);
+}
+
+.banner::after {
+  left: auto;
+  right: -70px;
+  border-left: 20px solid #791;
+  border-right: 30px solid transparent;
+  transform: rotate(5deg);
+}
+/* Flash class and keyframe animation */
+.flashit{
+  color:red;
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 1s infinite;
+}
+@-webkit-keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: .1; }
+  100% { opacity: 1; }
+}
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: .1; }
+  100% { opacity: 1; }
+}
+
+h3{
+  font-size:20px;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 45%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.banner-wrapper > * {
+  flex: 1 100%;
+}
+
+.banner-wrapper > div {
+  width: 100%;
+  text-align:center;
 }
