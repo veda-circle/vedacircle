@@ -34,6 +34,7 @@ export class HeaderComponent implements OnInit {
       }
       if (number <= 5 ){
         this.newsheader.nativeElement.style.display = "block";
+        this.titleBar.nativeElement.style.display = "none";
       }
     });
   }
