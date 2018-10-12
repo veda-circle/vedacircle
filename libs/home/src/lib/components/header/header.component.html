@@ -1,48 +1,59 @@
 
+<div #newsheader id="news-modal-view" class="modal-view">
 
-    <div #newsheader class="row">
-        <div class="column left">
-            <div class="vc-overflow-hidden  vc-border-circle team_container">
-                <img class="team_image" src="./assets/img/bg/periyavva.jpeg" alt="">
+    <!-- Modal content -->
+    <div class="modal-view-content">
+        <span class="close" (click)="closeNewsHeader()">&times;</span>
+        <div class="row">
+            <div class="column left">
+                <div class="vc-overflow-hidden  vc-border-circle team_container">
+                    <img class="team_image" src="./assets/img/bg/periyavva.jpeg" alt="">
+                </div>
             </div>
-        </div>
-        <div class="column middle">
-            <div class="banner-wrapper">
-                <div>
-                    <h1 class="banner">
-                        Shri Kanchi Maha Periyava
-                    </h1>
-                </div>
-                <div style="margin-top:100px;">
-                    <p style="font-size:18px">
-                        125th Jayanthi Maharudra Mahotsavam <br/>DEC 22nd, 23rd and
-                        24th
-                    </p>
+            <div class="column middle">
+                <div class="banner-wrapper">
+                    <div>
+                        <h1 class="banner">
+                            Shri Kanchi Maha Periyava
+                        </h1>
+                    </div>
+                    <div style="margin-top:120px;">
+                        <p style="font-size:22px;color:#fff;">
+                            125th Jayanthi Mahotsava Maharudra Mahauyagna
+                        </p>
+                        <p style="font-size:22px;color:#fff;">
+                           DEC 22nd, 23rd and 24th
+                        </p>
+
+                    </div>
+                    <div style="margin-top:10px;">
+                        <i class="fa fa fa-map-marker"></i> Santan Dharma Temple, 15311 Pioneer Blvd, Norwalk
+                    </div>
+                    <div style="margin-top:20px;width:100%">
+                        <h5 style="font-size:20px;color:#fff;"> For Rutvik Registration: Please
+                            <a href="https://goo.gl/forms/5PxbsJUbSNu0UmXr2" target="_blank"> Click Here</a></h5>
+
+                        <h3 class="flashit" style="margin-top:-5px;font-size:40px;margin-bottom:5px">GRAND EVENT!! All are
+                            invited!!</h3>
+                    </div>
 
                 </div>
-                <div style="margin-top:10px;">
-                    <i class="fa fa fa-map-marker"></i> Santan Dharma Temple, 15311 Pioneer Blvd, Norwalk
-                </div>
-                <div style="margin-top:10px;">
-                    <h5 style="font-size:14px;"> For Rutvik Registration: Please
-                        <a href="https://goo.gl/forms/5PxbsJUbSNu0UmXr2" target="_blank"> Click Here</a></h5>
 
-                    <h3 class="flashit" style="margin-top:-5px;margin-bottom:5px">GRAND EVENT!! All are
-                        invited!!</h3>
+
+            </div>
+            <div class="column right">
+                <div class="vc-overflow-hidden  vc-border-circle team_container">
+                    <img src="./assets/img/bg/arunachaleswarar-unnamalaiyaal.jpg"
+                         class="team_image"/>
                 </div>
 
             </div>
-
-
-        </div>
-        <div class="column right">
-            <div class="vc-overflow-hidden  vc-border-circle team_container">
-                <img src="./assets/img/bg/arunachaleswarar-unnamalaiyaal.jpg"
-                     class="team_image"/>
-            </div>
-
         </div>
     </div>
+
+</div>
+
+
 
 <header class="vc-small-hidden header" #navbar>
 
@@ -149,3 +160,59 @@
     </nav>
 
 </header>
+<section
+        class="vc-responsive-height vc-cover-background vc-position-relative vc-flex vc-flex-middle vc-overflow-hidden grey_overlay container">
+
+    <div>
+        <video width="100%" onloadedmetadata="this.muted=true" autoplay loop  class="video" id="video" playsinline>
+            <source src="./assets/video/RamaMahayagnam.mp4" type="video/mp4">
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <!-- <slideshow #slideshow
+                    [imageUrls]="imageUrls"
+                    [height]="height"
+                    [minHeight]="minHeight"
+                    [arrowSize]="arrowSize"
+                    [showArrows]="showArrows"
+                    [disableSwiping]="disableSwiping"
+                    [autoPlay]="autoPlay"
+                    [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+                    [debug]="debug"
+                    [backgroundSize]="backgroundSize"
+                    [backgroundPosition]="backgroundPosition"
+                    [backgroundRepeat]="backgroundRepeat"
+                    [showDots]="showDots"
+                    [dotColor]="dotColor"
+                    [showCaptions]="showCaptions"
+                    [captionColor]="captionColor"
+                    [captionBackground]="captionBackground"
+                    [lazyLoad]="lazyLoad">
+         </slideshow>-->
+    </div>
+
+    <div class="vc-container vc-container-center vc-width-1-1 vc-text-center vc-position-relative container_block">
+
+        <div #titleBar class="container_block" style="display:none">
+            <h1 class="vc-h1 container_title">VEDA Circle</h1>
+            <h2 class="vc-h2 container_subtitle"></h2>
+            <div class="vc-h2 container_description">A mission to promote Vedic Education Dissemination and Awareness
+            </div>
+
+            <div class="vc-position-relative vc-margin-large-bottom vc-width-1-1 container_button">
+
+                <div pageScroll [routerLink]="['/home']" href="#donate"
+                     class="vc-button vc-border-rounded orange_button container_button_subscribe">
+                    Donate
+                </div>
+                <div pageScroll [routerLink]="['/home']" href="#subscribe"
+                     class="vc-button vc-border-rounded container_button_subscribe">
+                    Subscribe
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div pageScroll [routerLink]="['/home']" href="#about" class="vc-icon-angle-down container_arrow"></div>
+
+
+</section>

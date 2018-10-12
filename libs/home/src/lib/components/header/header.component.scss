@@ -390,7 +390,7 @@ nav.mobile ul li a, nav.mobile ul li h3 {
 }
 /* Flash class and keyframe animation */
 .flashit{
-  color:red;
+  color:yellow;
   -webkit-animation: flash linear 1s infinite;
   animation: flash linear 1s infinite;
 }
@@ -416,16 +416,17 @@ h3{
 }
 
 .left, .right {
-  width: 25%;
+  width: 20%;
 }
 
 .middle {
-  width: 45%;
+  width: 52%;
 }
 
 /* Clear floats after the columns */
 .row:after {
   content: "";
+  margin-top:-100px;
   display: table;
   clear: both;
 }
@@ -440,4 +441,43 @@ h3{
 .banner-wrapper > div {
   width: 100%;
   text-align:center;
+}
+
+.modal-view {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  opacity:0.7 !important;
+}
+
+/* Modal Content/Box */
+.modal-view-content {
+  background-color:rgba(74, 55, 50, .5);
+  color: #fff;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

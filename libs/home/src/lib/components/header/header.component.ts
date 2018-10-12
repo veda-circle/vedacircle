@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild("navbar") navbar: ElementRef;
   @ViewChild("mobileNav") mobileNav: ElementRef;
   @ViewChild("newsheader") newsheader: ElementRef;
+  @ViewChild("titleBar") titleBar: ElementRef;
 
   mobileInitVal = false;
 
@@ -50,6 +51,7 @@ export class HeaderComponent implements OnInit {
 
   closeNewsHeader() {
     this.newsheader.nativeElement.style.display = "none";
+    this.titleBar.nativeElement.style.display = "block";
   }
 
   public login() {
