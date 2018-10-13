@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild("mobilenewsheader") mobileNewsHeader: ElementRef;
 
   mobileInitVal = false;
-  toggleNews = false;
+  toggleNews = true;
   constructor(private store: Store, private renderer: Renderer2) {
   }
 
@@ -61,7 +61,7 @@ export class HeaderComponent implements OnInit {
         this.newsheader.nativeElement.classList.add("vc-visible-large");
         this.newsheader1.nativeElement.classList.add("vc-hidden-large");
       }
-    }, 9000);
+    }, 5000);
   }
 
   toggleMobileNav() {
