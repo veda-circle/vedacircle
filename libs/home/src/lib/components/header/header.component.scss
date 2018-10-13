@@ -414,7 +414,10 @@ h3{
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
-
+.mobile-column{
+  float: left;
+  padding: 10px;
+}
 .left, .right {
   width: 20%;
 }
@@ -480,4 +483,9 @@ h3{
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.mobile_image {
+  min-width: 100px;
+  min-height: 100px;
 }

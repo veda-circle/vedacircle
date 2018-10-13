@@ -1,5 +1,4 @@
-
-<div #newsheader id="news-modal-view" class="modal-view">
+<div #newsheader id="news-modal-view" class="modal-view vc-hidden-small">
 
     <!-- Modal content -->
     <div class="modal-view-content">
@@ -22,7 +21,7 @@
                             125th Jayanthi Mahotsava Maharudra Mahayagna
                         </p>
                         <p style="font-size:22px;color:#fff;">
-                           DEC 22nd, 23rd and 24th
+                            DEC 22nd, 23rd and 24th
                         </p>
 
                     </div>
@@ -33,7 +32,8 @@
                         <h5 style="font-size:20px;color:#fff;"> For Rutvik Registration: Please
                             <a href="https://goo.gl/forms/5PxbsJUbSNu0UmXr2" target="_blank"> Click Here</a></h5>
 
-                        <h3 class="flashit" style="margin-top:-5px;font-size:40px;margin-bottom:5px">GRAND EVENT!! All are
+                        <h3 class="flashit" style="margin-top:-5px;font-size:40px;margin-bottom:5px">GRAND EVENT!! All
+                            are
                             invited!!</h3>
                     </div>
 
@@ -53,166 +53,195 @@
 
 </div>
 
+<div #mobilenewsheader class="vc-visible-small">
 
+    <div class="row">
+        <div class="mobile-column left">
+            <div class="vc-overflow-hidden  vc-border-circle team_container">
+                <img class="mobile_image" width="50px" src="./assets/img/bg/periyavva.jpeg" alt="">
+            </div>
+        </div>
+        <div class="mobile-column middle">
 
-<header class="vc-small-hidden header" #navbar>
+            <div style="margin-top:10px;">
+                <p style="font-size:18px;color:#e37820;">
+                    SHRI KANCHI MAHA PERIYAVA
+                </p>
+                <p style="font-size:15px;color:#e37820;">
+                     125th Jayanthi Mahotsava Maharudra Mahayagna
+                </p>
+                <p style="font-size:18px;color:#e37820;">
+                    DEC 22nd, 23rd and 24th
 
-    <nav class="vc-navbar header-nav">
-        <div>
-            <div class="header_view clearfix">
-                <div class="header_view">
-                    <div class="header_bottom clearfix">
-                        <div class="header_view_left">
-                            <div class="menu_btn" (click)="toggleMobileNav()">
+                </p>
+                <i class="fa fa fa-map-marker"></i> Santan Dharma Temple, 15311 Pioneer Blvd, Norwalk
+                <h5 style="font-size:16px;color:#e37820;"> For Rutvik Registration: Please
+                    <a href="https://goo.gl/forms/5PxbsJUbSNu0UmXr2" target="_blank"> Click Here</a></h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <header class="vc-small-hidden header" #navbar>
+
+        <nav class="vc-navbar header-nav">
+            <div>
+                <div class="header_view clearfix">
+                    <div class="header_view">
+                        <div class="header_bottom clearfix">
+                            <div class="header_view_left">
+                                <div class="menu_btn" (click)="toggleMobileNav()">
                                 <span>
                                     <i class="fa fa-bars "></i>
                                 </span>
-                            </div>
-                            <div class="vc_logo_wrap" style="margin-top:5px;height: 75px;">
-                                <div class="vc_logo">
-                                    <a href="https://www.veda-circle.org/"
-                                       style="height: 80px; visibility: visible;">
+                                </div>
+                                <div class="vc_logo_wrap" style="margin-top:5px;height: 75px;">
+                                    <div class="vc_logo">
+                                        <a href="https://www.veda-circle.org/"
+                                           style="height: 80px; visibility: visible;">
 
-                                        <img class="mobile" src="./assets/img/logo.png" alt=""
-                                             style="height: 100%;">
-                                    </a>
+                                            <img class="mobile" src="./assets/img/logo.png" alt=""
+                                                 style="height: 100%;">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="vc-hidden-large" style="margin-bottom: 15px">
+                    <div class="vc-container vc-container-center">
+                        <br/><br/>
                     </div>
                 </div>
             </div>
-            <div class="vc-hidden-large" style="margin-bottom: 15px">
-                <div class="vc-container vc-container-center">
-                    <br/><br/>
+            <div class="vc-hidden-small vc-container vc-container-center">
+
+                <div class="vc-navbar-flip vc-visible-large">
+
+                    <ul class="vc-navbar-nav header-nav-list">
+                        <li class="header_nav_list_item">
+                            <a pageScroll class="link_features header_nav_list_item_link"
+                               [routerLink]="['/home']" >Home</a>
+                        </li>
+                        <li class="header_nav_list_item">
+                            <a pageScroll class="link_features header_nav_list_item_link" [routerLink]="['/home']"
+                               href="#about">About</a>
+                        </li>
+                        <li class="header_nav_list_item">
+                            <a pageScroll [routerLink]="['/home']" class="link_offer header_nav_list_item_link"
+                               href="#calEvents">Events</a>
+                        </li>
+                        <li class="header_nav_list_item">
+                            <a pageScroll [routerLink]="['/home']" class="link_pricing header_nav_list_item_link"
+                               href="#vcgallery">Gallery</a>
+                        </li>
+                        <li class="header_nav_list_item">
+                            <a pageScroll [routerLink]="['/home']" class="link_team header_nav_list_item_link"
+                               href="#org">Organization</a>
+                        </li>
+                        <li class="header_nav_list_item">
+                            <a pageScroll [routerLink]="['/home']" class="link_customers header_nav_list_item_link"
+                               href="#classes">Classes</a>
+                        </li>
+                        <li class="header_nav_list_item">
+                            <a pageScroll [routerLink]="['/home']" class="link_customers header_nav_list_item_link"
+                               href="#donate">Donate</a>
+                        </li>
+                    </ul>
+
                 </div>
-            </div>
-        </div>
-        <div class="vc-hidden-small vc-container vc-container-center">
-
-            <div class="vc-navbar-flip vc-visible-large">
-
-                <ul class="vc-navbar-nav header-nav-list">
-                    <li class="header_nav_list_item">
-                        <a pageScroll class="link_features header_nav_list_item_link"
-                           [routerLink]="['/home']" >Home</a>
-                    </li>
-                    <li class="header_nav_list_item">
-                        <a pageScroll class="link_features header_nav_list_item_link" [routerLink]="['/home']"
-                           href="#about">About</a>
-                    </li>
-                    <li class="header_nav_list_item">
-                        <a pageScroll [routerLink]="['/home']" class="link_offer header_nav_list_item_link"
-                           href="#calEvents">Events</a>
-                    </li>
-                    <li class="header_nav_list_item">
-                        <a pageScroll [routerLink]="['/home']" class="link_pricing header_nav_list_item_link"
-                           href="#vcgallery">Gallery</a>
-                    </li>
-                    <li class="header_nav_list_item">
-                        <a pageScroll [routerLink]="['/home']" class="link_team header_nav_list_item_link"
-                           href="#org">Organization</a>
-                    </li>
-                    <li class="header_nav_list_item">
-                        <a pageScroll [routerLink]="['/home']" class="link_customers header_nav_list_item_link"
-                           href="#classes">Classes</a>
-                    </li>
-                    <li class="header_nav_list_item">
-                        <a pageScroll [routerLink]="['/home']" class="link_customers header_nav_list_item_link"
-                           href="#donate">Donate</a>
-                    </li>
-                </ul>
 
             </div>
+        </nav>
+        <nav class="mobile">
+            <ul #mobileNav style="display:none">
+                <li class="linkitem">
+                    <a pageScroll   [routerLink]="['/home']" >Home</a>
+                </li>
+                <li class="linkitem">
+                    <a pageScroll [routerLink]="['/home']"
+                       href="#about">About</a>
+                </li>
+                <li class="linkitem">
+                    <a pageScroll [routerLink]="['/home']"
+                       href="#calEvents">Events</a>
+                </li>
+                <li class="linkitem">
+                    <a pageScroll [routerLink]="['/home']"
+                       href="#vcgallery">Gallery</a>
+                </li>
+                <li class="linkitem">
+                    <a pageScroll [routerLink]="['/home']" href="#org">Organization</a>
+                </li>
+                <li class="linkitem">
+                    <a pageScroll [routerLink]="['/home']"
+                       href="#classes">Classes</a>
+                </li>
+                <li class="linkitem">
+                    <a pageScroll [routerLink]="['/home']"
+                       href="#donate">Donate</a>
+                </li>
+            </ul>
+        </nav>
 
-        </div>
-    </nav>
-    <nav class="mobile">
-        <ul #mobileNav style="display:none">
-            <li class="linkitem">
-                <a pageScroll   [routerLink]="['/home']" >Home</a>
-            </li>
-            <li class="linkitem">
-                <a pageScroll [routerLink]="['/home']"
-                   href="#about">About</a>
-            </li>
-            <li class="linkitem">
-                <a pageScroll [routerLink]="['/home']"
-                   href="#calEvents">Events</a>
-            </li>
-            <li class="linkitem">
-                <a pageScroll [routerLink]="['/home']"
-                   href="#vcgallery">Gallery</a>
-            </li>
-            <li class="linkitem">
-                <a pageScroll [routerLink]="['/home']" href="#org">Organization</a>
-            </li>
-            <li class="linkitem">
-                <a pageScroll [routerLink]="['/home']"
-                   href="#classes">Classes</a>
-            </li>
-            <li class="linkitem">
-                <a pageScroll [routerLink]="['/home']"
-                   href="#donate">Donate</a>
-            </li>
-        </ul>
-    </nav>
+    </header>
+    <section
+            class="vc-responsive-height vc-cover-background vc-position-relative vc-flex vc-flex-middle vc-overflow-hidden grey_overlay container">
 
-</header>
-<section
-        class="vc-responsive-height vc-cover-background vc-position-relative vc-flex vc-flex-middle vc-overflow-hidden grey_overlay container">
-
-    <div>
-        <video width="100%" onloadedmetadata="this.muted=true" autoplay loop  class="video" id="video" playsinline>
-            <source src="./assets/video/RamaMahayagnam.mp4" type="video/mp4">
-            Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
-        <!-- <slideshow #slideshow
-                    [imageUrls]="imageUrls"
-                    [height]="height"
-                    [minHeight]="minHeight"
-                    [arrowSize]="arrowSize"
-                    [showArrows]="showArrows"
-                    [disableSwiping]="disableSwiping"
-                    [autoPlay]="autoPlay"
-                    [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
-                    [debug]="debug"
-                    [backgroundSize]="backgroundSize"
-                    [backgroundPosition]="backgroundPosition"
-                    [backgroundRepeat]="backgroundRepeat"
-                    [showDots]="showDots"
-                    [dotColor]="dotColor"
-                    [showCaptions]="showCaptions"
-                    [captionColor]="captionColor"
-                    [captionBackground]="captionBackground"
-                    [lazyLoad]="lazyLoad">
-         </slideshow>-->
-    </div>
-
-    <div class="vc-container vc-container-center vc-width-1-1 vc-text-center vc-position-relative container_block">
-
-        <div #titleBar class="container_block" style="display:none">
-            <h1 class="vc-h1 container_title">VEDA Circle</h1>
-            <h2 class="vc-h2 container_subtitle"></h2>
-            <div class="vc-h2 container_description">A mission to promote Vedic Education Dissemination and Awareness
-            </div>
-
-            <div class="vc-position-relative vc-margin-large-bottom vc-width-1-1 container_button">
-
-                <div pageScroll [routerLink]="['/home']" href="#donate"
-                     class="vc-button vc-border-rounded orange_button container_button_subscribe">
-                    Donate
-                </div>
-                <div pageScroll [routerLink]="['/home']" href="#subscribe"
-                     class="vc-button vc-border-rounded container_button_subscribe">
-                    Subscribe
-                </div>
-            </div>
+        <div>
+            <video width="100%" onloadedmetadata="this.muted=true" autoplay loop class="video" id="video" playsinline>
+                <source src="./assets/video/RamaMahayagnam.mp4" type="video/mp4">
+                Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <!-- <slideshow #slideshow
+                        [imageUrls]="imageUrls"
+                        [height]="height"
+                        [minHeight]="minHeight"
+                        [arrowSize]="arrowSize"
+                        [showArrows]="showArrows"
+                        [disableSwiping]="disableSwiping"
+                        [autoPlay]="autoPlay"
+                        [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+                        [debug]="debug"
+                        [backgroundSize]="backgroundSize"
+                        [backgroundPosition]="backgroundPosition"
+                        [backgroundRepeat]="backgroundRepeat"
+                        [showDots]="showDots"
+                        [dotColor]="dotColor"
+                        [showCaptions]="showCaptions"
+                        [captionColor]="captionColor"
+                        [captionBackground]="captionBackground"
+                        [lazyLoad]="lazyLoad">
+             </slideshow>-->
         </div>
 
-    </div>
-    <div pageScroll [routerLink]="['/home']" href="#about" class="vc-icon-angle-down container_arrow"></div>
+        <div class="vc-container vc-container-center vc-width-1-1 vc-text-center vc-position-relative container_block">
+
+            <div #titleBar class="container_block vc-hidden-large" >
+                <h1 class="vc-h1 container_title">VEDA Circle</h1>
+                <h2 class="vc-h2 container_subtitle"></h2>
+                <div class="vc-h2 container_description">A mission to promote Vedic Education Dissemination and
+                    Awareness
+                </div>
+
+                <div class="vc-position-relative vc-margin-large-bottom vc-width-1-1 container_button">
+
+                    <div pageScroll [routerLink]="['/home']" href="#donate"
+                         class="vc-button vc-border-rounded orange_button container_button_subscribe">
+                        Donate
+                    </div>
+                    <div pageScroll [routerLink]="['/home']" href="#subscribe"
+                         class="vc-button vc-border-rounded container_button_subscribe">
+                        Subscribe
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div pageScroll [routerLink]="['/home']" href="#about" class="vc-icon-angle-down container_arrow"></div>
 
 
-</section>
+    </section>
