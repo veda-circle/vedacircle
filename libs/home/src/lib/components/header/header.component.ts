@@ -14,11 +14,12 @@ export class HeaderComponent implements OnInit {
   @ViewChild("navbar") navbar: ElementRef;
   @ViewChild("mobileNav") mobileNav: ElementRef;
   @ViewChild("newsheader") newsheader: ElementRef;
+  @ViewChild("newsheader1") newsheader1: ElementRef;
   @ViewChild("titleBar") titleBar: ElementRef;
   @ViewChild("mobilenewsheader") mobileNewsHeader: ElementRef;
 
   mobileInitVal = false;
-
+  toggleNews = false;
   constructor(private store: Store, private renderer: Renderer2) {
   }
 
@@ -29,21 +30,38 @@ export class HeaderComponent implements OnInit {
 
       if (number > 150 || window.pageYOffset > 150) {
         this.newsheader.nativeElement.style.display = "none";
+        this.newsheader1.nativeElement.style.display = "none";
         //this.mobileNewsHeader.nativeElement.classList.add('vc-hidden-small');
-       // this.mobileNewsHeader.nativeElement.classList.add('vc-visible-small');
+        // this.mobileNewsHeader.nativeElement.classList.add('vc-visible-small');
         this.navbar.nativeElement.classList.add("active");
       } else {
         this.navbar.nativeElement.classList.remove("active");
       }
-      if (number <= 5 ){
+      if (number <= 5) {
         this.newsheader.nativeElement.style.display = "block";
+        this.newsheader1.nativeElement.style.display = "block";
         //this.mobileNewsHeader.nativeElement.classList.remove('vc-visible-small');
         //this.mobileNewsHeader.nativeElement.classList.add('vc-hidden-small');
         this.titleBar.nativeElement.style.display = "none";
-        this.titleBar.nativeElement.classList.add('vc-hidden-large');
-        this.titleBar.nativeElement.classList.remove('vc-visible-large');
+        this.titleBar.nativeElement.classList.add("vc-hidden-large");
+        this.titleBar.nativeElement.classList.remove("vc-visible-large");
       }
     });
+
+    setInterval(() => {
+      this.toggleNews = !this.toggleNews;
+      if( this.toggleNews ){
+        this.newsheader1.nativeElement.classList.remove("vc-hidden-large");
+        this.newsheader1.nativeElement.classList.add("vc-visible-large");
+        this.newsheader.nativeElement.classList.add("vc-hidden-large");
+        console.log( this.toggleNews)
+      }else{
+        console.log( this.toggleNews + 's')
+        this.newsheader.nativeElement.classList.remove("vc-hidden-large");
+        this.newsheader.nativeElement.classList.add("vc-visible-large");
+        this.newsheader1.nativeElement.classList.add("vc-hidden-large");
+      }
+    }, 9000);
   }
 
   toggleMobileNav() {
@@ -59,9 +77,10 @@ export class HeaderComponent implements OnInit {
 
   closeNewsHeader() {
     this.newsheader.nativeElement.style.display = "none";
-    this.titleBar.nativeElement.style.display = "block";
-    this.titleBar.nativeElement.classList.remove('vc-hidden-large');
-    this.titleBar.nativeElement.classList.add('vc-visible-large');
+    this.newsheader1.nativeElement.style.display = "none";
+    // this.titleBar.nativeElement.style.display = "block";
+    this.titleBar.nativeElement.classList.remove("vc-hidden-large");
+    this.titleBar.nativeElement.classList.add("vc-visible-large");
   }
 
   public login() {
