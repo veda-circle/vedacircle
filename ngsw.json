@@ -9,7 +9,7 @@
       "urls": [
         "/vedacircle/1.922cb49fa80c8599bbde.js",
         "/vedacircle/10.fc506ef4937266364596.js",
-        "/vedacircle/11.cbea5850baaae67e38b7.js",
+        "/vedacircle/11.3be7bc5985f78416547c.js",
         "/vedacircle/2.c63ca7db487c840c4799.js",
         "/vedacircle/3.fe41e893f8846d7bbd6f.js",
         "/vedacircle/4.9a8db3a3f17590caa5a9.js",
@@ -23,7 +23,7 @@
         "/vedacircle/index.html",
         "/vedacircle/main.3bee8a3d4b2f25949f93.js",
         "/vedacircle/polyfills.f0eb008a322d837d9530.js",
-        "/vedacircle/runtime.ce5513351823d6e8fd31.js",
+        "/vedacircle/runtime.b1590ed825c601285e64.js",
         "/vedacircle/styles.24b49cd92a2085408b19.css"
       ],
       "patterns": []
@@ -126,6 +126,7 @@
         "/vedacircle/assets/img/gallery/board/panditsivaramakrishnan.jpg",
         "/vedacircle/assets/img/gallery/board/savithri.png",
         "/vedacircle/assets/img/gallery/board/sridhar.png",
+        "/vedacircle/assets/img/gallery/board/venu.jpg",
         "/vedacircle/assets/img/gallery/dp2015/IMG_1251.JPG",
         "/vedacircle/assets/img/gallery/dp2015/IMG_1260.JPG",
         "/vedacircle/assets/img/gallery/dp2015/IMG_1261.JPG",
@@ -213,7 +214,7 @@
   "hashTable": {
     "/vedacircle/1.922cb49fa80c8599bbde.js": "b49fb7c234059260558932e6c083f5e96ef7bccd",
     "/vedacircle/10.fc506ef4937266364596.js": "ec46c60b9be6f79c1620881bd86890f060bb7ce1",
-    "/vedacircle/11.cbea5850baaae67e38b7.js": "83e581e4b673b7eb9579d4265fc656204be9368d",
+    "/vedacircle/11.3be7bc5985f78416547c.js": "35bdd3d83e650e7f43cc9bc4c05416ea913a11c7",
     "/vedacircle/2.c63ca7db487c840c4799.js": "d1bbc66a173fa6d4c1c5f15d52039a5d5ef3aa6b",
     "/vedacircle/3.fe41e893f8846d7bbd6f.js": "524a4dd0b5fb897478fe961015146149af7dc551",
     "/vedacircle/4.9a8db3a3f17590caa5a9.js": "883c786b950313911bebe54a4d5faff00cf6fab4",
@@ -315,6 +316,7 @@
     "/vedacircle/assets/img/gallery/board/panditsivaramakrishnan.jpg": "641b29c871f4b89d1e7e27c9097d669080d9e396",
     "/vedacircle/assets/img/gallery/board/savithri.png": "941367abf5dbf878e61103ddea2a5b57c3a1552f",
     "/vedacircle/assets/img/gallery/board/sridhar.png": "859adacfe1730d16f87439b70764e68bb2881307",
+    "/vedacircle/assets/img/gallery/board/venu.jpg": "adbee45b6fc4e1140d4bfe260fd012f8a7b97619",
     "/vedacircle/assets/img/gallery/dp2015/IMG_1251.JPG": "8d3e564f4842e6b55253c7a2aed9c5bdc394c64f",
     "/vedacircle/assets/img/gallery/dp2015/IMG_1260.JPG": "87ac617b915fcea499c7a96b4c79b9833526c0f2",
     "/vedacircle/assets/img/gallery/dp2015/IMG_1261.JPG": "46492fa6d1df342a93bccbe01b679c698002dd06",
@@ -386,10 +388,10 @@
     "/vedacircle/assets/video/deepapooja.mp4": "c07aada9c3bdb47ec68eb0af47b09cfe0595c398",
     "/vedacircle/common.d169162bce3d199ec6ac.js": "a9d75954d773373cd01e69e45053521342a014d8",
     "/vedacircle/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/vedacircle/index.html": "151c73ccf677be17e7ead914516a9d2bbb1b99a1",
+    "/vedacircle/index.html": "fc84c933b4b6dfc5614b4e7c117efed63882ff87",
     "/vedacircle/main.3bee8a3d4b2f25949f93.js": "16955e49979922bcb5a094a0c1d68c8a4cd02fc2",
     "/vedacircle/polyfills.f0eb008a322d837d9530.js": "8384154060895c0d45ce448b6f5b4ac06ba69b7b",
-    "/vedacircle/runtime.ce5513351823d6e8fd31.js": "e3daab19a411dea23037a1946167585dfb5e2f99",
+    "/vedacircle/runtime.b1590ed825c601285e64.js": "068b990814c9d294ce65f3e04e606a0f4198168e",
     "/vedacircle/styles.24b49cd92a2085408b19.css": "bd1c0954d375da0a6d9de9c1f7e125e45a4f8cb0"
   },
   "navigationUrls": [
