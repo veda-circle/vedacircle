@@ -9,7 +9,7 @@
       "urls": [
         "/vedacircle/1.922cb49fa80c8599bbde.js",
         "/vedacircle/10.fc506ef4937266364596.js",
-        "/vedacircle/11.3be7bc5985f78416547c.js",
+        "/vedacircle/11.b600ffcec7d1a1aa43d1.js",
         "/vedacircle/2.c63ca7db487c840c4799.js",
         "/vedacircle/3.fe41e893f8846d7bbd6f.js",
         "/vedacircle/4.9a8db3a3f17590caa5a9.js",
@@ -23,7 +23,7 @@
         "/vedacircle/index.html",
         "/vedacircle/main.3bee8a3d4b2f25949f93.js",
         "/vedacircle/polyfills.f0eb008a322d837d9530.js",
-        "/vedacircle/runtime.b1590ed825c601285e64.js",
+        "/vedacircle/runtime.869a02dd7164bbd4acee.js",
         "/vedacircle/styles.24b49cd92a2085408b19.css"
       ],
       "patterns": []
@@ -195,7 +195,8 @@
         "/vedacircle/assets/themes/pink-bluegrey.css",
         "/vedacircle/assets/themes/purple-green.css",
         "/vedacircle/assets/video/RamaMahayagnam.mp4",
-        "/vedacircle/assets/video/deepapooja.mp4"
+        "/vedacircle/assets/video/deepapooja.mp4",
+        "/vedacircle/assets/video/skandashasti.mp4"
       ],
       "patterns": []
     },
@@ -214,7 +215,7 @@
   "hashTable": {
     "/vedacircle/1.922cb49fa80c8599bbde.js": "b49fb7c234059260558932e6c083f5e96ef7bccd",
     "/vedacircle/10.fc506ef4937266364596.js": "ec46c60b9be6f79c1620881bd86890f060bb7ce1",
-    "/vedacircle/11.3be7bc5985f78416547c.js": "35bdd3d83e650e7f43cc9bc4c05416ea913a11c7",
+    "/vedacircle/11.b600ffcec7d1a1aa43d1.js": "c064028c343b9cda1c6a75a64409f28d6ca3172a",
     "/vedacircle/2.c63ca7db487c840c4799.js": "d1bbc66a173fa6d4c1c5f15d52039a5d5ef3aa6b",
     "/vedacircle/3.fe41e893f8846d7bbd6f.js": "524a4dd0b5fb897478fe961015146149af7dc551",
     "/vedacircle/4.9a8db3a3f17590caa5a9.js": "883c786b950313911bebe54a4d5faff00cf6fab4",
@@ -386,12 +387,13 @@
     "/vedacircle/assets/themes/purple-green.css": "e096206fcbf681ff61c096b6023e90e11d456db1",
     "/vedacircle/assets/video/RamaMahayagnam.mp4": "cc0afe16c0082da45b82aea9c8c02d518e68dde0",
     "/vedacircle/assets/video/deepapooja.mp4": "c07aada9c3bdb47ec68eb0af47b09cfe0595c398",
+    "/vedacircle/assets/video/skandashasti.mp4": "069a2ba1db4221b9958b37fbb80ccac25908cbd4",
     "/vedacircle/common.d169162bce3d199ec6ac.js": "a9d75954d773373cd01e69e45053521342a014d8",
     "/vedacircle/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/vedacircle/index.html": "fc84c933b4b6dfc5614b4e7c117efed63882ff87",
+    "/vedacircle/index.html": "97676a631135a6d4d2196c8fe987069b08b8a4fe",
     "/vedacircle/main.3bee8a3d4b2f25949f93.js": "16955e49979922bcb5a094a0c1d68c8a4cd02fc2",
     "/vedacircle/polyfills.f0eb008a322d837d9530.js": "8384154060895c0d45ce448b6f5b4ac06ba69b7b",
-    "/vedacircle/runtime.b1590ed825c601285e64.js": "068b990814c9d294ce65f3e04e606a0f4198168e",
+    "/vedacircle/runtime.869a02dd7164bbd4acee.js": "099a4c5fe0802a9ef72c6e20a42d9d0b2f81fdbc",
     "/vedacircle/styles.24b49cd92a2085408b19.css": "bd1c0954d375da0a6d9de9c1f7e125e45a4f8cb0"
   },
   "navigationUrls": [
