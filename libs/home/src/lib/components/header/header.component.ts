@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild("mobilenewsheader") mobileNewsHeader: ElementRef;
 
   mobileInitVal = false;
-  toggleNews = true;
+  toggleNews = false;
   constructor(private store: Store, private renderer: Renderer2) {
   }
 
@@ -48,20 +48,18 @@ export class HeaderComponent implements OnInit {
       }
     });
 
-    setInterval(() => {
+   /* setInterval(() => {
       this.toggleNews = !this.toggleNews;
       if( this.toggleNews ){
         this.newsheader1.nativeElement.classList.remove("vc-hidden-large");
         this.newsheader1.nativeElement.classList.add("vc-visible-large");
         this.newsheader.nativeElement.classList.add("vc-hidden-large");
-        console.log( this.toggleNews)
       }else{
-        console.log( this.toggleNews + 's')
         this.newsheader.nativeElement.classList.remove("vc-hidden-large");
         this.newsheader.nativeElement.classList.add("vc-visible-large");
         this.newsheader1.nativeElement.classList.add("vc-hidden-large");
       }
-    }, 5000);
+    }, 5000);*/
   }
 
   toggleMobileNav() {
