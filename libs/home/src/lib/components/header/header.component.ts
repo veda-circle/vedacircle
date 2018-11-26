@@ -58,7 +58,7 @@ export class HeaderComponent implements OnInit {
 
       if (number > 150 || window.pageYOffset > 150) {
         this.newsheader.nativeElement.style.display = "none";
-        this.newsheader1.nativeElement.style.display = "none";
+      //  this.newsheader1.nativeElement.style.display = "none";
         //this.mobileNewsHeader.nativeElement.classList.add('vc-hidden-small');
         // this.mobileNewsHeader.nativeElement.classList.add('vc-visible-small');
         this.navbar.nativeElement.classList.add("active");
