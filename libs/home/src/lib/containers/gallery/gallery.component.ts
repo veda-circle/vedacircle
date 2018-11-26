@@ -89,29 +89,22 @@ export class GalleryComponent implements OnInit {
   imagesData = dataImages;
   slides = [
     {
-      img: "./assets/img/gallery/MR-2018/MR-Page1.png",
+      img: "./assets/img/gallery/MR-2018/MR-page1.png",
       name: "Shri Kanchi MahaPeriyavva 125th Jayanthi Maharudra Mahotsavam",
       date: "2018-12-22 to 2018-12-24",
       description: "",
       time: ""
     },
     {
-      img: "./assets/img/gallery/MR-2018/MR-Page2.png",
+      img: "./assets/img/gallery/MR-2018/MR-page2.png",
       name: "Shri Kanchi MahaPeriyavva 125th Jayanthi Maharudra Mahotsavam",
       date: "2018-12-22 to 2018-12-24",
-      description: "",
-      time: ""
-    },
-    {
-      img: "./assets/img/gallery/2018/skandashasti/IMG_4320.jpg",
-      name: "Arupadiveedu Skanda Shasti Event 2018",
-      date: "2018-09-02 to 2018-11-18",
       description: "",
       time: ""
     }
 
   ];
-
+  zoomMode = "hover";
   slideConfig = {
     slidesToShow: 1,
     autoplay: true,

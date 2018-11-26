@@ -120,6 +120,7 @@
     "nest-router": "^1.0.6",
     "ng-simple-slideshow": "^1.2.4",
     "ngx-filepond": "^3.0.0",
+    "ngx-image-zoom": "^0.3.3",
     "ngx-moment": "^3.1.0",
     "ngx-page-scroll": "^5.0.0",
     "ngx-perfect-scrollbar": "^6.3.1",

@@ -30,6 +30,7 @@ import { OrganizationComponent } from "@vedacircle/home/src/lib/containers/organ
 import { ClassesComponent } from "@vedacircle/home/src/lib/containers/classes/classes.component";
 import { ContactusComponent } from "@vedacircle/home/src/lib/containers/contactus/contactus.component";
 import { SubscribeComponent } from "@vedacircle/home/src/lib/containers/subscribe/subscribe.component";
+import { NgxImageZoomModule } from "ngx-image-zoom";
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import { SubscribeComponent } from "@vedacircle/home/src/lib/containers/subscrib
     SvgViewerModule,
     SlideshowModule,
     NgxPageScrollModule,
+    NgxImageZoomModule,
     FlatpickrModule.forRoot(),
     ModalGalleryModule.forRoot({ shortcuts: ["ctrl+a", "ctrl+s", "meta+s"] }),
     FormsModule,

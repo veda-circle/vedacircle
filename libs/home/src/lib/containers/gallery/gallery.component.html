@@ -1,14 +1,18 @@
 <section id="vcgallery"
          class="vcgallery wide_four_item_vcgallery section vc-scrollspy-init-inview vc-scrollspy-inview vc-active">
+
     <h3 class="vc-h3 vc-text-center animated section_title vcgallery_title">VEDA Gallery</h3>
     <h4 class="vc-h4 vc-text-center vc-margin-large-bottom animated section_subtitle vcgallery_subtitle">List of
         upcoming events
         happening for the year 2018</h4>
     <div class="eventSection">
+
         <ngx-slick class="regular slick-slider" #slickModal="slick-modal" [config]="slideConfig"
                    style="margin-left:25px;margin-right:25px">
-            <div ngxSlickItem *ngFor="let slide of slides" class="slide" id="eventId" style="width:200px;padding:5px;">
-                <img class="imageEvent" src="{{ slide.img }}" alt=""/>
+            <div ngxSlickItem *ngFor="let slide of slides"  id="eventId">
+
+                <ngx-image-zoom [thumbImage]="slide.img"  [magnification]=3 [enableScrollZoom]=true
+                                [zoomMode]="zoomMode" [fullImage]="slide.img"></ngx-image-zoom>
                 <h3 class="nameEvent" style="text-align: justify;">
                     {{slide.name}} <br/>{{ slide.date }}
                 </h3>
