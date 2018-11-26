@@ -28,26 +28,27 @@ export class HeaderComponent implements OnInit {
       href: "#config"
     }
   ];
- /* height: string = '400px';
-  minHeight: string;
-  arrowSize: string = '30px';
-  showArrows: boolean = true;
-  disableSwiping: boolean = false;
-  autoPlay: boolean = true;
-  autoPlayInterval: number = 3333;
-  stopAutoPlayOnSlide: boolean = true;
-  debug: boolean = false;
-  backgroundSize: string = 'cover';
-  backgroundPosition: string = 'center center';
-  backgroundRepeat: string = 'no-repeat';
-  showDots: boolean = true;
-  dotColor: string = '#FFF';
-  showCaptions: boolean = true;
-  captionColor: string = '#FFF';
-  captionBackground: string = 'rgba(0, 0, 0, .35)';
-  lazyLoad: boolean = false;
-  hideOnNoSlides: boolean = false;
-  width: string = '100%';*/
+
+  /* height: string = '400px';
+   minHeight: string;
+   arrowSize: string = '30px';
+   showArrows: boolean = true;
+   disableSwiping: boolean = false;
+   autoPlay: boolean = true;
+   autoPlayInterval: number = 3333;
+   stopAutoPlayOnSlide: boolean = true;
+   debug: boolean = false;
+   backgroundSize: string = 'cover';
+   backgroundPosition: string = 'center center';
+   backgroundRepeat: string = 'no-repeat';
+   showDots: boolean = true;
+   dotColor: string = '#FFF';
+   showCaptions: boolean = true;
+   captionColor: string = '#FFF';
+   captionBackground: string = 'rgba(0, 0, 0, .35)';
+   lazyLoad: boolean = false;
+   hideOnNoSlides: boolean = false;
+   width: string = '100%';*/
   constructor(private store: Store, private renderer: Renderer2) {
   }
 
@@ -58,16 +59,17 @@ export class HeaderComponent implements OnInit {
 
       if (number > 150 || window.pageYOffset > 150) {
         this.newsheader.nativeElement.style.display = "none";
-      //  this.newsheader1.nativeElement.style.display = "none";
+        //  this.newsheader1.nativeElement.style.display = "none";
         //this.mobileNewsHeader.nativeElement.classList.add('vc-hidden-small');
         // this.mobileNewsHeader.nativeElement.classList.add('vc-visible-small');
         this.navbar.nativeElement.classList.add("active");
       } else {
         this.navbar.nativeElement.classList.remove("active");
       }
+
       if (number <= 5) {
         this.newsheader.nativeElement.style.display = "block";
-     //   this.newsheader1.nativeElement.style.display = "block";
+        //   this.newsheader1.nativeElement.style.display = "block";
         //this.mobileNewsHeader.nativeElement.classList.remove('vc-visible-small');
         //this.mobileNewsHeader.nativeElement.classList.add('vc-hidden-small');
         this.titleBar.nativeElement.style.display = "none";
@@ -105,6 +107,7 @@ export class HeaderComponent implements OnInit {
     this.newsheader.nativeElement.style.display = "none";
     // this.newsheader1.nativeElement.style.display = "none";
     // this.titleBar.nativeElement.style.display = "block";
+    this.titleBar.nativeElement.style.display = "block";
     this.titleBar.nativeElement.classList.remove("vc-hidden-large");
     this.titleBar.nativeElement.classList.add("vc-visible-large");
   }
