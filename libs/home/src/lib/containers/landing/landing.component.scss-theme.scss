@@ -11,15 +11,15 @@
     }
 
     .default-header-headline {
-      color: mat-color($primary, default-contrast);
+      color: mat-color($primary, lighter);
     }
 
     .default-header-start {
-      color: mat-color($primary);
+      color: mat-color($primary, lighter);
     }
 
-    .default-homepage-row {
-      color: mat-color($foreground, secondary-text);
-    }
+    //.default-homepage-row {
+    //  color: mat-color($foreground, secondary-text);
+    //}
   }
 }

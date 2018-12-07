@@ -1,22 +1,18 @@
-import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  HostBinding,
-  Input,
-  NgZone,
-  OnDestroy
-} from '@angular/core';
-import { fromEvent, merge, Subject } from 'rxjs';
+import { AfterViewInit, Directive, ElementRef, HostBinding, Input, NgZone, OnDestroy } from '@angular/core';
+import { fromEvent, merge } from 'rxjs';
 import { map, switchMap, takeUntil } from 'rxjs/operators';
+import { untilDestroy } from '@vedacircle/ngx-utils';
 
 @Directive({
-  selector: '[draggable]'
+  selector: '[draggable]',
 })
 export class DraggableDirective implements AfterViewInit, OnDestroy {
-  @HostBinding('style.cursor') cursor = 'move';
-  @Input() dragHandle: string;
-  @Input() dragTarget: string;
+  @HostBinding('style.cursor')
+  cursor = 'move';
+  @Input()
+  dragHandle: string;
+  @Input()
+  dragTarget: string;
 
   // Element to be dragged
   private target: HTMLElement;
@@ -24,8 +20,6 @@ export class DraggableDirective implements AfterViewInit, OnDestroy {
   private handle: HTMLElement;
   private delta = { x: 0, y: 0 };
   private offset = { x: 0, y: 0 };
-
-  private destroy$ = new Subject<void>();
 
   constructor(private elementRef: ElementRef, private zone: NgZone) {}
 
@@ -37,9 +31,7 @@ export class DraggableDirective implements AfterViewInit, OnDestroy {
     this.setupEvents();
   }
 
-  public ngOnDestroy(): void {
-    this.destroy$.next();
-  }
+  ngOnDestroy() {}
 
   private setupEvents() {
     this.zone.runOutsideAngular(() => {
@@ -47,31 +39,23 @@ export class DraggableDirective implements AfterViewInit, OnDestroy {
         e.preventDefault();
         return {
           x: e.clientX,
-          y: e.clientY
+          y: e.clientY,
         };
       };
 
       const touchEvents = (e: TouchEvent) => {
         return {
           x: e.changedTouches[0].clientX,
-          y: e.changedTouches[0].clientY
+          y: e.changedTouches[0].clientY,
         };
       };
 
-      const mousedown$ = fromEvent(this.handle, 'mousedown').pipe(
-        map(mouseEvents)
-      );
-      const mousemove$ = fromEvent(document, 'mousemove').pipe(
-        map(mouseEvents)
-      );
+      const mousedown$ = fromEvent(this.handle, 'mousedown').pipe(map(mouseEvents));
+      const mousemove$ = fromEvent(document, 'mousemove').pipe(map(mouseEvents));
       const mouseup$ = fromEvent(document, 'mouseup').pipe(map(mouseEvents));
 
-      const touchstart$ = fromEvent(this.handle, 'touchstart').pipe(
-        map(touchEvents)
-      );
-      const touchmove$ = fromEvent(document, 'touchmove').pipe(
-        map(touchEvents)
-      );
+      const touchstart$ = fromEvent(this.handle, 'touchstart').pipe(map(touchEvents));
+      const touchmove$ = fromEvent(document, 'touchmove').pipe(map(touchEvents));
       const touchend$ = fromEvent(document, 'touchend').pipe(map(touchEvents));
 
       const start$ = merge(mousedown$, touchstart$);
@@ -87,13 +71,13 @@ export class DraggableDirective implements AfterViewInit, OnDestroy {
             map(move => {
               this.delta = {
                 x: move.x - startX,
-                y: move.y - startY
+                y: move.y - startY,
               };
             }),
-            takeUntil(end$)
+            takeUntil(end$),
           );
         }),
-        takeUntil(this.destroy$)
+        untilDestroy(this),
       );
 
       drag$.subscribe(() => {
@@ -104,7 +88,7 @@ export class DraggableDirective implements AfterViewInit, OnDestroy {
         this.translate();
       });
 
-      end$.pipe(takeUntil(this.destroy$)).subscribe(() => {
+      end$.pipe(untilDestroy(this)).subscribe(() => {
         this.offset.x += this.delta.x;
         this.offset.y += this.delta.y;
         this.delta = { x: 0, y: 0 };

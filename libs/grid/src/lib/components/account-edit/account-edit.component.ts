@@ -7,25 +7,25 @@ import { Account, Gender } from '../../models/account.model';
 import { states } from './states';
 import { Observable } from 'rxjs';
 import { EntityFormComponent } from '@vedacircle/shared';
-import * as moment from 'moment';
+import { subYears } from 'date-fns/esm';
 
 @Component({
   selector: 'ngx-account-edit',
   templateUrl: './account-edit.component.html',
-  styleUrls: ['./account-edit.component.scss']
+  styleUrls: ['./account-edit.component.scss'],
 })
 export class AccountEditComponent extends EntityFormComponent<Account> {
   readonly genderOptions = Object.keys(Gender);
   readonly states: string[] = states;
   filteredStates: Observable<string[]>;
 
-  readonly maxDate = moment();
-  readonly minDate = moment().subtract(100, 'years');
+  readonly maxDate = new Date();
+  readonly minDate = subYears(this.maxDate, 100);
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: { title: string; payload: Account },
     public dialogRef: MatDialogRef<AccountEditComponent>,
-    private fb: FormBuilder
+    private fb: FormBuilder,
   ) {
     super(data, dialogRef);
   }
@@ -34,18 +34,14 @@ export class AccountEditComponent extends EntityFormComponent<Account> {
   // tslint:disable-next-line
   ngOnInit() {
     super.ngOnInit();
-    this.filteredStates = this.entityForm
-      .get('address.state')
-      .valueChanges.pipe(
-        startWith(''),
-        map(state => (state ? this.filterStates(state) : this.states.slice()))
-      );
+    this.filteredStates = this.entityForm.get('address.state').valueChanges.pipe(
+      startWith(''),
+      map(state => (state ? this.filterStates(state) : this.states.slice())),
+    );
   }
 
   private filterStates(name: string) {
-    return this.states.filter(
-      state => state.toLowerCase().indexOf(name.toLowerCase()) === 0
-    );
+    return this.states.filter(state => state.toLowerCase().indexOf(name.toLowerCase()) === 0);
   }
 
   buildForm(item: Account) {
@@ -57,19 +53,16 @@ export class AccountEditComponent extends EntityFormComponent<Account> {
         gender: [item.gender || '', Validators.required],
         dob: [item.dob, Validators.required],
         email: [item.email || '', [Validators.required, Validators.email]],
-        phone: [
-          item.phone || '',
-          [Validators.required, Validators.minLength(11)]
-        ],
+        phone: [item.phone || '', [Validators.required, Validators.minLength(11)]],
         company: [item.company || '', Validators.required],
         address: this.fb.group({
           street: [item.address.street || '', Validators.required],
           city: [item.address.city || '', Validators.required],
           state: [item.address.state || '', Validators.required],
-          zip: [item.address.zip || '', Validators.required]
-        })
+          zip: [item.address.zip || '', Validators.required],
+        }),
       },
-      { updateOn: 'blur' }
+      { updateOn: 'blur' },
     );
   }
 }

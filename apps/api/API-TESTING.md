@@ -1,38 +1,43 @@
-API Testing
-===========
+# API Testing
 
 ### Database
+
 ```bash
-mongo -u "mdbuser" -p "cockpit123" --authenticationDatabase "cockpit"
+psql -h <host> -p <port> -u <database>
+psql -h <host> -p <port> -U <username> -W <password> <database>
+
 ```
 
-### REST API 
+### REST API
+
+> Note: you need to pass [access_token](#token)
+
 ```bash
-# create 
+# create
 curl -v -X POST \
-  http://localhost:3000/api/account \
+  http://localhost:3000/api/notifications \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "account123",
     "description": "account description",
-    "email": "sumo@demo.com"
+    "email": "VC@demo.com"
   }' \
 | jq .
 
 # get all
 curl -v -X GET \
-  http://localhost:3000/api/account \
+  http://localhost:3000/api/notifications \
 | jq .
 
-# get one 
+# get one
 curl -v -X GET \
-  http://localhost:3000/api/account/5b3e4e97e2891c9fb3692d15 \
+  http://localhost:3000/api/notifications/1 \
 | jq .
 
 
 # patch
 curl -v -X PATCH \
-  http://localhost:3000/api/account/5b3e4e97e2891c9fb3692d15 \
+  http://localhost:3000/api/notifications/1 \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "wwww"
@@ -41,12 +46,12 @@ curl -v -X PATCH \
 
 # verify if it is patched
 curl -v -X GET \
-  http://localhost:3000/api/account/5b3e4e97e2891c9fb3692d15 \
+  http://localhost:3000/api/notifications/1 \
 | jq .
 
 # replace
 curl -v -X PUT \
-  http://localhost:3000/api/account/5b3e4e97e2891c9fb3692d15 \
+  http://localhost:3000/api/notifications/1 \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "account555",
@@ -56,70 +61,78 @@ curl -v -X PUT \
 
 # verify if it is replaced
 curl -v -X GET \
-  http://localhost:3000/api/account/5b3e4e97e2891c9fb3692d15 \
+  http://localhost:3000/api/notifications/1 \
 | jq .
 
 # delete
 curl -v -X DELETE \
-  http://localhost:3000/api/account/5b3e4e97e2891c9fb3692d15 \
+  http://localhost:3000/api/notifications/1 \
 | jq .
 
 ```
 
-
 ### Email
+
 ```bash
 # send email
 curl -v -X POST \
   http://localhost:3000/api/user/email \
   -H 'Content-Type: application/json' \
   -d '{
-    "title": "sumodmeo",
+    "title": "VCdmeo",
     "name" : "Gabber",
     "comments" : "no comments"
   }' \
 | jq .
 ```
 
-### User
-```bash
-curl -v -X POST \
-  http://localhost:3000/api/user \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "firstName": "dsfds",
-        "lastName": "sdfsf",
-        "email": "sdfsdfddw@sdfsd.com",
-        "accounts": {"ddd": "2342424",
-          "ttt" : { "ddd" : "sadad" }
-        }
-      }' \
-| jq .
-```
+### Token
 
-
-### token
 ```bash
-USERNAME=sumo
+OIDC_ISSUER_URL=https://myroute-is360.a3c1.starter-us-west-1.openshiftapps.com/auth/realms/is360
+OIDC_CLIENT_ID=is360ui
+
+USERNAME=VC3
 PASSWORD=demo
-OIDC_BASE_URL=https://keycloak-is360.7e14.starter-us-west-2.openshiftapps.com/auth/realms/is360
-CLIENT_ID=cockpit
+
+# get URLs
+curl $OIDC_ISSUER_URL/.well-known/openid-configuration | jq .
+#get certs
+curl $OIDC_ISSUER_URL/protocol/openid-connect/certs | jq .
 
 # Get tokens
-response=$(curl -X POST $OIDC_BASE_URL/protocol/openid-connect/token \
+response=$(curl -X POST $OIDC_ISSUER_URL/protocol/openid-connect/token \
  -H "Content-Type: application/x-www-form-urlencoded" \
  -d username=$USERNAME \
  -d password=$PASSWORD \
- -d client_id=$CLIENT_ID \
+ -d client_id=OIDC_CLIENT_ID \
  -d 'grant_type=password' \
  -d 'scope=openid')
 
 access_token=$(echo $response | jq  -r '.access_token')
+refresh_token=$(echo $response | jq  -r '.refresh_token')
 
 echo $access_token
+echo $refresh_token
 
 curl -X GET \
-  http://localhost:3000/api \
-  -H "Authorization: Bearer $access_token" \
-| jq .
+  http://localhost:3000 \
+    -H "Authorization: Bearer $access_token"
+
+curl -X GET \
+  http://localhost:3000/api/notifications \
+    -H "accept: application/json" \
+    -H "Authorization: Bearer $access_token" \
+  | jq .
+
+# Get User Profile
+curl -X POST $OIDC_ISSUER_URL/protocol/openid-connect/userinfo \
+ -H "Content-Type: application/x-www-form-urlencoded" \
+ -d "access_token=$access_token" | jq .
+
+# Logout
+curl -X POST  $OIDC_ISSUER_URL/protocol/openid-connect/logout \
+ -H "Content-Type: application/x-www-form-urlencoded" \
+ -d client_id=$OIDC_CLIENT_ID \
+ -d "refresh_token=$refresh_token" | jq .
 ```

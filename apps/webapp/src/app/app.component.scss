@@ -8,7 +8,6 @@ app-home-layout {
   right: 0;
 }
 
-
 app-root > ngx-sidenav {
   flex: 1;
 }
@@ -19,7 +18,7 @@ app-root > ngx-admin-layout {
   overflow-y: auto;
 }
 
-//SUMO
+//VC
 @media (max-width: 599px) {
   ngx-home-layout {
     top: 92px;

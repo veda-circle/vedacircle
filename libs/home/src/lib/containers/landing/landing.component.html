@@ -1,8 +1,132 @@
 
+<div #newsheader id="news-modal-view" class="modal-view vc-visible-large">
+
+    <div class="modal-view-content">
+        <span class="close" (click)="closeNewsHeader()">&times;</span>
+
+        <div class="row">
+            <div class="column left">
+                <div class="vc-overflow-hidden  vc-border-circle team_container">
+                    <img class="team_image" src="./assets/img/bg/periyavva.jpeg" alt="">
+                </div>
+            </div>
+            <div class="column middle">
+                <div class="banner-wrapper">
+                    <div>
+                        <h1 class="banner">
+                            Shri Kanchi Maha Periyava
+                        </h1>
+                    </div>
+                    <div style="margin-top:120px;">
+                        <p style="font-size:22px;color:#fff;">
+                            125th Jayanthi Mahotsava Maharudra Mahayagna
+                        </p>
+                        <p style="font-size:22px;color:#fff;">
+                            DEC 22nd, 23rd and 24th
+                        </p>
+
+                    </div>
+                    <div style="margin-top:10px;">
+                        <i class="fa fa fa-map-marker"></i> Santan Dharma Temple, 15311 Pioneer Blvd, Norwalk
+                    </div>
+                    <div flex="row" style="margin-top:20px;width:100%">
+                        <h5 style="font-size:20px;color:#fff;"> For Rutvik Registration: Please
+                            <a href="https://goo.gl/forms/5PxbsJUbSNu0UmXr2" target="_blank"> Click Here</a>
+                        </h5>
+                        <h5 style="font-size:20px;color:#fff;"> For Event Details: Please
+                            <a pageScroll [routerLink]="['/home']" href="#events"> Click Here</a>
+                        </h5>
+
+                        <h3 class="flashit" style="margin-top:-5px;font-size:40px;margin-bottom:5px">GRAND
+                            EVENT!!
+                            All
+                            are
+                            invited!!</h3>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="column right">
+                <div class="vc-overflow-hidden  vc-border-circle team_container">
+                    <img src="./assets/img/bg/arunachaleswarar-unnamalaiyaal.jpg"
+                         class="team_image"/>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div #mobilenewsheader class="vc-visible-small">
+
+    <div class="row">
+        <div class="mobile-column left">
+            <div class="vc-overflow-hidden  vc-border-circle team_container">
+                <img class="mobile_image" width="50px" src="./assets/img/bg/periyavva.jpeg" alt="">
+            </div>
+        </div>
+        <div class="mobile-column middle">
+
+            <div style="margin-top:10px;">
+                <p style="font-size:18px;color:#e37820;">
+                    SHRI KANCHI MAHA PERIYAVA
+                </p>
+                <p style="font-size:15px;color:#e37820;">
+                    125th Jayanthi Mahotsava Maharudra Mahayagna
+                </p>
+                <p style="font-size:18px;color:#e37820;">
+                    DEC 22nd, 23rd and 24th
+
+                </p>
+                <i class="fa fa fa-map-marker"></i> Santan Dharma Temple, 15311 Pioneer Blvd, Norwalk
+                <h5 style="font-size:16px;color:#e37820;"> For Rutvik Registration: Please
+                    <a href="https://goo.gl/forms/5PxbsJUbSNu0UmXr2" target="_blank"> Click Here</a></h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section id="banner"
+         class="vc-responsive-height vc-cover-background vc-position-relative vc-flex vc-flex-middle vc-overflow-hidden grey_overlay container">
+    <div>
+       <video width="100%" onloadedmetadata="this.muted=true" autoplay loop class="video" id="video" playsinline>
+            <source src="./assets/video/deepapooja.mp4" type="video/mp4">
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+    </div>
+
+    <div class="vc-container vc-container-center vc-width-1-1 vc-text-center vc-position-relative container_block">
+
+        <div #titleBar class="container_block vc-hidden-large">
+            <h1 class="vc-h1 container_title">VEDA Circle</h1>
+            <h2 class="vc-h2 container_subtitle"></h2>
+            <div class="vc-h2 container_description">A mission to promote Vedic Education Dissemination and
+                Awareness
+            </div>
+
+            <div class="vc-position-relative vc-margin-large-bottom vc-width-1-1 container_button">
+
+                <div pageScroll [routerLink]="['/home']" href="#donate"
+                     class="vc-button vc-border-rounded orange_button container_button_subscribe">
+                    Donate
+                </div>
+                <div pageScroll [routerLink]="['/home']" href="#subscribe"
+                     class="vc-button vc-border-rounded container_button_subscribe">
+                    Subscribe
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div pageScroll [routerLink]="['/home']" href="#about" class="vc-icon-angle-down container_arrow"></div>
+
+</section>
 <ngx-about></ngx-about>
-<ngx-gallery></ngx-gallery>
-<ngx-events></ngx-events>
-<ngx-org></ngx-org>
-<ngx-subscribe></ngx-subscribe>
-<ngx-classes></ngx-classes>
-<ngx-contactus></ngx-contactus>
+<ngx-features></ngx-features>
+<ngx-event></ngx-event>
+<ngx-contact></ngx-contact>

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Crumb } from '@vedacircle/breadcrumbs';
 
 interface State {
   name: string;
@@ -10,9 +11,13 @@ interface State {
   selector: 'ngx-virtual-scroll',
   templateUrl: './virtual-scroll.component.html',
   styleUrls: ['./virtual-scroll.component.scss'],
-  encapsulation: ViewEncapsulation.None
 })
 export class VirtualScrollComponent implements OnInit {
+  crumbs: ReadonlyArray<Crumb> = [
+    { name: 'Dashboard', link: '/dashboard' },
+    { name: 'Experiments', link: '/dashboard/experiments' },
+    { name: 'Virtual Scroll' },
+  ];
   observableData = new BehaviorSubject<number[]>([]);
   states = [
     { name: 'Alabama', capital: 'Montgomery' },
@@ -64,7 +69,7 @@ export class VirtualScrollComponent implements OnInit {
     { name: 'Washington', capital: 'Olympia' },
     { name: 'West Virginia', capital: 'Charleston' },
     { name: 'Wisconsin', capital: 'Madison' },
-    { name: 'Wyoming', capital: 'Cheyenne' }
+    { name: 'Wyoming', capital: 'Cheyenne' },
   ];
   statesObservable = new BehaviorSubject(this.states);
   indexTrackFn = (index: number) => index;
@@ -83,16 +88,18 @@ export class VirtualScrollComponent implements OnInit {
 
   sortBy(prop: 'name' | 'capital') {
     this.statesObservable.next(
-      this.states.map(s => ({ ...s })).sort((a, b) => {
-        const aProp = a[prop],
-          bProp = b[prop];
-        if (aProp < bProp) {
-          return -1;
-        } else if (aProp > bProp) {
-          return 1;
-        }
-        return 0;
-      })
+      this.states
+        .map(s => ({ ...s }))
+        .sort((a, b) => {
+          const aProp = a[prop],
+            bProp = b[prop];
+          if (aProp < bProp) {
+            return -1;
+          } else if (aProp > bProp) {
+            return 1;
+          }
+          return 0;
+        }),
     );
   }
 }

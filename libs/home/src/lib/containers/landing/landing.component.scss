@@ -1,220 +1,239 @@
-@import "../../../../../../apps/webapp/src/styles/vc/vc.css";
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css');
 
+@import '../../../../../../apps/webapp/src/assets/vc/paperkit.css';
 
-.more {
-  position: absolute;
-  /* margin: 0px; */
-  /* top: 0px; */
-  margin-top: 2px;
-  /* word-break: break-word; */
-  background: rgba(0, 0, 0, 0.7);
-  height: 50px;
-  width: 50px;
-  padding-left: 0px;
-  padding-top: 2px;
-  padding-top: 2px;
-  text-align: center;
-}
-
-.list-img {
-  height: 50px;
-  margin-top: 2px;
-  cursor: pointer;
-}
-
-.float-left {
+.close_btn {
   float: left;
-  margin-right: 5px;
-  color: #ffffff;
-}
-
-.float-left a:hover {
-  color: red;
-  cursor: pointer;
-}
-
-.ng-thumb {
   height: 100px;
-  float: left;
-  display: block;
+  color: #000000;
+  background-color:rgba(74, 55, 50, .5);
+  margin: 10px 0px 0px 30px;
+}
+#nav-news-header {
+  z-index: 20000000 !important;
+  height: 275px !important;
+}
+.adjustmargin {
+  //position: relative !important;
+  /* margin-top: 0px !important; */
+  top: auto !important;
+}
+.addcolortonav {
+  //background-color: #ffffff;
+}
+
+.nav--news-header {
+  height: auto;
+  left: 0;
+  position: fixed; background:orange;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: auto;
+  -webkit-touch-callout: none;
+  z-index: 26;
+}
+
+.container_close {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  line-height: 35px;
+  text-align: center;
+  color:rgba(74, 55, 50, .5);
+  font-size: 21px;
+  border: 2px solid rgba(74, 55, 50, .5);
+  border-radius: 100%;
+  transition: opacity 0.3s;
+  z-index: 5;
   cursor: pointer;
-  margin: 4px 4px 0 0;
 }
 
-
-.my-app-custom-plain-container-with-desc {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-
-  figure {
-    margin: 20px;
-    position: relative;
-    text-align: center;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    figcaption {
-      background: rgba(0, 0, 0, .5);
-      color: #fff;
-      font-size: 85%;
-      padding: 5px;
-      position: absolute;
-      bottom: 3px;
-      left: 0;
-      right: 0;
-    }
-  }
-
-  .description {
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .my-app-custom-image-with-desc {
-    height: auto;
-    margin-right: 2px;
-    width: 200px;
-    align-self: start;
-  }
-}
-
-.slick-prev, .slick-next {
+.banner {
+  position: absolute;
+  left: 50%;
   display: block;
-  height: 75px;
-  width: 75px;
-  background-color: #1e2023;
-  border: 2px solid #000;
-  border-radius: 50%;
-}
-@media (max-width: 1022px) and (min-width: 768px) {
-  .slick-next {
-    right: -50px;
-  }
-}
-h3 {
+  margin: 30px -200px;
+  width: 400px;
+  height: 60px;
+  border: 1px solid #8a1;
+  font: normal 30px/60px 'Rye';
+  text-align: center;
   color: #fff;
-  font-family: sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-style: normal;
-  font-weight: 500;
-  text-transform: none;
+  background: #9b2;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0,0,0,.15) inset,
+  0 6px 10px rgba(0,0,0,.15);
 }
-@media (max-width: 1022px) and (min-width: 768px) {
-   .dateOfEvent,  .dateOfEventTime,  .description {
-    font-size: 10px;
-    margin-left: 30%;
-    margin-right: 0px;
-  }
+
+.banner::before,
+.banner::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -70px;
+  top: 24px;
+  display: block;
+  width: 40px;
+  height: 0px;
+  border: 30px solid #9b2;
+  border-right: 20px solid #791;
+  border-bottom-color: #94b81e;
+  border-left-color: transparent;
+  transform: rotate(-5deg);
 }
-@media (max-width: 1022px) and (min-width: 768px) {
-   .nameEvent {
-    margin-left: 30%;
-    font-size: 14px;
-     text-align:center;
-    margin-right: 0px;
-  }
+
+.banner::after {
+  left: auto;
+  right: -70px;
+  border-left: 20px solid #791;
+  border-right: 30px solid transparent;
+  transform: rotate(5deg);
 }
-@media (max-width: 1022px) and (min-width: 768px) {
-  #upcomingEvents {
-    margin-left: 10%;
-    margin-right: 13%;
-  }
+/* Flash class and keyframe animation */
+.flashit{
+  color:yellow;
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 1s infinite;
 }
-.imageEvent {
-  width: 450px;
-  height: 300px;
-  margin-left: 20%;
+@-webkit-keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: .1; }
+  100% { opacity: 1; }
 }
-eventSection {
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 15px;
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: .1; }
+  100% { opacity: 1; }
+}
+
+h3{
+  font-size:20px;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.mobile-column{
+  float: left;
+  padding: 10px;
+}
+.left, .right {
+  width: 20%;
+}
+
+.middle {
+  width: 52%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  margin-top:-100px;
+  display: table;
+  clear: both;
+}
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.banner-wrapper > * {
+  flex: 1 100%;
+}
+
+.banner-wrapper > div {
   width: 100%;
+  text-align:center;
 }
-@media (max-width: 1022px) and (min-width: 768px) {
-  .nameEvent {
-    margin-left: 30%;
-    font-size: 10px;
-    margin-right: 0px;
+
+.modal-view {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  opacity:0.8 !important;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
+
+/* Modal Content/Box */
+.modal-view-content {
+  background-color:rgba(74, 55, 50, .5);
+  color: #fff;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
   }
 }
-#eventId{
-  width: 200px;
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
 }
-@media (max-width: 1022px) and (min-width: 768px) {
-  #eventId {
-    margin-right: 1%;
-    width: 300px;
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity:0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-/* ----------- iPhone 4 and 4S ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2) {
-
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-
-/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2) {
-
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 667px)
-and (-webkit-min-device-pixel-ratio: 2) {
-
+.mobile_image {
+  min-width: 100px;
+  min-height: 100px;
 }
 
-
-/* ----------- iPhone 6+, 7+ and 8+ ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3) {
-
-}
-
-
-/* ----------- iPhone X ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 812px)
-and (-webkit-min-device-pixel-ratio: 3) {
-
-  .imageEvent {
-    width: 300px;
-    height: 300px;
-    margin-left: 0%;
-  }
-  img{
-   // max-width: 0%;
-  }
+.bg_container {
+  width: 230px;
+  height: 270px;
 }

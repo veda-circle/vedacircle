@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Logout } from '@vedacircle/auth';
 import { Store } from '@ngxs/store';
 
 @Component({
   selector: 'ngx-user-menu',
   templateUrl: './user-menu.component.html',
   styleUrls: ['./user-menu.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserMenuComponent implements OnInit {
   isOpen: boolean;
-  @Input() currentUser = null;
+  @Input()
+  currentUser = null;
 
   constructor(private store: Store) {}
 
@@ -28,7 +28,4 @@ export class UserMenuComponent implements OnInit {
     this.isOpen = false;
   }
 
-  public logout() {
-    this.store.dispatch(new Logout());
-  }
 }

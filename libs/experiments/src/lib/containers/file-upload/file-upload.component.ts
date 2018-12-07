@@ -1,11 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 import { Crumb } from '@vedacircle/breadcrumbs';
+import { FileUploadService } from './file-upload.service';
 
 @Component({
   selector: 'ngx-file-upload',
   templateUrl: './file-upload.component.html',
   styleUrls: ['./file-upload.component.scss'],
+  providers: [FileUploadService],
 })
 export class FileUploadComponent {
   crumbs: ReadonlyArray<Crumb> = [
@@ -24,6 +26,20 @@ export class FileUploadComponent {
       const formData = new FormData();
       formData.append(fieldName, file, file.name);
       formData.append(fieldName, JSON.stringify(metadata));
+      this.uploadService.uploadFile(file, {}, 'tenant1').subscribe(
+        data => {
+          this.myPond.removeFiles();
+          this.snackBar.open(`Uploaded Successfully`, '', {
+            duration: 3000,
+          });
+        },
+        err => {
+          console.error(`File Upload Error: ${err.message}`);
+          this.snackBar.open(`File Upload Error: ${err.message}`, '', {
+            duration: 3000,
+          });
+        },
+      );
 
       // Progress indicator supported, set progress to 25% of 1
       progress(true, 0.25, 1);
@@ -52,7 +68,7 @@ export class FileUploadComponent {
       // ...
 
       // Can call the error method if something is wrong, should exit after
-      //error('oh my goodness');
+      // error('oh my goodness');
 
       // Should call the load method when done, no parameters required
       load();
@@ -67,14 +83,14 @@ export class FileUploadComponent {
 
       // Can call the header method to supply FilePond with early response header string
       // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
-      //headers(headersString);
+      // headers(headersString);
 
       // Should call the progress method to update the progress to 100% before calling load
       // (endlessMode, loadedSize, totalSize)
       progress(true, 0, 1024);
 
       // Should call the load method with a file object or blob when done
-      //load(file);
+      // load(file);
 
       // Should expose an abort method so the request can be cancelled
       return {
@@ -102,7 +118,7 @@ export class FileUploadComponent {
     acceptedFileTypes: 'image/*, application/pdf, application/*, text/plain, text/csv, .vsd',
   };
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public snackBar: MatSnackBar, private uploadService: FileUploadService) {}
 
   pondHandleInit() {
     console.log('FilePond has initialised', this.myPond);

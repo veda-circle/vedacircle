@@ -4,7 +4,8 @@
     "node_modules/@nrwl/schematics/src/tslint"
   ],
   "extends": [
-    "rxjs-tslint-rules"
+    "rxjs-tslint-rules",
+    "tslint-config-prettier"
   ],
   "rules": {
     "arrow-return-shorthand": true,
@@ -69,6 +70,7 @@
     ],
     "no-misused-new": true,
     "no-non-null-assertion": true,
+    "no-redundant-jsdoc": true,
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-string-throw": true,

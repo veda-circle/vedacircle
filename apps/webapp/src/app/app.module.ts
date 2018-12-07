@@ -28,7 +28,11 @@ export class MyHammerConfig extends HammerGestureConfig {
         { path: '', redirectTo: 'home', pathMatch: 'full' },
         { path: 'home', loadChildren: '@vedacircle/home#HomeModule', data: { preload: true } },
         { path: 'dashboard', loadChildren: '@vedacircle/dashboard#DashboardModule', data: { preload: true } },
-        { path: '404', loadChildren: '@vedacircle/not-found#NotFoundModule' },
+        {
+          path: '404',
+          loadChildren: '@vedacircle/not-found#NotFoundModule',
+          data: { title: '404', preload: false },
+        },
         // 404 should be last
         { path: '**', redirectTo: '404', pathMatch: 'full' },
       ],
@@ -38,6 +42,7 @@ export class MyHammerConfig extends HammerGestureConfig {
         initialNavigation: 'enabled',
         preloadingStrategy: PreloadAllModules, // TODO: PreloadSelectedModulesList
         paramsInheritanceStrategy: 'always',
+        // enableTracing: true, // enable to debug routing during development
         // onSameUrlNavigation: 'reload'
       },
     ),

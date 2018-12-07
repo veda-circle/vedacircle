@@ -5,11 +5,12 @@ export const environment = {
   production: true,
   envName: 'mock',
 
+  DOCS_BASE_URL: 'http://localhost:8000',
   API_BASE_URL: 'http://localhost:3000/api',
   WS_EVENT_BUS_URL: 'ws://localhost:3000/eventbus',
   auth: {
     clientId: 'is360ui',
-    issuer: 'https://myroute-is360.a3c1.starter-us-west-1.openshiftapps.com/auth/realms/is360'
+    issuer: 'https://myroute-is360.a3c1.starter-us-west-1.openshiftapps.com/auth/realms/is360',
     // issuer: 'https://keycloak-is360.7e14.starter-us-west-2.openshiftapps.com/auth/realms/is360'
-  }
+  },
 };

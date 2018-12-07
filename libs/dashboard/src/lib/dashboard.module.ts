@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@vedacircle/shared';
 
-import { AuthGuard } from '@vedacircle/auth';
 import { ChatBoxModule } from '@vedacircle/chat-box';
 
 import { DashboardLayoutComponent } from './containers/dashboard-layout/dashboard-layout.component';
 import { OverviewComponent } from './containers/overview/overview.component';
+import { SettingsComponent } from './containers/settings/settings.component';
 import { RainbowComponent } from './components/rainbow/rainbow.component';
 import { QuickpanelModule } from '@vedacircle/quickpanel';
 import { ToolbarModule } from '@vedacircle/toolbar';
 import { SidenavModule } from '@vedacircle/sidenav';
-import { environment } from '@env/environment';
+import { ProfileComponent } from './containers/profile/profile.component';
 
 @NgModule({
   imports: [
@@ -21,7 +21,7 @@ import { environment } from '@env/environment';
     QuickpanelModule,
     // FIXME: AOT not working with environment.xyz
     ChatBoxModule.forRoot({
-      accessToken: '37808bf14a19406cbe2a50cfd1332dd3' // environment.dialogFlow.apiToken
+      accessToken: '37808bf14a19406cbe2a50cfd1332dd3', // environment.dialogFlow.apiToken
     }),
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
@@ -29,32 +29,42 @@ import { environment } from '@env/environment';
         path: '',
         component: DashboardLayoutComponent,
        // canActivate: [AuthGuard],
-        data: { animation: 'dashboard' },
+        data: { title: 'Dashboard', depth: 1 },
         children: [
           {
-            path: 'overview',
+            path: '',
             component: OverviewComponent,
-            data: { animation: 'overview' }
+            data: { title: 'Overview' },
           },
           {
-            path: '',
+            path: 'profile',
+            component: ProfileComponent,
+            data: { title: 'Settings', depth: '2' },
+          },
+          {
+            path: 'settings',
+            component: SettingsComponent,
+            data: { title: 'Settings', depth: '2' },
+          },
+          {
+            path: 'widgets',
             loadChildren: '@vedacircle/widgets#WidgetsModule',
-            data: { animation: 'overview', preload: true }
+            data: { title: 'Widgets', depth: '2', preload: false },
           },
           {
             path: 'grid',
             loadChildren: '@vedacircle/grid#GridModule',
-            data: { animation: 'grid', preload: true }
+            data: { title: 'Grid', depth: 2, preload: false },
           },
           {
             path: 'experiments',
             loadChildren: '@vedacircle/experiments#ExperimentsModule',
-            data: { animation: 'experiments' }
-          }
-        ]
-      }
-    ])
+            data: { title: 'Experiments', depth: 2, preload: false },
+          },
+        ],
+      },
+    ]),
   ],
-  declarations: [DashboardLayoutComponent, OverviewComponent, RainbowComponent]
+  declarations: [DashboardLayoutComponent, OverviewComponent, RainbowComponent, ProfileComponent, SettingsComponent],
 })
 export class DashboardModule {}

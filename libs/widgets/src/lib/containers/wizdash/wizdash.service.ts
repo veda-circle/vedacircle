@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { ChartData } from 'chart.js';
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import {environment} from "@env/environment";
+import { environment } from '@env/environment';
 
 import {
   advancedPieChartDemoLabels,
@@ -33,12 +33,10 @@ import {
   salesSummaryDemoLabels,
   top5CategoriesDemoData,
   visitsChartDemoLabels,
-  visitsChartDemoValues
+  visitsChartDemoValues,
 } from '../../demo-data/widget-demo-data';
 
-
 /**
- * @class WizdashService
  * This is just a demo service for populating the charts on the dashboard.
  * You will have to implement a similiar service for the data to be populated.
  * Examples are provided below :)
@@ -46,11 +44,9 @@ import {
 
 @Injectable()
 export class WizdashService {
-
   // url = environment.backend;
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getSales() {
     /**
@@ -63,35 +59,34 @@ export class WizdashService {
 
     // Simulating request from local data
     return of({ labels: salesChartDemoLabels(), data: salesChartDemoValues }).pipe(
-      map(values => this.toSalesChartData(values))
+      map(values => this.toSalesChartData(values)),
     );
   }
 
   /**
    * Converting Data from Server to Chart compatible format
-   * @returns {Chart.ChartData}
    */
-  toSalesChartData(chartData: { labels: string[], data: number[] }) {
+  toSalesChartData(chartData: { labels: string[]; data: number[] }) {
     return {
       labels: chartData.labels,
       datasets: [
         {
           label: '# of Sales',
           data: chartData.data,
-          backgroundColor: '#FFFFFF'
-        }
-      ]
+          backgroundColor: '#FFFFFF',
+        },
+      ],
     } as ChartData;
   }
 
   getVisits() {
     // Simulating request from local data
     return of({ labels: visitsChartDemoLabels(), data: visitsChartDemoValues }).pipe(
-      map(values => this.toVisitsChartData(values))
+      map(values => this.toVisitsChartData(values)),
     );
   }
 
-  toVisitsChartData(chartData: { labels: string[], data: number[] }) {
+  toVisitsChartData(chartData: { labels: string[]; data: number[] }) {
     return {
       labels: chartData.labels,
       datasets: [
@@ -102,20 +97,20 @@ export class WizdashService {
           fill: false,
           borderColor: '#FFFFFF',
           borderWidth: 2,
-          lineTension: 0
-        }
-      ]
+          lineTension: 0,
+        },
+      ],
     } as ChartData;
   }
 
   getClicks() {
     // Simulating request from local data
     return of({ labels: clicksChartDemoLabels(), data: clicksChartDemoValues }).pipe(
-      map(values => this.toClicksChartData(values))
+      map(values => this.toClicksChartData(values)),
     );
   }
 
-  toClicksChartData(chartData: { labels: string[], data: number[] }) {
+  toClicksChartData(chartData: { labels: string[]; data: number[] }) {
     return {
       labels: chartData.labels,
       datasets: [
@@ -126,19 +121,19 @@ export class WizdashService {
           backgroundColor: '#FFFFFF',
           borderColor: '#FFFFFF',
           borderWidth: 2,
-        }
-      ]
+        },
+      ],
     } as ChartData;
   }
 
   getConversions() {
     // Simulating request from local data
     return of({ labels: conversionsChartDemoLabels(), data: conversionsChartDemoValues }).pipe(
-      map(values => this.toConversionsChartData(values))
+      map(values => this.toConversionsChartData(values)),
     );
   }
 
-  toConversionsChartData(chartData: { labels: string[], data: number[] }) {
+  toConversionsChartData(chartData: { labels: string[]; data: number[] }) {
     return {
       labels: chartData.labels,
       datasets: [
@@ -150,53 +145,51 @@ export class WizdashService {
           borderColor: '#FFFFFF',
           borderWidth: 2,
           pointRadius: 0,
-          lineTension: 0
-        }
-      ]
+          lineTension: 0,
+        },
+      ],
     } as ChartData;
   }
 
   getSalesSummary() {
     // Simulating request from local data
     return of({ labels: salesSummaryDemoLabels(), data: salesSummaryDemoData }).pipe(
-      map(values => this.toSalesSummaryChartData(values))
+      map(values => this.toSalesSummaryChartData(values)),
     );
   }
 
-  toSalesSummaryChartData(chartData: { labels: string[], data: { [set: string]: number[] } }) {
+  toSalesSummaryChartData(chartData: { labels: string[]; data: { [set: string]: number[] } }) {
     return {
       labels: chartData.labels,
       datasets: [
         {
           label: 'Revenue',
           backgroundColor: '#7cb342',
-          data: chartData.data.revenue
+          data: chartData.data.revenue,
         },
         {
           label: 'Expenses',
           backgroundColor: '#EEEEEE',
-          data: chartData.data.expenses
-        }
-      ]
+          data: chartData.data.expenses,
+        },
+      ],
     } as ChartData;
   }
 
   getTop5Categories() {
     // Simulating request from local data
-    return of(top5CategoriesDemoData).pipe(
-      map(values => this.toTop5CategoriesChartData(values))
-    );
+    return of(top5CategoriesDemoData).pipe(map(values => this.toTop5CategoriesChartData(values)));
   }
 
-  toTop5CategoriesChartData(chartData: { label: string, value: number }[]) {
+  toTop5CategoriesChartData(chartData: { label: string; value: number }[]) {
     return {
       labels: chartData.map(data => data.label),
       datasets: [
         {
           data: chartData.map(data => data.value),
-          backgroundColor: ['#2196F3', '#009688', '#4CAF50', '#607D8B', '#E91E63']
-        }
-      ]
+          backgroundColor: ['#2196F3', '#009688', '#4CAF50', '#607D8B', '#E91E63'],
+        },
+      ],
     } as ChartData;
   }
 
@@ -204,13 +197,11 @@ export class WizdashService {
     // Simulating request from local data
     return of({
       labels: audienceOverviewUsersDemoLabels(),
-      data: { thisWeek: audienceOverviewUsersDemoData, lastWeek: audienceOverviewUsersDemoDataLastWeek }
-    }).pipe(
-      map(values => this.toAudienceOverviewUsersChartData(values))
-    );
+      data: { thisWeek: audienceOverviewUsersDemoData, lastWeek: audienceOverviewUsersDemoDataLastWeek },
+    }).pipe(map(values => this.toAudienceOverviewUsersChartData(values)));
   }
 
-  toAudienceOverviewUsersChartData(chartData: { labels: string[], data: { [set: string]: number[] } }) {
+  toAudienceOverviewUsersChartData(chartData: { labels: string[]; data: { [set: string]: number[] } }) {
     return {
       labels: chartData.labels,
       datasets: [
@@ -220,7 +211,7 @@ export class WizdashService {
           lineTension: 0,
           fill: false,
           borderColor: '#4285f4',
-          pointRadius: 0
+          pointRadius: 0,
         },
         {
           label: 'Users - Last Week',
@@ -229,9 +220,9 @@ export class WizdashService {
           fill: false,
           borderColor: 'rgba(66, 133, 244, 0.3)',
           borderDash: [3, 5],
-          pointRadius: 0
-        }
-      ]
+          pointRadius: 0,
+        },
+      ],
     } as ChartData;
   }
 
@@ -239,13 +230,11 @@ export class WizdashService {
     // Simulating request from local data
     return of({
       labels: audienceOverviewSessionsDemoLabels(),
-      data: { thisWeek: audienceOverviewSessionsDemoData, lastWeek: audienceOverviewSessionsDemoDataLastWeek }
-    }).pipe(
-      map(values => this.toAudienceOverviewSessionsChartData(values))
-    );
+      data: { thisWeek: audienceOverviewSessionsDemoData, lastWeek: audienceOverviewSessionsDemoDataLastWeek },
+    }).pipe(map(values => this.toAudienceOverviewSessionsChartData(values)));
   }
 
-  toAudienceOverviewSessionsChartData(chartData: { labels: string[], data: { [set: string]: number[] } }) {
+  toAudienceOverviewSessionsChartData(chartData: { labels: string[]; data: { [set: string]: number[] } }) {
     return {
       labels: chartData.labels,
       datasets: [
@@ -264,9 +253,9 @@ export class WizdashService {
           fill: false,
           borderColor: 'rgba(66, 133, 244, 0.3)',
           borderDash: [3, 5],
-          pointRadius: 0
-        }
-      ]
+          pointRadius: 0,
+        },
+      ],
     } as ChartData;
   }
 
@@ -274,13 +263,11 @@ export class WizdashService {
     // Simulating request from local data
     return of({
       labels: audienceOverviewBounceRateDemoLabels(),
-      data: { thisWeek: audienceOverviewBounceRateDemoData, lastWeek: audienceOverviewBounceRateDemoDataLastWeek }
-    }).pipe(
-      map(values => this.toAudienceOverviewBounceRateChartData(values))
-    );
+      data: { thisWeek: audienceOverviewBounceRateDemoData, lastWeek: audienceOverviewBounceRateDemoDataLastWeek },
+    }).pipe(map(values => this.toAudienceOverviewBounceRateChartData(values)));
   }
 
-  toAudienceOverviewBounceRateChartData(chartData: { labels: string[], data: { [set: string]: number[] } }) {
+  toAudienceOverviewBounceRateChartData(chartData: { labels: string[]; data: { [set: string]: number[] } }) {
     return {
       labels: chartData.labels,
       datasets: [
@@ -299,9 +286,9 @@ export class WizdashService {
           fill: false,
           borderColor: 'rgba(66, 133, 244, 0.3)',
           borderDash: [3, 5],
-          pointRadius: 0
-        }
-      ]
+          pointRadius: 0,
+        },
+      ],
     } as ChartData;
   }
 
@@ -309,13 +296,14 @@ export class WizdashService {
     // Simulating request from local data
     return of({
       labels: audienceOverviewSessionDurationDemoLabels(),
-      data: { thisWeek: audienceOverviewSessionDurationDemoData, lastWeek: audienceOverviewSessionDurationDemoLastWeek }
-    }).pipe(
-      map(values => this.toAudienceOverviewSessionDurationChartData(values))
-    );
+      data: {
+        thisWeek: audienceOverviewSessionDurationDemoData,
+        lastWeek: audienceOverviewSessionDurationDemoLastWeek,
+      },
+    }).pipe(map(values => this.toAudienceOverviewSessionDurationChartData(values)));
   }
 
-  toAudienceOverviewSessionDurationChartData(chartData: { labels: string[], data: { [set: string]: number[] } }) {
+  toAudienceOverviewSessionDurationChartData(chartData: { labels: string[]; data: { [set: string]: number[] } }) {
     return {
       labels: chartData.labels,
       datasets: [
@@ -334,9 +322,9 @@ export class WizdashService {
           fill: false,
           borderColor: 'rgba(66, 133, 244, 0.3)',
           borderDash: [3, 5],
-          pointRadius: 0
-        }
-      ]
+          pointRadius: 0,
+        },
+      ],
     } as ChartData;
   }
 
@@ -348,43 +336,43 @@ export class WizdashService {
   getRecentSalesData() {
     return of({
       labels: recentSalesChartDemoLabels(),
-      data: recentSalesChartDemoValues
-    }).pipe(
-      map(values => this.toRecentSalesChartData(values))
-    );
+      data: recentSalesChartDemoValues,
+    }).pipe(map(values => this.toRecentSalesChartData(values)));
   }
 
-  toRecentSalesChartData(chartData: { labels: string[], data: number[] }) {
+  toRecentSalesChartData(chartData: { labels: string[]; data: number[] }) {
     return {
       labels: chartData.labels,
-      datasets: [{
-        label: 'Sales',
-        backgroundColor: '#DBF6F9',
-        borderColor: '#DBF6F9',
-        data: chartData.data,
-        lineTension: 0
-      }]
+      datasets: [
+        {
+          label: 'Sales',
+          backgroundColor: '#DBF6F9',
+          borderColor: '#DBF6F9',
+          data: chartData.data,
+          lineTension: 0,
+        },
+      ],
     };
   }
 
   getAdvancedPieChartData() {
     return of({
       labels: advancedPieChartDemoLabels,
-      data: advancedPieChartDemoValues
-    }).pipe(
-      map(values => this.toAdvancedPieChartData(values))
-    );
+      data: advancedPieChartDemoValues,
+    }).pipe(map(values => this.toAdvancedPieChartData(values)));
   }
 
-  toAdvancedPieChartData(chartData: { labels: string[], data: number[] }) {
+  toAdvancedPieChartData(chartData: { labels: string[]; data: number[] }) {
     return {
       labels: chartData.labels,
-      datasets: [{
-        label: 'Sales',
-        backgroundColor: ['#009688', '#2196F3', '#9C27B0', '#00BCD4', '#F44336', '#FF9800'],
-        borderColor: 'transparent',
-        data: chartData.data,
-      }]
+      datasets: [
+        {
+          label: 'Sales',
+          backgroundColor: ['#009688', '#2196F3', '#9C27B0', '#00BCD4', '#F44336', '#FF9800'],
+          borderColor: 'transparent',
+          data: chartData.data,
+        },
+      ],
     };
   }
 }

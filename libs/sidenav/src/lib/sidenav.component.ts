@@ -5,22 +5,24 @@ import {
   OnDestroy,
   HostBinding,
   ChangeDetectorRef,
-  HostListener
+  HostListener,
+  Inject,
 } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Observable, Subject, Subscription } from 'rxjs';
 
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 import { MenuItem, MenuService, SidenavState } from '@vedacircle/navigator';
+import { untilDestroy } from '@vedacircle/ngx-utils';
+import { WINDOW } from '@vedacircle/core';
 // import { sidenavAnimation } from '@vedacircle/animations';
-import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'ngx-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   // animations: [sidenavAnimation]
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class SidenavComponent implements OnInit, OnDestroy {
   private _destroyed$ = new Subject<void>();
@@ -31,15 +33,16 @@ export class SidenavComponent implements OnInit, OnDestroy {
     private router: Router,
     private menuService: MenuService,
     private snackBar: MatSnackBar,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    @Inject(WINDOW) private window: Window,
   ) {}
 
   ngOnInit() {
-    this.menuService.items$.pipe(takeUntil(this._destroyed$)).subscribe((items: MenuItem[]) => {
+    this.menuService.items$.pipe(untilDestroy(this)).subscribe((items: MenuItem[]) => {
       this.items = items;
     });
 
-    // this.router.events.pipe(takeUntil(this._destroyed$))
+    // this.router.events.pipe(untilDestroy(this))
     //   .subscribe(event => {
     //   if (event instanceof NavigationEnd) {
     //     this.menuService.setCurrentlyOpenByRoute(event.url);
@@ -51,27 +54,24 @@ export class SidenavComponent implements OnInit, OnDestroy {
     // });
   }
 
-  ngOnDestroy() {
-    this._destroyed$.next();
-    this._destroyed$.complete();
-  }
+  ngOnDestroy() {}
 
   toggleIconSidenav() {
     setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
+      this.window.dispatchEvent(new Event('resize'));
     }, 300);
 
     this.menuService.isIconSidenav = !this.menuService.isIconSidenav;
 
     const snackBarConfig: MatSnackBarConfig = <MatSnackBarConfig>{
-      duration: 10000
+      duration: 10000,
     };
 
     if (this.menuService.isIconSidenav) {
       this.snackBar.open(
         'You activated Icon-Sidenav, move your mouse to the content and see what happens!',
         '',
-        snackBarConfig
+        snackBarConfig,
       );
     }
   }

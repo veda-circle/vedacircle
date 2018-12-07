@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FilePondModule, registerPlugin } from 'ngx-filepond';
-import { ScrollingModule as ExperimentalScrollingModule } from '@angular/cdk-experimental/scrolling';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { KnobModule } from '@xmlking/ngx-knob';
+import { InViewportModule } from '@vedacircle/ngx-utils';
 
 import { ClapModule } from '@vedacircle/clap';
 import { LedModule } from '@vedacircle/led';
+import { ImageComparisonModule } from '@vedacircle/image-comparison';
 import { SharedModule } from '@vedacircle/shared';
 import { ContextMenuModule } from '@vedacircle/context-menu';
 import { AnimationsComponent } from './containers/animations/animations.component';
@@ -18,12 +19,15 @@ import { KnobDemoComponent } from './containers/knob-demo/knob-demo.component';
 import { VirtualScrollComponent } from './containers/virtual-scroll/virtual-scroll.component';
 import { StickyTableComponent } from './containers/sticky-table/sticky-table.component';
 import { LedDemoComponent } from './containers/led-demo/led-demo.component';
+import { ImageCompComponent } from './containers/image-comp/image-comp.component';
+import { LayoutComponent } from './containers/layout/layout.component';
+import { CardComponent } from './components/card/card.component';
+import { ViewportComponent } from './containers/viewport/viewport.component';
 
 // Registering plugins
 import * as FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import * as FilepondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
 import * as FilepondPluginImagePreview from 'filepond-plugin-image-preview';
-
 
 registerPlugin(FilePondPluginFileValidateType, FilepondPluginFileValidateSize, FilepondPluginImagePreview);
 
@@ -32,53 +36,69 @@ registerPlugin(FilePondPluginFileValidateType, FilepondPluginFileValidateSize, F
     SharedModule,
     FilePondModule,
     ContextMenuModule,
-    ExperimentalScrollingModule,
     ScrollingModule,
     ClapModule,
     LedModule,
     KnobModule,
+    InViewportModule,
+    ImageComparisonModule,
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
-      { path: '', redirectTo: 'animations', pathMatch: 'full', data: { animation: 'experiments' } },
+      { path: '', redirectTo: 'animations', pathMatch: 'full' },
       {
         path: 'animations',
         component: AnimationsComponent,
-        data: { animations: 'animations' },
+        data: { title: 'Animations', depth: 2 },
       },
       {
         path: 'file-upload',
         component: FileUploadComponent,
-        data: { animation: 'file-upload' },
+        data: { title: 'File Upload', depth: 3 },
       },
       {
         path: 'context-menu',
         component: ContextMenuComponent,
-        data: { animation: 'context-menu' },
+        data: { title: 'Context Menu', depth: 3 },
       },
       {
         path: 'virtual-scroll',
         component: VirtualScrollComponent,
-        data: { animation: 'virtual-scroll' },
+        data: { title: 'Virtual Scroll', depth: 3 },
       },
       {
         path: 'table',
         component: StickyTableComponent,
-        data: { animation: 'sticky-table' },
+        data: { title: 'Sticky Table', depth: 3 },
       },
       {
         path: 'clap',
         component: ClapButtonComponent,
-        data: { animation: 'clap' },
+        data: { title: 'Clap', depth: 3 },
       },
       {
         path: 'led',
         component: LedDemoComponent,
-        data: { animation: 'led' },
+        data: { title: 'Led', depth: 3 },
       },
       {
         path: 'knob',
         component: KnobDemoComponent,
-        data: { animation: 'Knob' },
+        data: { title: 'Knob', depth: 3 },
+      },
+      {
+        path: 'image-comp',
+        component: ImageCompComponent,
+        data: { title: 'ImageComp', depth: 3 },
+      },
+      {
+        path: 'layout',
+        component: LayoutComponent,
+        data: { title: 'Layout', depth: 3 },
+      },
+      {
+        path: 'viewport',
+        component: ViewportComponent,
+        data: { title: 'Viewport', depth: 3 },
       },
     ]),
   ],
@@ -92,6 +112,10 @@ registerPlugin(FilePondPluginFileValidateType, FilepondPluginFileValidateSize, F
     ClapButtonComponent,
     KnobDemoComponent,
     LedDemoComponent,
+    ImageCompComponent,
+    LayoutComponent,
+    CardComponent,
+    ViewportComponent,
   ],
 })
 export class ExperimentsModule {}

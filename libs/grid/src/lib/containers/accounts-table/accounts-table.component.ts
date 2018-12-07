@@ -7,23 +7,24 @@ import { AppConfirmService } from '@vedacircle/app-confirm';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { catchError, tap, concatMap, filter, map, mergeMap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-
+import { format } from 'date-fns/esm';
 import { AccountEditComponent } from '../../components/account-edit/account-edit.component';
-import * as moment from 'moment';
 import { Navigate } from '@ngxs/router-plugin';
 import { Store } from '@ngxs/store';
 import { Crumb } from '@vedacircle/breadcrumbs';
 
+// TODO: search with facets https://github.com/sfeir-open-source/angular-search-experience
+// https://ngx.tools/#/search?q=Go
 @Component({
   selector: 'ngx-accounts-table',
   templateUrl: '../../../../../shared/src/lib/containers/entity/entity.component.html',
-  styleUrls: ['../../../../../shared/src/lib/containers/entity/entity.component.scss']
+  styleUrls: ['../../../../../shared/src/lib/containers/entity/entity.component.scss'],
 })
 export class AccountsTableComponent extends EntitiesComponent<Account, AccountService> {
   crumbs: ReadonlyArray<Crumb> = [
     { name: 'Dashboard', link: '/dashboard' },
     { name: 'Grid', link: '/dashboard/grid' },
-    { name: 'CRUD Table' }
+    { name: 'CRUD Table' },
   ];
 
   // readonly columns = [ { property: 'id'},{ property: 'name'},{ property: 'gender'},{ property: 'age'} ] as EntityColumnDef<Account>[]
@@ -31,12 +32,17 @@ export class AccountsTableComponent extends EntitiesComponent<Account, AccountSe
     // prettier-ignore
     new EntityColumnDef<Account>({ property: 'userId',  header: 'No.',    displayFn: (entity) => `${entity.id}` }),
     // prettier-ignore
+    // tslint:disable:max-line-length
     new EntityColumnDef<Account>({ property: 'Name',    header: 'Name',   displayFn: (entity) => `${entity.first_name} ${entity.last_name}` }),
     new EntityColumnDef<Account>({ property: 'gender', header: 'Gender' }),
     // prettier-ignore
-    new EntityColumnDef<Account>({ property: 'dob',     header: 'DoB',    displayFn: (entity) => `${moment(entity.dob).format('LL')}` }),
+    new EntityColumnDef<Account>({ property: 'dob',     header: 'DoB',    displayFn: (entity) => `${format(entity.dob, 'MMMM dd, yyyy')}` }),
     new EntityColumnDef<Account>({ property: 'city', header: 'City', displayFn: entity => `${entity.address.city}` }),
-    new EntityColumnDef<Account>({ property: 'state', header: 'State', displayFn: entity => `${entity.address.state}` })
+    new EntityColumnDef<Account>({
+      property: 'state',
+      header: 'State',
+      displayFn: entity => `${entity.address.state}`,
+    }),
   ] as EntityColumnDef<Account>[];
 
   // optional
@@ -51,7 +57,7 @@ export class AccountsTableComponent extends EntitiesComponent<Account, AccountSe
     private store: Store,
     private dialog: MatDialog,
     private snack: MatSnackBar,
-    private confirmService: AppConfirmService
+    private confirmService: AppConfirmService,
   ) {
     super(accountService);
   }
@@ -68,7 +74,7 @@ export class AccountsTableComponent extends EntitiesComponent<Account, AccountSe
       catchError(error => {
         this.snack.open(error, 'OK', { duration: 10000 });
         return throwError('Ignore Me!');
-      })
+      }),
     );
   }
 
@@ -108,7 +114,7 @@ export class AccountsTableComponent extends EntitiesComponent<Account, AccountSe
     const dialogRef = this.dialog.open(this.formRef, {
       width: '720px',
       disableClose: true,
-      data: { title: title, payload: entity }
+      data: { title: title, payload: entity },
     });
 
     dialogRef
@@ -117,17 +123,19 @@ export class AccountsTableComponent extends EntitiesComponent<Account, AccountSe
         filter(res => res !== false),
         // tap(res => console.log(res)),
         map((res: Account) => {
-          if (!isNew) res.id = entity.id;
+          if (!isNew) {
+            res.id = entity.id;
+          }
           return res;
         }),
-        concatMap((res: Account) => super.updateOrCreate(res, isNew))
+        concatMap((res: Account) => super.updateOrCreate(res, isNew)),
       )
       .subscribe(
         _ => {
-          this.snack.open(isNew ? 'Member Created!' : 'Member Updated!', 'OK', { duration: 5000 })
-          this.store.dispatch(new Navigate([`/dashboard/grid/crud-table`]))
+          this.snack.open(isNew ? 'Member Created!' : 'Member Updated!', 'OK', { duration: 5000 });
+          this.store.dispatch(new Navigate([`/dashboard/grid/crud-table`]));
         },
-        error => this.snack.open(error, 'OK', { duration: 10000 })
+        error => this.snack.open(error, 'OK', { duration: 10000 }),
       );
   }
 }

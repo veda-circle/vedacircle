@@ -1,13 +1,15 @@
 import { AfterViewInit, Component, Inject, OnDestroy } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { scrollFabAnimation } from '@vedacircle/animations';
-import { PageScrollConfig, PageScrollService, PageScrollInstance } from 'ngx-page-scroll';
-import { map, tap, distinctUntilChanged, throttleTime, takeUntil, share } from 'rxjs/operators';
-import { BehaviorSubject, fromEvent, Subject } from 'rxjs';
+import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll';
+import { distinctUntilChanged, map, share, tap, throttleTime } from 'rxjs/operators';
+import { BehaviorSubject, fromEvent } from 'rxjs';
+import { untilDestroy } from '@vedacircle/ngx-utils';
+import { WINDOW } from '@vedacircle/core';
 
 enum ShowStatus {
   show = 'show',
-  hide = 'hide'
+  hide = 'hide',
 }
 
 @Component({
@@ -17,22 +19,22 @@ enum ShowStatus {
   animations: [scrollFabAnimation],
 })
 export class ScrollToTopComponent implements AfterViewInit, OnDestroy {
-  private _destroyed$ = new Subject<void>();
-
   private _stateSubject = new BehaviorSubject<string>(ShowStatus.hide);
   state$ = this._stateSubject.asObservable();
 
   pageScrollInstance: PageScrollInstance;
 
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
-  }
+  constructor(
+    private pageScrollService: PageScrollService,
+    @Inject(DOCUMENT) private document: any,
+    @Inject(WINDOW) private window: Window,
+  ) {}
 
   ngAfterViewInit() {
     this.pageScrollInstance = PageScrollInstance.simpleInstance(this.document, '#top');
-    const scroll$ = fromEvent(window, 'scroll').pipe(
-      takeUntil(this._destroyed$),
+    const scroll$ = fromEvent(this.window, 'scroll').pipe(
       throttleTime(10),
-      map(() => window.pageYOffset),
+      map(() => this.window.pageYOffset),
       map(y => {
         if (y > 100) {
           return ShowStatus.show;
@@ -43,14 +45,12 @@ export class ScrollToTopComponent implements AfterViewInit, OnDestroy {
       distinctUntilChanged(),
       share(),
       tap(state => this._stateSubject.next(state)),
+      untilDestroy(this),
     );
     scroll$.subscribe();
   }
 
-  ngOnDestroy() {
-    this._destroyed$.next();
-    this._destroyed$.complete();
-  }
+  ngOnDestroy() {}
 
   scrollToTop() {
     this.pageScrollService.start(this.pageScrollInstance);

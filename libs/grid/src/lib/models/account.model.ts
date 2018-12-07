@@ -1,12 +1,11 @@
 import { Entity } from '@vedacircle/shared';
-import * as moment from 'moment';
 
 export class Account extends Entity {
   public id = 0;
   public first_name?: string;
   public last_name?: string;
   public gender?: Gender;
-  public dob?: moment.Moment;
+  public dob?: Date;
   public email?: string;
   public phone?: string;
   public company?: string;
@@ -14,15 +13,10 @@ export class Account extends Entity {
 }
 
 export class Address {
-  constructor(
-    public street?: string,
-    public city?: string,
-    public state?: string,
-    public zip?: string
-  ) {}
+  constructor(public street?: string, public city?: string, public state?: string, public zip?: string) {}
 }
 
 export enum Gender {
   male = 'make',
-  female = 'female'
+  female = 'female',
 }

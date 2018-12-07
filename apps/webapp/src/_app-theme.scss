@@ -10,8 +10,6 @@
 @import '../../../libs/toolbar/src/lib/toolbar.component.scss-theme';
 @import '../../../libs/sidenav/src/lib/sidenav.component.scss-theme';
 @import '../../../libs/chat-box/src/lib/chat-box.component.scss-theme';
-@import '../../../libs/grid/src/lib/containers/accounts-grid-list/accounts-grid-list.component.scss-theme';
-
 @import './styles/global.scss-theme';
 @import './styles/svg-theme';
 
@@ -44,11 +42,7 @@
   @include ngx-header-component-theme($theme);
 
   @include ngx-about-component-theme($theme);
-  @include ngx-breadcrumbs-component-theme($theme);
   @include ngx-toolbar-component-theme($theme);
-  @include ngx-sidenav-component-theme($theme);
-  @include ngx-chat-box-component-theme($theme);
-  @include ngx-accounts-grid-list-component-theme($theme);
 
   @include ngx-global-theme($theme);
 }

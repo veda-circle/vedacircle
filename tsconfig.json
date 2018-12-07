@@ -1,8 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "importHelpers": true,
     "sourceMap": true,
     "declaration": false,
     "module": "es2015",
@@ -10,19 +9,28 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "resolveJsonModule": true,
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2017",
-      "dom"
+      "es2018",
+      "dom",
+      "esnext.array"
     ],
+    "baseUrl": ".",
     "paths": {
       "@vedacircle/*": [
         "libs/*"
       ],
       "@env/*": [
         "apps/webapp/src/environments/*"
+      ],
+      "@env-api/environment": [
+        "apps/api/src/environments/environment.ts"
+      ],
+      "@vedacircle/models": [
+        "libs/models/src/index.ts"
       ],
       "@vedacircle/core": [
         "libs/core/src/index.ts"
@@ -90,9 +98,6 @@
       "@vedacircle/quickpanel": [
         "libs/quickpanel/src/index.ts"
       ],
-      "@vedacircle/ngx-pipes": [
-        "libs/ngx-pipes/src/index.ts"
-      ],
       "@vedacircle/svg-viewer": [
         "libs/svg-viewer/src/index.ts"
       ],
@@ -123,13 +128,28 @@
       "@vedacircle/notifications": [
         "libs/notifications/src/index.ts"
       ],
+      "clap/*": [
+        "dist/clap/*"
+      ],
       "@vedacircle/clap": [
         "libs/clap/src/index.ts"
+      ],
+      "image-comparison/*": [
+        "dist/image-comparison/*"
+      ],
+      "@vedacircle/image-comparison": [
+        "libs/image-comparison/src/index.ts"
+      ],
+      "@vedacircle/ngx-utils": [
+        "libs/ngx-utils/src/index.ts"
       ]
     }
   },
   "exclude": [
     "node_modules",
-    "tmp"
+    "tmp",
+    "dist/**/*",
+    "coverage/**/*",
+    "tools/**/_*files/**/*"
   ]
 }

@@ -3,12 +3,16 @@ import { NotificationsComponent } from './notifications.component';
 import { NgxsModule } from '@ngxs/store';
 
 import { SharedModule } from '@vedacircle/shared';
+import { DateFnsModule } from '@vedacircle/ngx-utils';
 import { NotificationsState } from './notifications.state';
-import { NotificationsService } from './notifications.service';
+import { NotificationsHandler } from './notifications.handler';
+
 @NgModule({
-  imports: [SharedModule, NgxsModule.forFeature([NotificationsState])],
+  imports: [SharedModule, DateFnsModule, NgxsModule.forFeature([NotificationsState])],
   declarations: [NotificationsComponent],
-  providers: [NotificationsService],
   exports: [NotificationsComponent],
 })
-export class NotificationsModule {}
+export class NotificationsModule {
+  // HINT: NotificationsHandler is injected here to initialize it as Module Run Block
+  constructor(notificationsHandler: NotificationsHandler) {}
+}

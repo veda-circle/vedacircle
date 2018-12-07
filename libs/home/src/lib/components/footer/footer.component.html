@@ -1,12 +1,11 @@
-<!--
-<footer class="default-footer">
+<!--<footer class="default-footer">
   <div class="default-footer-list">
     <div class="default-footer-logo">
       <div class="footer-logo">
         <img class="default-footer-angular-logo"
-             src="assets/img/homepage/angular-white-transparent.svg"
+             src="assets/img/homepage/favicon.ico"
              alt="angular">
-        <span><a href="https://angular.io">Learn Angular</a></span>
+        <span><a href="/">OSFI Cloud Computing Service Application</a></span>
       </div>
     </div>
 
@@ -15,28 +14,44 @@
     </div>
 
     <div class="default-footer-copyright">
-      <span>Powered by Sumo ©2010-2018.</span>
+      <span>Powered by Enterprise Engineering Services ©2017-2018.</span>
       <span>Code licensed under an MIT-style License.</span>
       <span>Documentation licensed under CC BY 4.0.</span>
     </div>
   </div>
-</footer>
--->
+</footer>-->
 
-<div class="vc-container vc-container-center vc-text-center">
-  <ul class="vc-list social_list">
-    <li class="social_list_item">
-      <a class="vc-icon-facebook social_list_item_link" href="#"></a>
-    </li>
-    <li class="social_list_item">
-      <a class="vc-icon-twitter social_list_item_link" href="#"></a>
-    </li>
-    <li class="social_list_item">
-      <a class="vc-icon-google-plus social_list_item_link" href="#"></a>
-    </li>
-    <li class="social_list_item">
-      <a class="vc-icon-linkedin social_list_item_link" href="#"></a>
-    </li>
-  </ul>
-  <div class="footer_message">© 2018 Veda Circle. All Rights Reserved</div>
-</div>
+<footer id="footer">
+  <div class="inner">
+    <ul class="contact">
+      <li class="icon fa-home"><strong>Immediate</strong> OSFI Operations Team</li>
+      <li class="icon fa-phone"><strong>Phone</strong> (000) 000-0000</li>
+      <li class="icon fa-envelope"><strong>Email</strong> </li>
+    </ul>
+    <form [formGroup]="entityForm" novalidate (ngSubmit)="onSubmit(entityForm.value)">
+      <h4>Reach US</h4>
+      <div class="fields">
+        <div class="field half"><label for="name">Name</label><input name="name" required  formControlName="name" id="name" type="text"
+                                                                     placeholder="Name"></div>
+        <div class="field half"><label for="email">Email</label><input name="email"  required formControlName="email" id="email" type="email"
+                                                                       placeholder="Email"></div>
+        <div class="field"><label for="message">Message</label><textarea name="message" required formControlName="message" id="message" rows="6"
+                                                                         placeholder="Message"></textarea></div>
+      </div>
+      <ul class="actions">
+        <li>
+          <button mat-raised-button class="button large" [disabled]="entityForm.invalid">Submit</button> </li>
+      </ul>
+    </form>
+  </div>
+  <div class="copyright">
+
+    <div class="default-footer-version">
+      <span class="version">Current Version: {{version}}-{{environment}}</span>
+    </div>
+    <div class="default-footer-copyright">
+      <span>Powered by Enterprise Engineering Services ©2018-2019.</span>
+      <span>Code licensed under an MIT-style License.</span>
+    </div>
+  </div>
+</footer>

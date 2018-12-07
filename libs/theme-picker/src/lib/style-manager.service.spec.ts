@@ -8,14 +8,13 @@ describe('StyleManagerService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
-      providers: [StyleManagerService]
-    }));
-
-  beforeEach(
-    inject([StyleManagerService], (sm: StyleManagerService) => {
-      styleManager = sm;
-    })
+      providers: [StyleManagerService],
+    }),
   );
+
+  beforeEach(inject([StyleManagerService], (sm: StyleManagerService) => {
+    styleManager = sm;
+  }));
 
   afterEach(() => {
     const links = document.head.querySelectorAll('link');

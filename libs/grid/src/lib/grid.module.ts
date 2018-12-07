@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@vedacircle/shared';
 import { AppConfirmModule } from '@vedacircle/app-confirm';
-import { DraggableModule } from '@vedacircle/draggable';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { NgxPipesModule } from '@vedacircle/ngx-pipes';
+import { TruncateModule, HelperModule } from '@vedacircle/ngx-utils';
 import { AccountsGridListComponent } from './containers/accounts-grid-list/accounts-grid-list.component';
 import { AccountsTableComponent } from './containers/accounts-table/accounts-table.component';
 import { AccountService } from './services/account.service';
@@ -15,23 +14,34 @@ import { AccountEditComponent } from './components/account-edit/account-edit.com
 @NgModule({
   imports: [
     SharedModule,
-    DraggableModule,
     DragDropModule,
     AppConfirmModule,
-    NgxPipesModule,
+    TruncateModule,
+    HelperModule,
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
-      { path: '', redirectTo: 'crud-table', pathMatch: 'full', data: { animation: 'grid' } },
-      { path: 'crud-table', component: AccountsTableComponent, data: { animation: 'accounts-table' },
+      { path: '', redirectTo: 'crud-table', pathMatch: 'full' },
+      {
+        path: 'crud-table',
+        component: AccountsTableComponent,
+        data: { title: 'Accounts', depth: 2 },
         children: [
-          { path: ':id', component: AccountDetailComponent, data: { animation: 'account-detail' } },
+          {
+            path: ':id',
+            component: AccountDetailComponent,
+            data: { title: 'Account Detail' },
+          },
         ],
       },
-      { path: 'grid-list', component: AccountsGridListComponent, data: { animation: 'accounts-grid-list' } }
-    ])
+      {
+        path: 'grid-list',
+        component: AccountsGridListComponent,
+        data: { title: 'Accounts Grid-List', depth: 3 },
+      },
+    ]),
   ],
   declarations: [AccountsTableComponent, AccountsGridListComponent, AccountDetailComponent, AccountEditComponent],
   entryComponents: [AccountEditComponent],
-  providers: [AccountService, RandomAccountService]
+  providers: [AccountService, RandomAccountService],
 })
 export class GridModule {}
