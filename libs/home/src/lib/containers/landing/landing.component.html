@@ -1,4 +1,3 @@
-
 <div #newsheader id="news-modal-view" class="modal-view vc-visible-large">
 
     <div class="modal-view-content">
@@ -87,7 +86,22 @@
                 <i class="fa fa fa-map-marker"></i> Santan Dharma Temple, 15311 Pioneer Blvd, Norwalk
                 <h5 style="font-size:16px;color:#e37820;"> For Rutvik Registration: Please
                     <a href="https://goo.gl/forms/5PxbsJUbSNu0UmXr2" target="_blank"> Click Here</a></h5>
+                <h5 style="font-size:16px;color:#e37820;"> For Event Details: Please
+                    <a pageScroll [routerLink]="['/home']" href="#events"> Click Here</a>
+                </h5>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mobile-column left">
+            <div class="vc-overflow-hidden  vc-border-circle icon major">
+                <img class="" width="100px" src="./assets/img/bg/balaperiyava.png" alt="">
+            </div>
+        </div>
+        <div class="mobile-column middle">
+            <h5 style="font-size:16px;color:#e37820;"> Blessings from BALA PERIYAVA Please
+                <a pageScroll [routerLink]="['/home']" href="#events"> Click Here</a>
+            </h5>
         </div>
     </div>
 
@@ -96,7 +110,7 @@
 <section id="banner"
          class="vc-responsive-height vc-cover-background vc-position-relative vc-flex vc-flex-middle vc-overflow-hidden grey_overlay container">
     <div>
-       <video width="100%" onloadedmetadata="this.muted=true" autoplay loop class="video" id="video" playsinline>
+        <video width="100%" onloadedmetadata="this.muted=true" autoplay loop class="video" id="video" playsinline>
             <source src="./assets/video/deepapooja.mp4" type="video/mp4">
             Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
