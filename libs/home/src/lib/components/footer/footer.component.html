@@ -28,30 +28,9 @@
       <li class="icon fa-phone"><strong>Phone</strong> (000) 000-0000</li>
       <li class="icon fa-envelope"><strong>Email</strong> </li>
     </ul>
-    <form [formGroup]="entityForm" novalidate (ngSubmit)="onSubmit(entityForm.value)">
-      <h4>Reach US</h4>
-      <div class="fields">
-        <div class="field half"><label for="name">Name</label><input name="name" required  formControlName="name" id="name" type="text"
-                                                                     placeholder="Name"></div>
-        <div class="field half"><label for="email">Email</label><input name="email"  required formControlName="email" id="email" type="email"
-                                                                       placeholder="Email"></div>
-        <div class="field"><label for="message">Message</label><textarea name="message" required formControlName="message" id="message" rows="6"
-                                                                         placeholder="Message"></textarea></div>
-      </div>
-      <ul class="actions">
-        <li>
-          <button mat-raised-button class="button large" [disabled]="entityForm.invalid">Submit</button> </li>
-      </ul>
-    </form>
+
   </div>
   <div class="copyright">
 
-    <div class="default-footer-version">
-      <span class="version">Current Version: {{version}}-{{environment}}</span>
-    </div>
-    <div class="default-footer-copyright">
-      <span>Powered by Enterprise Engineering Services ©2018-2019.</span>
-      <span>Code licensed under an MIT-style License.</span>
-    </div>
   </div>
 </footer>
