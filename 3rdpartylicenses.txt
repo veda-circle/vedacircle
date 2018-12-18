@@ -1,11 +1,11 @@
 vedacircle
 MIT
 
-scrollbar
-
 breadcrumbs
 
 theme-picker
+
+scrollbar
 
 scroll-to-top
 
