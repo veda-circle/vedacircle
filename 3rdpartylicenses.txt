@@ -1,13 +1,13 @@
 vedacircle
 MIT
 
-scroll-to-top
-
 scrollbar
+
+breadcrumbs
 
 theme-picker
 
-breadcrumbs
+scroll-to-top
 
 notifications
 
@@ -17,9 +17,9 @@ chat-box
 
 context-menu
 
-app-confirm
-
 loading-overlay
+
+app-confirm
 
 image-comparison
 
