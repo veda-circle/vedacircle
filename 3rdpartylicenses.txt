@@ -9,15 +9,15 @@ scrollbar
 
 theme-picker
 
-notifications
-
 led
+
+notifications
 
 chat-box
 
-context-menu
-
 loading-overlay
+
+context-menu
 
 app-confirm
 
