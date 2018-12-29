@@ -5,21 +5,21 @@ breadcrumbs
 
 scroll-to-top
 
-scrollbar
-
 theme-picker
 
-led
+scrollbar
 
 notifications
 
 chat-box
 
-loading-overlay
+led
 
 context-menu
 
 app-confirm
+
+loading-overlay
 
 image-comparison
 
