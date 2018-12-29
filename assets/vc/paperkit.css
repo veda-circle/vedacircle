@@ -1268,7 +1268,8 @@ iframe {
 .vc-cover-background {
   background-position: 50% 50%;
   background-size: cover;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  background-image: url('../../assets/img/gallery/MR-2018/Maharudram.jpg');
 }
 
 .vc-cover {
