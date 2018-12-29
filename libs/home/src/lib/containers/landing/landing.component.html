@@ -1,4 +1,4 @@
-<div #newsheader id="news-modal-view" class="modal-view vc-visible-large">
+<div #newsheader id="news-modal-view" class="modal-view vc-hidden">
 
     <div class="modal-view-content">
         <span class="close" (click)="closeNewsHeader()">&times;</span>
@@ -6,7 +6,7 @@
         <div class="row">
             <div class="column left">
                 <div class="vc-overflow-hidden  vc-border-circle team_container">
-                    <img class="team_image" src="./assets/img/bg/periyavva.jpeg" alt="">
+                    <img class="team_image" src="./assets/img/gallery/periyavva.jpeg" alt="">
                 </div>
             </div>
             <div class="column middle">
@@ -16,7 +16,7 @@
                             Shri Kanchi Maha Periyava
                         </h1>
                     </div>
-                    <div style="margin-top:120px;">
+                    <!--<div style="margin-top:120px;">
                         <p style="font-size:22px;color:#fff;">
                             125th Jayanthi Mahotsava Maharudra Mahayagna
                         </p>
@@ -43,7 +43,7 @@
                             invited!!</h3>
                         <img src="assets/img/gallery/MR-2018/kanchi-letter.png" width="95%" height="25%"
                              title="Maharudram" style="padding-right:20px; padding-bottom:20px;">
-                    </div>
+                    </div>-->
 
                 </div>
 
@@ -61,13 +61,14 @@
     </div>
 
 </div>
+<!--
 
 <div #mobilenewsheader class="vc-visible-small">
 
     <div class="row">
         <div class="mobile-column left">
-            <div class="vc-overflow-hidden  vc-border-circle team_container">
-                <img class="mobile_image" width="50px" src="./assets/img/bg/periyavva.jpeg" alt="">
+            <div class="vc-overflow-hidden  vc-border-circle icon major">
+                <img width="100px" src="./assets/img/gallery/periyavva.jpeg" alt="">
             </div>
         </div>
         <div class="mobile-column middle">
@@ -106,19 +107,20 @@
     </div>
 
 </div>
+-->
 
 <section id="banner"
          class="vc-responsive-height vc-cover-background vc-position-relative vc-flex vc-flex-middle vc-overflow-hidden grey_overlay container">
     <div>
-        <video width="100%" onloadedmetadata="this.muted=true" autoplay loop class="video" id="video" playsinline>
-            <source src="./assets/video/deepapooja.mp4" type="video/mp4">
-            Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
+        <!-- <video width="100%" onloadedmetadata="this.muted=true" autoplay loop class="video" id="video" playsinline>
+             <source src="./assets/video/deepapooja.mp4" type="video/mp4">
+             Your browser does not support the video tag. I suggest you upgrade your browser.
+         </video>-->
     </div>
 
     <div class="vc-container vc-container-center vc-width-1-1 vc-text-center vc-position-relative container_block">
 
-        <div #titleBar class="container_block vc-hidden-large">
+        <div #titleBar class="container_block vc-visible">
             <h1 class="vc-h1 container_title">VEDA Circle</h1>
             <h2 class="vc-h2 container_subtitle"></h2>
             <div class="vc-h2 container_description">A mission to promote Vedic Education Dissemination and
@@ -135,6 +137,12 @@
                      class="vc-button vc-border-rounded container_button_subscribe">
                     Subscribe
                 </div>
+            </div>
+            <div class="resp-container">
+                <iframe     src="https://www.youtube.com/embed/VErMCYcbNEg?rel=0" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
             </div>
         </div>
 

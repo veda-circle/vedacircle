@@ -178,6 +178,7 @@ h3{
   margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
+  height:60%;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 @keyframes fadein {
@@ -236,4 +237,25 @@ h3{
 .bg_container {
   width: 230px;
   height: 270px;
+}
+.resp-container {
+  position: relative;
+  padding-bottom: 26.25%;
+  padding-top: 35px;
+  margin-left: 30%;
+  height: 0;
+}
+
+.resp-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: auto;
+  height: 300px;
+}
+
+@media screen and (max-width: 375px) {
+  .resp-container {
+    margin-left: 0%;
+  }
 }
