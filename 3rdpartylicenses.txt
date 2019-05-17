@@ -1,27 +1,27 @@
 vedacircle
 MIT
 
-breadcrumbs
+theme-picker
 
 scroll-to-top
 
-theme-picker
+breadcrumbs
 
 scrollbar
 
-notifications
-
 chat-box
+
+notifications
 
 led
 
 context-menu
 
-app-confirm
-
 loading-overlay
 
 image-comparison
+
+app-confirm
 
 draggable
 
