@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'ngx-about',
+  selector: 'ngx-charity',
   templateUrl: './charity.component.html',
   styleUrls: ['./charity.component.scss'],
 })
