@@ -15,6 +15,7 @@ import { StickyHeaderDirective } from './components/header/sticky-header.directi
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EventComponent } from "@vedacircle/home/src/lib/containers/events/event.component";
+import { CharityComponent } from "@vedacircle/home/src/lib/containers/charity/charity.component";
 
 @NgModule({
   imports: [
@@ -51,6 +52,11 @@ import { EventComponent } from "@vedacircle/home/src/lib/containers/events/event
             component: FeaturesComponent,
             data: { animation: 'features' },
           },
+          {
+            path: 'charity',
+            component: CharityComponent,
+            data: { animation: 'charity' },
+          },
         ],
       },
     ]),
@@ -65,6 +71,7 @@ import { EventComponent } from "@vedacircle/home/src/lib/containers/events/event
     ContactComponent,
     AboutComponent,
     EventComponent,
+    CharityComponent,
     FeaturesComponent
   ],
 })
