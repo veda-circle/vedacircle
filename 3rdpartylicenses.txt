@@ -1,23 +1,23 @@
 vedacircle
 MIT
 
-scroll-to-top
-
 breadcrumbs
+
+scroll-to-top
 
 theme-picker
 
 scrollbar
 
-led
-
 notifications
+
+led
 
 chat-box
 
-context-menu
-
 image-comparison
+
+context-menu
 
 loading-overlay
 
