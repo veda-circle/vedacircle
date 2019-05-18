@@ -12,7 +12,7 @@
         "/vedacircle/18.c5b49d0f50083e602c1e.js",
         "/vedacircle/19.0747beb600499822d7b8.js",
         "/vedacircle/2.e7cda07c66607165537c.js",
-        "/vedacircle/20.b0752e98151a4d63b9fb.js",
+        "/vedacircle/20.b2b4577365a8b59e97dc.js",
         "/vedacircle/21.af3d9a67bd14820a0a08.js",
         "/vedacircle/3.c6a76107520f5c5a9545.js",
         "/vedacircle/4.7667d0b92ebf1840ff37.js",
@@ -25,7 +25,7 @@
         "/vedacircle/index.html",
         "/vedacircle/main.28b0e1eaa68a2dc4258e.js",
         "/vedacircle/polyfills.afb9369602cb648f666b.js",
-        "/vedacircle/runtime.bed835129d2e8406515a.js",
+        "/vedacircle/runtime.46f296363ad41717b14f.js",
         "/vedacircle/styles.adfb67d4cd0f7c805a58.css"
       ],
       "patterns": []
@@ -207,7 +207,7 @@
     "/vedacircle/18.c5b49d0f50083e602c1e.js": "1824cfddbc9e3575ed6f8e200801959dc6fae423",
     "/vedacircle/19.0747beb600499822d7b8.js": "66b62ad2bb3f133e44e6bb97818d65154b633e29",
     "/vedacircle/2.e7cda07c66607165537c.js": "70fdd68d2b6149b08f630b331900726ca5b0b08a",
-    "/vedacircle/20.b0752e98151a4d63b9fb.js": "d70fa67a110a867704e0d61a05264d63fc7f3ab1",
+    "/vedacircle/20.b2b4577365a8b59e97dc.js": "83c205815cff6c36b0856cb36a12a50f54da0f9c",
     "/vedacircle/21.af3d9a67bd14820a0a08.js": "2628073f00f11fe0f176f0e5a0b2ec3641e5f39e",
     "/vedacircle/3.c6a76107520f5c5a9545.js": "05c4b5b394133d046d9afb70870a8d3931849262",
     "/vedacircle/4.7667d0b92ebf1840ff37.js": "bd0d6fb5cc95b080b643f1964dfc1abd4896070e",
@@ -368,10 +368,10 @@
     "/vedacircle/assets/video/skandashasti.mp4": "069a2ba1db4221b9958b37fbb80ccac25908cbd4",
     "/vedacircle/common.1c56a9f4ba5882631d73.js": "5e72368f553a2e89bf49f2c0aed4d219d87ccf05",
     "/vedacircle/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/vedacircle/index.html": "34e471c6241e9f120f0a2747b9619e94fae7d193",
+    "/vedacircle/index.html": "45be0ac64b5ddf15cc2f39308108b977df92c193",
     "/vedacircle/main.28b0e1eaa68a2dc4258e.js": "30f9bab51c6ddc225ccc1a097b4bc76fcfdacfcb",
     "/vedacircle/polyfills.afb9369602cb648f666b.js": "57aba4b98fa387feac19b51fd5733a9ab69212de",
-    "/vedacircle/runtime.bed835129d2e8406515a.js": "9111702f307731ac3851261dbed196982ff05f2e",
+    "/vedacircle/runtime.46f296363ad41717b14f.js": "bb85f92e76a0455a091de4a5112617ac9548e5b6",
     "/vedacircle/styles.adfb67d4cd0f7c805a58.css": "e61e3f1580dec878ce7d8a38d31ba51a84013f14"
   },
   "navigationUrls": [

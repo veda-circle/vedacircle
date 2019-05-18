@@ -1,25 +1,25 @@
 vedacircle
 MIT
 
-scrollbar
-
 scroll-to-top
-
-theme-picker
 
 breadcrumbs
 
-notifications
+theme-picker
+
+scrollbar
 
 led
+
+notifications
 
 chat-box
 
 context-menu
 
-loading-overlay
-
 image-comparison
+
+loading-overlay
 
 app-confirm
 
