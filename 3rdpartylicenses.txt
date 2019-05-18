@@ -1,21 +1,21 @@
 vedacircle
 MIT
 
-breadcrumbs
-
 scroll-to-top
+
+scrollbar
 
 theme-picker
 
-scrollbar
+breadcrumbs
 
 notifications
 
 led
 
-chat-box
-
 context-menu
+
+chat-box
 
 loading-overlay
 
