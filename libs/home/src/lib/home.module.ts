@@ -8,23 +8,23 @@ import { HomeLayoutComponent } from './containers/home-layout/home-layout.compon
 import { LandingComponent } from './containers/landing/landing.component';
 import { ContactComponent } from './containers/contact/contact.component';
 import { AboutComponent } from './containers/about/about.component';
-import { ScrollToTopModule } from '@vedacircle/scroll-to-top';
 import { SvgViewerModule } from '@vedacircle/svg-viewer';
 import { FeaturesComponent } from './containers/features/features.component';
 import { StickyHeaderDirective } from './components/header/sticky-header.directive';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { EventComponent } from "@vedacircle/home/src/lib/containers/events/event.component";
-import { CharityComponent } from "@vedacircle/home/src/lib/containers/charity/charity.component";
+import { EventComponent} from "./containers/events/event.component";
+import { CharityComponent } from './containers/charity/charity.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
     SharedModule,
     DragDropModule,
-    ScrollToTopModule,
     ThemePickerModule,
     SvgViewerModule,
     NgxPageScrollModule,
+    MatListModule,
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
       {
@@ -70,8 +70,8 @@ import { CharityComponent } from "@vedacircle/home/src/lib/containers/charity/ch
     LandingComponent,
     ContactComponent,
     AboutComponent,
-    EventComponent,
     CharityComponent,
+    EventComponent,
     FeaturesComponent
   ],
 })

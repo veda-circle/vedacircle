@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import { SharedModule } from '@vedacircle/shared';
+import { ThemePickerModule } from '@vedacircle/theme-picker';
+import { RouterTestingModule } from '@angular/router/testing';
+import { CoreModule } from '@vedacircle/core';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -8,7 +12,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent]
+      imports: [SharedModule, CoreModule, ThemePickerModule, RouterTestingModule],
+      declarations: [HeaderComponent],
     }).compileComponents();
   }));
 

@@ -9267,8 +9267,7 @@ p {
   transition: background 0.5s;
 }
 .header.active {
- // background: orange;
-  //background-image: linear-gradient(grey, orange);
+
   background-color:rgba(74, 55, 50, .5);
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
 }
@@ -9607,7 +9606,6 @@ p {
 .price_header {
   position: relative;
   padding: 20px 0;
- // background: #5C6D7F;
   background-image: linear-gradient(to bottom,#fcf8e3 0,#faf2cc 100%);
 }
 .price_header:after {
@@ -10212,7 +10210,6 @@ p {
 
 .subscribe {
   padding: 100px 0 300px;
-  background: url('../../assets/img/bg/tree-bg.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   border: 0;

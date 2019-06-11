@@ -18,7 +18,7 @@ const PROXY_CONFIG = [
     context: [
       "/auth/realms"
     ],
-    'target': 'https://myroute-is360.a3c1.starter-us-west-1.openshiftapps.com',
+    'target': 'https://keycloak-ngx1.1d35.starter-us-east-1.openshiftapps.com',
     'secure': false,
     'logLevel': 'debug',
     // 'changeOrigin': true,
@@ -44,7 +44,7 @@ const PROXY_CONFIG = [
       "/back1/api",
       "/back1/api2",
     ],
-    'target': 'https://prod-back1-api.VC.com:3001',
+    'target': 'https://prod-back1-api.sumo.com:3001',
     'secure': false,
     'logLevel': 'debug',
     "pathRewrite": rewriteFn,
@@ -58,7 +58,7 @@ const PROXY_CONFIG = [
       "/back2/api",
       "/back2/api2",
     ],
-    'target': 'https://prod-back2-api.VC.com:3002',
+    'target': 'https://prod-back2-api.sumo.com:3002',
     'secure': false,
     'logLevel': 'debug',
     "pathRewrite": rewriteFn,

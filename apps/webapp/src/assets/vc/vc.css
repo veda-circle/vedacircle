@@ -2079,7 +2079,6 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focu
 }
 
 select {
-  background-image: url('../img/backgrounds/bg_section.svg');
 }
 
 select option {

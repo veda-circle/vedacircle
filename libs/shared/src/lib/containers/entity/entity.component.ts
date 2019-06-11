@@ -1,5 +1,7 @@
 import { AfterViewInit, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 import { EntityService } from './entity.service';
 import { Entity, EntityColumnDef } from './entity.model';
@@ -9,18 +11,16 @@ import { EntityFormComponent } from './entity-form.component';
 import { ComponentType } from '@angular/cdk/portal/typings/portal';
 import { SelectionChange, SelectionModel } from '@angular/cdk/collections';
 import { untilDestroy } from '@vedacircle/ngx-utils';
+import { parseISO } from 'date-fns/esm';
 
 export abstract class EntitiesComponent<TEntity extends Entity, TService extends EntityService<TEntity>>
   implements OnInit, OnDestroy, AfterViewInit {
   dataSource = new MatTableDataSource<TEntity>([]);
   selection = new SelectionModel<TEntity>(false, []);
 
-  @ViewChild(MatPaginator)
-  paginator: MatPaginator;
-  @ViewChild(MatSort)
-  sort: MatSort;
-  @ViewChild('filter')
-  filterRef: ElementRef;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  @ViewChild('filter', {static: true}) filterRef: ElementRef;
 
   readonly loading$;
   readonly columns: Array<EntityColumnDef<TEntity>>;
@@ -89,11 +89,11 @@ export abstract class EntitiesComponent<TEntity extends Entity, TService extends
     return this.entityService.delete(item.id).pipe(concatMap(_ => this.update()));
   }
 
-  updateOrCreate(entity: TEntity, isNew: boolean) {
-    if (isNew) {
-      return this.entityService.post(entity).pipe(concatMap(_ => this.update()));
+  updateOrCreate(entity: TEntity, id: number) {
+    if (id) {
+      return this.entityService.put(id, entity).pipe(concatMap(_ => this.update()));
     } else {
-      return this.entityService.put(entity).pipe(concatMap(_ => this.update()));
+      return this.entityService.post(entity).pipe(concatMap(_ => this.update()));
     }
   }
 
@@ -193,5 +193,10 @@ export abstract class EntitiesComponent<TEntity extends Entity, TService extends
     event.stopPropagation();
     event.stopImmediatePropagation();
     column.visible = !column.visible;
+  }
+
+  protected stringToDate(date: string | number | Date): number | Date {
+    const isString = s => typeof s === 'string' || s instanceof String;
+    return isString(date) ? parseISO(date) : date;
   }
 }

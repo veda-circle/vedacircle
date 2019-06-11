@@ -18,7 +18,7 @@ npm install -g @nestjs/cli
 > adding code dependencies
 
 ```bash
-nest new apps/api "my api" "0.1.0-SNAPSHOT" "Sumanth Chinthagunta <xmlking@gmail.com>" -d
+ng g node-app api --framework=nestjs --unit-test-runner=jest --tags=api-module -d
 
 # Add nestjs
 npm i  @nestjs/{common,core,microservices,swagger,websockets,typeorm,passport,elasticsearch}
@@ -54,7 +54,6 @@ npm i passport passport-jwt @xmlking/jwks-rsa
 
 npm i -D rimraf nodemon tsconfig-paths ts-loader
 npm i -D jest ts-jest @types/jest supertest @types/supertest
-npm i -D webpack-cli webpack-node-externals
 npm i -D @types/nodemailer
 npm i -D @types/socket.io
 npm i -D @types/passport@0.4.2 @types/passport-jwt
@@ -66,47 +65,68 @@ npm i -D @types/helmet
 
 ```bash
 # scaffold core module
-nest g module app/core --dry-run
-nest g guard auth app/core --dry-run
-
+nest g module app/core -d
+nest g guard auth app/core -d
 
 # scaffold shared module
-nest g module app/shared --dry-run
-nest g gateway eventbus app/shared --dry-run
+nest g module app/shared -d
+nest g gateway eventbus app/shared -d
 
 # scaffold user module
-nest g module app/user --dry-run
-nest g controller profile app/user --dry-run
-nest g service profile app/user --dry-run
-nest g class profile/profile.entity app/user --no-spec --dry-run
-nest g controller email app/user --dry-run
+nest g module app/user -d
+nest g class user.entity app/user --no-spec -d
+nest g controller user app -d
+nest g service user app -d
+nest g controller profile app/user -d
+nest g service profile app/user -d
+nest g class profile/profile.entity app/user --no-spec -d
+nest g controller email app/user -d
 
 # scaffold email module
-nest g module app/email --dry-run
-nest g service email app/email --flat --dry-run
+nest g module app/email -d
+nest g service email app/email --flat -d
 
 # scaffold auth module
-nest g module app/auth  --dry-run
-nest g controller auth app/auth --flat --dry-run
-nest g service auth app/auth --flat --dry-run
-nest g class user.entity app/auth --no-spec --dry-run
-nest g class auth.exception app/auth --no-spec --dry-run
+nest g module app/auth  -d
+nest g class auth.exception app/auth --no-spec -d
 
 # scaffold chat module
-nest g module app/chat  --dry-run
-nest g controller chat app/chat --flat --dry-run
-nest g service chat app/chat --flat --dry-run
-nest g gateway chat app/chat --flat --dry-run
+nest g module app/chat  -d
+nest g controller chat app/chat --flat -d
+nest g service chat app/chat --flat -d
+nest g gateway chat app/chat --flat -d
+
+# scaffold external module
+nest g module app/external  -d
+nest g controller weather app/external -d
+nest g service weather app/external -d
+
+# scaffold project module
+nest g module app/project -d
+nest g controller kubernetes app/project -d
+nest g service kubernetes app/project -d
+nest g class cluster/cluster.entity app/project --no-spec -d
+nest g controller cluster app/project -d
+nest g service cluster app/project -d
+nest g class project.entity app/project --no-spec -d
+nest g controller project app -d
+nest g service project app -d
 
 # scaffold notifications module
-nest g module app/notifications --dry-run
-nest g controller notification app/notifications --dry-run
-nest g service notification app/notifications --dry-run
-nest g service  notification/push  app/notifications --flat --no-spec --dry-run
-nest g class notification/notification.entity app/notifications --no-spec --dry-run
-nest g controller subscription app/notifications  --dry-run
-nest g service subscription app/notifications --dry-run
-nest g class subscription/subscription.entity app/notifications --no-spec --dry-run
+nest g module app/notifications -d
+nest g controller notification app/notifications -d
+nest g service notification app/notifications -d
+nest g service  notification/push  app/notifications --flat --no-spec -d
+nest g class notification/notification.entity app/notifications --no-spec -d
+nest g controller subscription app/notifications  -d
+nest g service subscription app/notifications -d
+nest g class subscription/subscription.entity app/notifications --no-spec -d
+
+You could also use `ng g` if you `npm i -D @nestjs/schematics`
+ng g @nestjs/schematics:module game --path app --source-root apps/api/src -d
+ng g @nestjs/schematics:controller match --path app/game  --source-root apps/api/src -d
+ng g @nestjs/schematics:service match --path app/game --source-root apps/api/src -d
+ng g @nestjs/schematics:class match/match.entity --path app/game --source-root apps/api/src --spec -d
 ```
 
 ### Ref
@@ -118,3 +138,4 @@ nest g class subscription/subscription.entity app/notifications --no-spec --dry-
 - https://github.com/beeman/nest-angular-nx
 - https://github.com/cgatian/customer-portal
 - http://blog.exceptionfound.com/index.php/2018/06/07/nestjs-basic-auth-and-sessions/
+- https://github.com/TorinAsakura/etl-api

@@ -23,7 +23,7 @@ about.component.scss-theme.scss
 3. How to generate test data?
 > use  https://next.json-generator.com
 > https://next.json-generator.com/4Js2XUryH
-> https://randomuser.me/api/?nat=us&results=100&exc=login,registered&seed=VC
+> https://randomuser.me/api/?nat=us&results=100&exc=login,registered&seed=sumo
 ```
 [
   {

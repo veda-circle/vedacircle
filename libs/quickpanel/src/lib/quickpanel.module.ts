@@ -1,32 +1,16 @@
 import { NgModule } from '@angular/core';
 import { QuickpanelComponent } from './quickpanel.component';
 import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MaterialModule } from '@vedacircle/material';
-import {
-  MatButtonModule,
-  MatIconModule,
-  MatListModule,
-  MatMenuModule,
-  MatSidenavModule,
-  MatProgressBarModule,
-  MatTabsModule,
-} from '@angular/material';
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { ScrollbarModule } from '@vedacircle/scrollbar';
+import { MatListModule } from '@angular/material/list';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTabsModule } from '@angular/material/tabs';
+import { SharedFlexLayoutModule, SharedPerfectScrollbarModule } from '@vedacircle/shared';
+
+const matModules = [MatListModule, MatProgressBarModule, MatSidenavModule, MatTabsModule];
 
 @NgModule({
-  imports: [
-    MatListModule,
-    MatProgressBarModule,
-    MatSidenavModule,
-    MatTabsModule,
-    MaterialModule,
-    PerfectScrollbarModule,
-    FlexLayoutModule,
-    ScrollbarModule,
-    CommonModule,
-  ],
+  imports: [CommonModule, [...matModules], SharedFlexLayoutModule, SharedPerfectScrollbarModule],
   exports: [QuickpanelComponent],
   declarations: [QuickpanelComponent],
 })

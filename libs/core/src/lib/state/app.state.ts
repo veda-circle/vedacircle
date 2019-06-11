@@ -1,4 +1,4 @@
-import { Action, NgxsOnInit, Selector, State, StateContext } from '@ngxs/store';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Inject } from '@angular/core';
 import { WINDOW } from '../services/window.token';
 
@@ -36,6 +36,7 @@ export interface AppStateModel {
   installed: boolean;
 }
 
+/** @dynamic */
 @State<AppStateModel>({
   name: 'app',
   defaults: {

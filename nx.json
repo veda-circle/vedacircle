@@ -1,6 +1,6 @@
 {
-  "npmScope": "vedacircle",
-  "implicitDependencies_TODO_BYPASSED": {
+  "npmScope": "ngx-starter-kit",
+  "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
     "tsconfig.json": "*",
@@ -11,16 +11,8 @@
     "webapp": {
       "tags": ["app-module"]
     },
-    "webapp-e2e": {
-      "tags": [],
-      "implicitDependencies": ["webapp"]
-    },
     "api": {
       "tags": ["api-module"]
-    },
-    "api-e2e": {
-      "tags": [],
-      "implicitDependencies": ["api"]
     },
     "backend": {
       "tags": ["api-module"]
@@ -48,9 +40,6 @@
     },
     "widgets": {
       "tags": ["child-module"]
-    },
-    "material": {
-      "tags": ["shared-module"]
     },
     "animations": {
       "tags": ["utils"]
@@ -124,11 +113,17 @@
     "image-comparison": {
       "tags": ["public-module"]
     },
+    "ngx-utils": {
+      "tags": ["public-module", "utils"]
+    },
+    "admin": {
+      "tags": ["entry-module"]
+    },
     "models": {
       "tags": ["utils"]
     },
-    "ngx-utils": {
-      "tags": ["public-module", "utils"]
+    "oidc": {
+      "tags": ["public-module"]
     }
   }
 }

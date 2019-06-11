@@ -4,15 +4,15 @@ KeyCloak
 Pre-configured KeyCloak OpenID Connect server for testing.
 
 * **Realm**: ngx
-* **Client ID**: cockpit
+* **Client ID**: ngxweb, ngxapi
 * **Accounts**:
   * *ROLE_ADMIN*
     1. ngxadmin : ngxadmin
   * *ROLE_USER*
-    1. VC: demo
-    2. VC1: demo
-    3. VC2: demo
-    4. VC3: demo
+    1. sumo: demo
+    2. sumo1: demo
+    3. sumo2: demo
+    4. sumo3: demo
 
 
 ### Configure SPA Client
@@ -21,8 +21,8 @@ Pre-configured KeyCloak OpenID Connect server for testing.
 
 ```json
   auth: {
-    clientId: 'cockpit',
-    issuer: 'http://localhost:9080/auth/realms/ngx'
+    clientId: 'ngxweb',
+    issuer: 'http://localhost:8080/auth/realms/ngx',
   }
 ```
 
@@ -44,8 +44,8 @@ docker-compose exec keycloak sh
 
 ### Use
 
-http://localhost:m080/
-> admin: admin
+http://localhost:8080/
+> admin: admin123
 
 ### Setup
 
@@ -60,9 +60,9 @@ http://localhost:m080/
 ```bash
 # Environment variable. change as per your server setup
 OIDC_ISSUER_URL=http://localhost:8080/auth/realms/ngx
-OIDC_CLIENT=cockpit
+OIDC_CLIENT=ngxweb
 
-USERNAME=VC
+USERNAME=sumo
 PASSWORD=demo
 
 # get URLs
@@ -103,47 +103,32 @@ curl -X POST  $OIDC_ISSUER_URL/protocol/openid-connect/logout \
 #### Example Access Token
 ```json
 {
-  "jti": "726d3a1b-4d1c-44e0-b645-f6c8b38ed83f",
-  "exp": 1529217929,
+  "jti": "bcd8138f-cba9-49e4-a4fa-86f688ba2730",
+  "exp": 1547688875,
   "nbf": 0,
-  "iat": 1529217629,
-  "iss": "http://localhost:9080/auth/realms/kubernetes",
-  "aud": "kube-tenant",
-  "sub": "8602c118-9778-4eda-98a0-673382934688",
+  "iat": 1547688575,
+  "iss": "http://localhost:8080/auth/realms/ngx",
+  "aud": "ngxapi",
+  "sub": "12c4ef1f-f4bd-451c-a435-ffc5daa1412c",
   "typ": "Bearer",
-  "azp": "kube-tenant",
+  "azp": "ngxweb",
   "auth_time": 0,
-  "session_state": "698b3e16-4f53-46b4-aa7f-ddc05c2f9ae8",
+  "session_state": "92cc97ad-3be7-48e0-9ee9-4329b2a66f07",
   "acr": "1",
   "allowed-origins": [
-    "http://localhost:4200"
+    "*"
   ],
   "realm_access": {
     "roles": [
-      "offline_access",
-      "uma_authorization"
+      "ROLE_USER"
     ]
   },
-  "resource_access": {
-    "kube-tenant": {
-      "roles": [
-        "ROLE_USER"
-      ]
-    },
-    "account": {
-      "roles": [
-        "manage-account",
-        "manage-account-links",
-        "view-profile"
-      ]
-    }
-  },
-  "scope": "openid profile email",
-  "email_verified": false,
-  "name": "VC demo",
-  "preferred_username": "VC",
-  "given_name": "VC",
-  "family_name": "demo",
-  "email": "VC@demo.com"
+  "scope": "openid email ngxapi_audience profile",
+  "email_verified": true,
+  "name": "sumo1 ngx",
+  "preferred_username": "sumo1",
+  "given_name": "sumo1",
+  "family_name": "ngx",
+  "email": "sumo1@ngx.com"
 }
 ```

@@ -4,7 +4,10 @@ import { SwPush } from '@angular/service-worker';
 import { EventCategory, GoogleAnalyticsService } from '../services/google-analytics.service';
 import { AppState, ChangeInstallStatus, ChangeOnlineStatus, IsOffline, IsOnline, SetInstallPrompt } from './app.state';
 import { WINDOW } from '../services/window.token';
+// import { LoginSuccess } from '@vedacircle/oidc';
+import { FetchProfile } from '../state/profile.state';
 
+/** @dynamic */
 @Injectable({
   providedIn: 'root',
 })

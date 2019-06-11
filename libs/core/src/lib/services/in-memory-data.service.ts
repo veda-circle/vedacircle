@@ -1,9 +1,11 @@
 import {
+  getStatusText,
   InMemoryDbService,
   ParsedRequestUrl,
   RequestInfo,
   RequestInfoUtilities,
   ResponseOptions,
+  STATUS,
 } from 'angular-in-memory-web-api';
 import { Injectable } from '@angular/core';
 
@@ -19,6 +21,9 @@ export class InMemoryDataService implements InMemoryDbService {
 
     const notificationsResponse = await fetch('assets/data/notifications.json');
     const notifications = await notificationsResponse.json();
+
+    const subscriptionResponse = await fetch('assets/data/subscription.json');
+    const subscription = await subscriptionResponse.json();
 
     const symbols = [
       {
@@ -38,12 +43,12 @@ export class InMemoryDataService implements InMemoryDbService {
       },
     ];
 
-    return { accounts, symbols, notifications };
+    return { accounts, symbols, notifications, subscription };
   }
 
   parseRequestUrl(url: string, utils: RequestInfoUtilities): ParsedRequestUrl {
     const newUrl = url
-      .replace(/\/notifications\/user/, '/notifications')
+      .replace(/\/notifications\/own/, '/notifications')
       .replace(/\/datapower\/serviceproxy/, '/serviceproxy')
       .replace(/\/nas\/cluster/, '/cluster')
       .replace(/\/layer7\/my.cnf/, '/mycnf');
@@ -52,5 +57,50 @@ export class InMemoryDataService implements InMemoryDbService {
     // console.log(`parseRequestUrl override of '${url}':`, parsed);
     // console.log(`parseRequestUrl override of '${url}':`, `new: ${newUrl}`);
     return parsed;
+  }
+
+  put(reqInfo: RequestInfo) {
+    const collectionName = reqInfo.collectionName;
+    if (collectionName === 'accounts') {
+      (reqInfo.req as any).body = { id: reqInfo.id, ...(reqInfo.req as any).body };
+    } else if (collectionName === 'notifications' || collectionName === 'subscription') {
+      reqInfo.collection[0].map(item => {
+        if (item.id === reqInfo.id) {
+          return { id: reqInfo.id, ...(reqInfo.req as any).body };
+        }
+        return item;
+      });
+      const options: ResponseOptions = {
+        status: STATUS.ACCEPTED,
+      };
+      return reqInfo.utils.createResponse$(() => {
+        return this.finishOptions(options, reqInfo);
+      });
+    } else {
+      return undefined; // let the default PUT handle all others
+    }
+  }
+
+  post(reqInfo: RequestInfo) {
+    const collectionName = reqInfo.collectionName;
+    if (collectionName === 'notifications' || collectionName === 'subscription') {
+      reqInfo.collection[0].push((reqInfo.req as any).body);
+      reqInfo.collection[1] = reqInfo.collection[1] + 1;
+      const options: ResponseOptions = {
+        status: STATUS.CREATED,
+      };
+      return reqInfo.utils.createResponse$(() => {
+        return this.finishOptions(options, reqInfo);
+      });
+    } else {
+      return undefined; // let the default POST handle all others
+    }
+  }
+
+  private finishOptions(options: ResponseOptions, { headers, url }: RequestInfo) {
+    options.statusText = getStatusText(options.status);
+    options.headers = headers;
+    options.url = url;
+    return options;
   }
 }

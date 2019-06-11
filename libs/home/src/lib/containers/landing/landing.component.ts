@@ -8,8 +8,8 @@ import { Store } from "@ngxs/store";
 }) /**/
 export class LandingComponent {
 
-  @ViewChild("newsheader") newsheader: ElementRef;
-  @ViewChild("titleBar") titleBar: ElementRef;
+  @ViewChild("newsheader", null) newsheader: ElementRef;
+  @ViewChild("titleBar", null) titleBar: ElementRef;
 
 
   constructor(private store: Store, private renderer: Renderer2) {

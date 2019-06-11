@@ -7,9 +7,8 @@ import { Store } from '@ngxs/store';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild('header')
-  header: ElementRef;
-  @ViewChild("mobileNav") mobileNav: ElementRef;
+  @ViewChild('header', null) header: ElementRef;
+  @ViewChild("mobileNav", null) mobileNav: ElementRef;
   mobileInitVal = true;
   menus = [
     { link: '#banner', label: 'Home', active: 'active', routerLink: '/home' },
@@ -17,7 +16,7 @@ export class HeaderComponent implements OnInit {
     { link: '#events', label: 'Events', active: '', routerLink: '/home' },
     { link: '#gallery', label: 'Gallery', active: '', routerLink: '/home' },
     { link: '#org', label: 'Organization', active: '', routerLink: '/home' },
-    { link: '#classes', label: 'Classes', active: '', routerLink: '/home' },
+    { link: '#charity', label: 'Charity', active: '', routerLink: '/home' },
     { link: '#donate', label: 'Donate', active: '', routerLink: '/home' },
   ];
 

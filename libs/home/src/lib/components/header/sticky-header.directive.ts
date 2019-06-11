@@ -1,20 +1,21 @@
 import { animate, AnimationBuilder, AnimationMetadata, AnimationPlayer, style } from '@angular/animations';
 
-import { AfterViewInit, Directive, ElementRef, OnDestroy } from '@angular/core';
-import { fromEvent, Subject } from 'rxjs';
-import { distinctUntilChanged, filter, map, pairwise, share, takeUntil, throttleTime } from 'rxjs/operators';
+import { AfterViewInit, Directive, ElementRef, Inject, OnDestroy } from '@angular/core';
+import { fromEvent } from 'rxjs';
+import { distinctUntilChanged, filter, map, pairwise, share, throttleTime } from 'rxjs/operators';
+import { untilDestroy } from '@vedacircle/ngx-utils';
+import { WINDOW } from '@vedacircle/core';
 
 enum Direction {
   Up = 'Up',
   Down = 'Down',
 }
 
-/* tslint:disable */
+/** @dynamic */
 @Directive({
   selector: '[stickyHeader]',
 })
 export class StickyHeaderDirective implements AfterViewInit, OnDestroy {
-  private _destroyed$ = new Subject<void>();
   player: AnimationPlayer;
 
   set show(show: boolean) {
@@ -30,7 +31,7 @@ export class StickyHeaderDirective implements AfterViewInit, OnDestroy {
     player.play();
   }
 
-  constructor(private builder: AnimationBuilder, private el: ElementRef) {}
+  constructor(private builder: AnimationBuilder, private el: ElementRef, @Inject(WINDOW) private window: Window) {}
 
   private fadeIn(): AnimationMetadata[] {
     return [style({ opacity: 0 }), animate('400ms ease-in', style({ opacity: 1 }))];
@@ -49,14 +50,14 @@ export class StickyHeaderDirective implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    const scroll$ = fromEvent(window, 'scroll').pipe(
-      takeUntil(this._destroyed$),
+    const scroll$ = fromEvent(this.window, 'scroll').pipe(
       throttleTime(10),
-      map(() => window.pageYOffset),
+      map(() => this.window.pageYOffset),
       pairwise(),
       map(([y1, y2]): Direction => (y2 < y1 ? Direction.Up : Direction.Down)),
       distinctUntilChanged(),
       share(),
+      untilDestroy(this),
     );
 
     const goingUp$ = scroll$.pipe(filter(direction => direction === Direction.Up));
@@ -67,8 +68,5 @@ export class StickyHeaderDirective implements AfterViewInit, OnDestroy {
     goingDown$.subscribe(() => (this.show = false));
   }
 
-  ngOnDestroy() {
-    this._destroyed$.next();
-    this._destroyed$.complete();
-  }
+  ngOnDestroy() {}
 }

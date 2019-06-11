@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { routerTransition } from '@vedacircle/animations';
 
 @Component({
   selector: 'ngx-home-layout',
   templateUrl: './home-layout.component.html',
-  styleUrls: ['./home-layout.component.scss'],
-  animations: [routerTransition]
+  styleUrls: ['./home-layout.component.scss']
 })
 export class HomeLayoutComponent implements OnInit {
   constructor() {}

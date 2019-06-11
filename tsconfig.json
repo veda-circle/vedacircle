@@ -1,155 +1,60 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "importHelpers": true,
-    "sourceMap": true,
+    "baseUrl": ".",
     "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "importHelpers": true,
+    "lib": ["dom", "es2018", "esnext.array"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
     "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom",
-      "esnext.array"
-    ],
-    "baseUrl": ".",
+    "rootDir": ".",
+    "sourceMap": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
     "paths": {
-      "@vedacircle/*": [
-        "libs/*"
-      ],
-      "@env/*": [
-        "apps/webapp/src/environments/*"
-      ],
-      "@env-api/environment": [
-        "apps/api/src/environments/environment.ts"
-      ],
-      "@vedacircle/models": [
-        "libs/models/src/index.ts"
-      ],
-      "@vedacircle/core": [
-        "libs/core/src/index.ts"
-      ],
-      "@vedacircle/shared": [
-        "libs/shared/src/index.ts"
-      ],
-      "@vedacircle/navigator": [
-        "libs/navigator/src/index.ts"
-      ],
-      "@vedacircle/socketio-plugin": [
-        "libs/socketio-plugin/src/index.ts"
-      ],
-      "@vedacircle/tree": [
-        "libs/tree/src/index.ts"
-      ],
-      "@vedacircle/home": [
-        "libs/home/src/index.ts"
-      ],
-      "@vedacircle/dashboard": [
-        "libs/dashboard/src/index.ts"
-      ],
-      "@vedacircle/not-found": [
-        "libs/not-found/src/index.ts"
-      ],
-      "@vedacircle/experiments": [
-        "libs/experiments/src/index.ts"
-      ],
-      "@vedacircle/widgets": [
-        "libs/widgets/src/index.ts"
-      ],
-      "@vedacircle/material": [
-        "libs/material/src/index.ts"
-      ],
-      "@vedacircle/animations": [
-        "libs/animations/src/index.ts"
-      ],
-      "@vedacircle/utils": [
-        "libs/utils/src/index.ts"
-      ],
-      "@vedacircle/auth": [
-        "libs/auth/src/index.ts"
-      ],
-      "@vedacircle/app-confirm": [
-        "libs/app-confirm/src/index.ts"
-      ],
-      "@vedacircle/draggable": [
-        "libs/draggable/src/index.ts"
-      ],
-      "@vedacircle/breadcrumbs": [
-        "libs/breadcrumbs/src/index.ts"
-      ],
-      "@vedacircle/scroll-to-top": [
-        "libs/scroll-to-top/src/index.ts"
-      ],
-      "@vedacircle/scrollbar": [
-        "libs/scrollbar/src/index.ts"
-      ],
-      "@vedacircle/context-menu": [
-        "libs/context-menu/src/index.ts"
-      ],
-      "@vedacircle/theme-picker": [
-        "libs/theme-picker/src/index.ts"
-      ],
-      "@vedacircle/quickpanel": [
-        "libs/quickpanel/src/index.ts"
-      ],
-      "@vedacircle/svg-viewer": [
-        "libs/svg-viewer/src/index.ts"
-      ],
-      "@vedacircle/led": [
-        "libs/led/src/index.ts"
-      ],
-      "@vedacircle/chat-box": [
-        "libs/chat-box/src/index.ts"
-      ],
-      "@vedacircle/json-diff": [
-        "libs/json-diff/src/index.ts"
-      ],
-      "@vedacircle/toolbar": [
-        "libs/toolbar/src/index.ts"
-      ],
-      "@vedacircle/sidenav": [
-        "libs/sidenav/src/index.ts"
-      ],
-      "@vedacircle/loading-overlay": [
-        "libs/loading-overlay/src/index.ts"
-      ],
-      "@vedacircle/grid": [
-        "libs/grid/src/index.ts"
-      ],
-      "notifications/*": [
-        "dist/notifications/*"
-      ],
-      "@vedacircle/notifications": [
-        "libs/notifications/src/index.ts"
-      ],
-      "clap/*": [
-        "dist/clap/*"
-      ],
-      "@vedacircle/clap": [
-        "libs/clap/src/index.ts"
-      ],
-      "image-comparison/*": [
-        "dist/image-comparison/*"
-      ],
-      "@vedacircle/image-comparison": [
-        "libs/image-comparison/src/index.ts"
-      ],
-      "@vedacircle/ngx-utils": [
-        "libs/ngx-utils/src/index.ts"
-      ]
+      "@env-api/environment": ["apps/api/src/environments/environment.ts"],
+      "@env/*": ["apps/webapp/src/environments/*"],
+      "@vedacircle/admin": ["libs/admin/src/index.ts"],
+      "@vedacircle/animations": ["libs/animations/src/index.ts"],
+      "@vedacircle/app-confirm": ["libs/app-confirm/src/index.ts"],
+      "@vedacircle/auth": ["libs/auth/src/index.ts"],
+      "@vedacircle/breadcrumbs": ["libs/breadcrumbs/src/index.ts"],
+      "@vedacircle/chat-box": ["libs/chat-box/src/index.ts"],
+      "@vedacircle/clap": ["libs/clap/src/index.ts"],
+      "@vedacircle/context-menu": ["libs/context-menu/src/index.ts"],
+      "@vedacircle/core": ["libs/core/src/index.ts"],
+      "@vedacircle/dashboard": ["libs/dashboard/src/index.ts"],
+      "@vedacircle/draggable": ["libs/draggable/src/index.ts"],
+      "@vedacircle/experiments": ["libs/experiments/src/index.ts"],
+      "@vedacircle/grid": ["libs/grid/src/index.ts"],
+      "@vedacircle/home": ["libs/home/src/index.ts"],
+      "@vedacircle/image-comparison": ["libs/image-comparison/src/index.ts"],
+      "@vedacircle/json-diff": ["libs/json-diff/src/index.ts"],
+      "@vedacircle/led": ["libs/led/src/index.ts"],
+      "@vedacircle/loading-overlay": ["libs/loading-overlay/src/index.ts"],
+      "@vedacircle/models": ["libs/models/src/index.ts"],
+      "@vedacircle/navigator": ["libs/navigator/src/index.ts"],
+      "@vedacircle/ngx-utils": ["libs/ngx-utils/src/index.ts"],
+      "@vedacircle/not-found": ["libs/not-found/src/index.ts"],
+      "@vedacircle/notifications": ["libs/notifications/src/index.ts"],
+      "@vedacircle/oidc": ["libs/oidc/src/index.ts"],
+      "@vedacircle/quickpanel": ["libs/quickpanel/src/index.ts"],
+      "@vedacircle/scroll-to-top": ["libs/scroll-to-top/src/index.ts"],
+      "@vedacircle/scrollbar": ["libs/scrollbar/src/index.ts"],
+      "@vedacircle/shared": ["libs/shared/src/index.ts"],
+      "@vedacircle/sidenav": ["libs/sidenav/src/index.ts"],
+      "@vedacircle/socketio-plugin": ["libs/socketio-plugin/src/index.ts"],
+      "@vedacircle/svg-viewer": ["libs/svg-viewer/src/index.ts"],
+      "@vedacircle/theme-picker": ["libs/theme-picker/src/index.ts"],
+      "@vedacircle/toolbar": ["libs/toolbar/src/index.ts"],
+      "@vedacircle/tree": ["libs/tree/src/index.ts"],
+      "@vedacircle/utils": ["libs/utils/src/index.ts"],
+      "@vedacircle/widgets": ["libs/widgets/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp",
-    "dist/**/*",
-    "coverage/**/*",
-    "tools/**/_*files/**/*"
-  ]
+  "exclude": ["coverage/**/*", "dist/**/*", "node_modules", "tmp", "todo/**/*", "tools/**/_*files/**/*"]
 }
