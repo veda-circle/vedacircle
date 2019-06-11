@@ -4,9 +4,10 @@
 ## Install
 
 ```bash
+brew install yarn
 git clone https://github.com/veda-circle/vedacircle.git
 cd vedacircle
-yarn
+yarn install
 ```
 
 ## Development server
