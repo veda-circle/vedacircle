@@ -1,12 +1,12 @@
 {
-  "name": "ngx-starter-kit",
+  "name": "vedacircle",
   "version": "2.0.4",
   "description": "Angular-NestJS Starter Kit Monorepo",
   "author": "Sumanth Chinthagunta <xmlking@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xmlking/ngx-starter-kit.git"
+    "url": "https://github.com/veda-circle/vedacircle.git"
   },
   "workspaces": [
     "libs/*",
@@ -21,7 +21,7 @@
     "prebuild": "rimraf dist coverage",
     "build": "ng build",
     "build:prod": "ng build webapp -c=production",
-    "build:mock": "ng build webapp -c=mock --base-href /ngx-starter-kit/",
+    "build:mock": "ng build webapp -c=mock --base-href /vedacircle",
     "deploy:mock": "yarn build:mock && gzip -k -r dist/apps/webapp/*.js && ngh --dir dist/apps/webapp",
     "bundle-report": "ng build -c=production --stats-json && webpack-bundle-analyzer dist/apps/webapp/stats.json",
     "// - RELEASE": "release Apps and Libs",

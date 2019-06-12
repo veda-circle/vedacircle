@@ -414,7 +414,7 @@
           "configurations": {
             "mock": {
               "aot": true,
-              "baseHref": "/ngx-starter-kit/",
+              "baseHref": "/vedacircle/",
               "buildOptimizer": true,
               "extractCss": true,
               "extractLicenses": true,

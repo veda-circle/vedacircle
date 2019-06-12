@@ -125,12 +125,12 @@ for nx help `yarn run help`
 
 ```bash
 # create workspace Ref: https://nx.dev/tutorial/01-create-application
-yarn create nx-workspace ngx-starter-kit --npm-scope=ngx-starter-kit --preset=empty --style=scss --skipInstall
+yarn create nx-workspace vedacircle --npm-scope=vedacircle --preset=empty --style=scss --skipInstall
 # or
-ng new ngx-starter-kit --collection=@nrwl/workspace --npm-scope=ngx-starter-kit --preset=empty --style=scss --verbose
+ng new vedacircle --collection=@nrwl/workspace --npm-scope=vedacircle --preset=empty --style=scss --verbose
 # or if you want *bazel* builds instead of *webpack*
-ng new ngx-starter-kit --collection=@nrwl/workspace --npm-scope=ngx-starter-kit --preset=empty --style=scss --bazel  --verbose
-cd ngx-starter-kit
+ng new vedacircle --collection=@nrwl/workspace --npm-scope=vedacircle --preset=empty --style=scss --bazel  --verbose
+cd vedacircle
 
 # make sure we are up-to-date
 ng update --next
@@ -170,7 +170,7 @@ ng g @nrwl/nest:app api --frontendProject=webapp --tags=api-module
 > adding 3rd party modules/libs
 
 ```bash
-cd ngx-starter-kit
+cd vedacircle
 
 # Add PWA
 ng add @angular/pwa@next --project webapp
