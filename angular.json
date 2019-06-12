@@ -437,56 +437,6 @@
             },
             "production": {
               "aot": true,
-              "budgets": [
-                {
-                  "baseline": "1.5mb",
-                  "maximumError": "20%",
-                  "maximumWarning": "10%",
-                  "name": "vendor",
-                  "type": "bundle"
-                },
-                {
-                  "baseline": "5mb",
-                  "maximumError": "20%",
-                  "maximumWarning": "10%",
-                  "minimumError": "20%",
-                  "minimumWarning": "10%",
-                  "type": "allScript"
-                },
-                {
-                  "baseline": "1800kb",
-                  "maximumError": "20%",
-                  "maximumWarning": "10%",
-                  "type": "initial"
-                },
-                {
-                  "baseline": "300kb",
-                  "maximumError": "20%",
-                  "maximumWarning": "10%",
-                  "name": "polyfills",
-                  "type": "bundle"
-                },
-                {
-                  "baseline": "350kb",
-                  "maximumError": "20%",
-                  "maximumWarning": "10%",
-                  "name": "styles",
-                  "type": "bundle"
-                },
-                {
-                  "baseline": "10mb",
-                  "maximumError": "20%",
-                  "maximumWarning": "10%",
-                  "type": "all"
-                },
-                {
-                  "baseline": "8mb",
-                  "maximumError": "20%",
-                  "maximumWarning": "10%",
-                  "name": "main",
-                  "type": "bundle"
-                }
-              ],
               "buildOptimizer": true,
               "extractCss": true,
               "extractLicenses": true,

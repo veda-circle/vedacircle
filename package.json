@@ -20,7 +20,7 @@
     "// - BUILDING": "Build Apps for Prod, Mock environments",
     "prebuild": "rimraf dist coverage",
     "build": "ng build",
-    "build:prod": "ng build webapp -c=production",
+    "build:prod": "ng build webapp -c=production --base-href https://veda-circle.github.io/vedacircle/",
     "build:mock": "ng build webapp -c=mock --base-href https://veda-circle.github.io/vedacircle/",
     "deploy:mock": "yarn build:mock && gzip -k -r dist/apps/webapp/*.js && ngh --dir dist/apps/webapp",
     "bundle-report": "ng build -c=production --stats-json && webpack-bundle-analyzer dist/apps/webapp/stats.json",
