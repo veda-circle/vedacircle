@@ -1,5 +1,5 @@
 {
-  "name": "ngx-starter-kit/store",
+  "name": "vedacircle/store",
   "version": "0.1",
   "schematics": {
     "store": {
