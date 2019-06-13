@@ -9,13 +9,13 @@ export interface ActivityElement {
 }
 
 const ELEMENT_DATA: ActivityElement[] = [
-    {day: 'Sunday', time: '7:00 - 7:30pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Bhajan'},
-    {day: 'Monday', time: '7:00 - 7:30pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Slokam'},
-    {day: 'Tuesday', time: '7:00 - 7:30pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Bhajan'},
-    {day: 'Wednesday', time: '7:00 - 7:30pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Bhajan'},
-    {day: 'Thursday', time: '7:00 - 7:30pm', location: 'Irvine', topic: 'VEDA Volume - 1, Mahanyasam'},
-    {day: 'Friday', time: '7:00 - 7:30pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Bhajan'},
-    {day: 'Saturday', time: '7:00 - 7:30pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Bhajan'},
+    {day: 'Sunday', time: '7:00 - 8:00pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Veda Class - Upanishad'},
+    {day: 'Monday', time: '7:00 - 8:00pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Slokam'},
+    {day: 'Tuesday', time: '7:00 - 8:00pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Bhajan'},
+    {day: 'Wednesday', time: '7:00 - 8:00pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Bhajan'},
+    {day: 'Thursday', time: '7:00 - 8:00pm', location: 'Irvine', topic: 'Veda class - Mahanyasam'},
+    {day: 'Friday', time: '7:00 - 8:00pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Bhajan'},
+    {day: 'Saturday', time: '7:00 - 8:00pm', location: 'Sanatan Dharma Temple, Norwalk', topic: 'Veda class - Kids'},
 ];
 
 @Component({

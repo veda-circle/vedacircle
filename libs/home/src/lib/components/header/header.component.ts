@@ -13,10 +13,10 @@ export class HeaderComponent implements OnInit {
   menus = [
     { link: '#banner', label: 'Home', active: 'active', routerLink: '/home' },
     { link: '#about', label: 'About', active: '', routerLink: '/home' },
-    { link: '#events', label: 'Events', active: '', routerLink: '/home' },
+    { link: '#events', label: 'Our Activities', active: '', routerLink: '/home' },
     { link: '#gallery', label: 'Gallery', active: '', routerLink: '/home' },
     { link: '#org', label: 'Organization', active: '', routerLink: '/home' },
-    { link: '#charity', label: 'Charity', active: '', routerLink: '/home' },
+    { link: '#events', label: 'Charity', active: '', routerLink: '/home' },
     { link: '#donate', label: 'Donate', active: '', routerLink: '/home' },
   ];
 
