@@ -480,6 +480,7 @@
             },
             "styles": [
               "apps/webapp/src/styles.scss",
+              "node_modules/animate.css/animate.min.css",
               {
                 "bundleName": "assets/themes/deeppurple-amber",
                 "input": "apps/webapp/src/styles/themes/deeppurple-amber.scss",

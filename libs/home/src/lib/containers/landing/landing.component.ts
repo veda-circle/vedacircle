@@ -1,6 +1,7 @@
 import { Component, ElementRef, Renderer2, ViewChild } from "@angular/core";
 import { Store } from "@ngxs/store";
 
+
 @Component({
   selector: "ngx-landing",
   templateUrl: "./landing.component.html",
@@ -10,7 +11,6 @@ export class LandingComponent {
 
   @ViewChild("newsheader", null) newsheader: ElementRef;
   @ViewChild("titleBar", null) titleBar: ElementRef;
-
 
   constructor(private store: Store, private renderer: Renderer2) {
 
@@ -39,6 +39,5 @@ export class LandingComponent {
     this.titleBar.nativeElement.classList.remove("vc-hidden-large");
     this.titleBar.nativeElement.classList.add("vc-visible-large");
   }
-
 
 }

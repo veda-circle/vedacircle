@@ -18,6 +18,8 @@ import { CharityComponent } from './containers/charity/charity.component';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MatIconModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -28,7 +30,9 @@ import { MatTableModule } from '@angular/material/table';
     NgxPageScrollModule,
     MatListModule,
     MatTabsModule,
+    MatIconModule,
     MatTableModule,
+    CarouselModule,
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
       {

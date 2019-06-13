@@ -19,7 +19,43 @@
                 </section>
             </header>
         </section>
-        <h1>Activities</h1> <br/>
+    </div>
+    <div class="inner">
+        <article>
+            <header class="major"><p>Our Activities</p>
+                <h1>Past Events</h1></header>
+        </article>
+
+        <section class="">
+
+                <div class="row">
+                    <div class="col-5 offset-1">
+
+                        <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)" #owlCar>
+
+                            <ng-container *ngFor="let item of slide; let i=index">
+                                <ng-template carouselSlide [dataHash]="item.dataHash" >
+                                    <div class="">
+                                        <p>{{item.text}}</p>
+                                        <img class="owl-lazy" [src]="[item.src]"  width="200px" height="260px" alt="">
+
+                                    </div><!-- /.carousel-item team-member -->
+                                </ng-template>
+                            </ng-container>
+
+                        </owl-carousel-o>
+
+                    </div>
+                </div>
+
+        </section>
+    </div>
+    <div class="inner">
+        <article>
+            <header class="major"><p>Activities</p>
+                <h1></h1></header>
+        </article>
+
         <section class="">
             <section class="posts">
                 <div class="">
@@ -69,6 +105,5 @@
             </section>
 
         </section>
-
     </div>
 </section>

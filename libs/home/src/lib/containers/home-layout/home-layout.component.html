@@ -1,6 +1,6 @@
 <div id="top" fxLayout="column" fxFlexFill class="optum-orange-theme">
   <ngx-home-header></ngx-home-header>
-  <div fxFlex class="content" [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path">
+  <div fxFlex class="content" >
     <router-outlet #o="outlet"></router-outlet>
   </div>
  <!--

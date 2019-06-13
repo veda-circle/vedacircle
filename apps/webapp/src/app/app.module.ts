@@ -8,6 +8,7 @@ import { QuicklinkModule, QuicklinkStrategy } from '@xmlking/ngx-quicklink';
 import { CoreModule } from '@vedacircle/core';
 
 import { environment } from '@env/environment';
+import {MatIconRegistry} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -46,4 +47,8 @@ import { environment } from '@env/environment';
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+    constructor(matIconRegistry: MatIconRegistry) {
+        matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+    }
+}

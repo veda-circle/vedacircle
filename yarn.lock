@@ -1948,6 +1948,11 @@ angular-in-memory-web-api@^0.8.0:
   resolved "https://registry.yarnpkg.com/angular-in-memory-web-api/-/angular-in-memory-web-api-0.8.0.tgz#6cb63c9e8e22c59383dfcccaf0512791400bf4e1"
   integrity sha512-2n0YtCLFxZo4JePHvH6q8b7JmBmhZq44Ic8VaBPRSXE4vAmlKXHU+kI2quNa612EAETDRkZcvLOU8K8CkhIZgQ==
 
+animate.css@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.2.tgz#e73e0d50e92cb1cfef1597d9b38a9481020e08ea"
+  integrity sha512-0bE8zYo7C0KvgOYrSVfrzkbYk6IOTVPNqkiHg2cbyF4Pq/PXzilz4BRWA3hwEUBoMp5VBgrC29lQIZyhRWdBTw==
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -6090,6 +6095,11 @@ follow-redirects@^1.0.0, follow-redirects@^1.2.5:
   dependencies:
     debug "^3.2.6"
 
+font-awesome@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+  integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
+
 fontkit@^1.0.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/fontkit/-/fontkit-1.8.0.tgz#deb9351619e90ddc91707b6156a9f14c8ab11554"
@@ -9896,6 +9906,13 @@ ngx-filepond@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ngx-filepond/-/ngx-filepond-5.0.1.tgz#0b6797be56e4382aa37b301fcb524f90b74f2035"
   integrity sha512-ohilvQVFE6uv+MPV6zx0H7roKGb5jXuAuzsfFouH3u4fpKzISZyWa0bvIzKW+UNTpzFQ6pIdCn8yBCA9MaSkCg==
+  dependencies:
+    tslib "^1.9.0"
+
+ngx-owl-carousel-o@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/ngx-owl-carousel-o/-/ngx-owl-carousel-o-1.1.5.tgz#b877b43bb8cc585207fd91530739f27ebac91bbc"
+  integrity sha512-E9W/hWQFvRqweQoPDBlkZfa6eARpbVZbK8VlrUA+7RssCGM6FmcAftq+aBey/tXuKsKM9EJPH3UG+6HSkNHhuw==
   dependencies:
     tslib "^1.9.0"
 
