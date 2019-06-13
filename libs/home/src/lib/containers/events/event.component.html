@@ -4,35 +4,68 @@
             <header class="major"><p>Our Activities</p>
                 <h1>Upcoming Events</h1></header>
         </article>
-        
-        <section class="spotlights">   
-            <header class="major"><p>Shri ShataChandi Mahayagnam and Maharudram - Sep 28, 2019 - Oct 8, 2019</p> <br/> <br/>
+
+        <section class="spotlights">
+            <header class="major"><p>Shri ShataChandi Mahayagnam and Maharudram - Sep 28, 2019 - Oct 8, 2019</p> <br/>
+                <br/>
                 <section class="posts">
                     <div class="rightColumn">
 
                         <img src="assets/img/gallery/2019/SC_page1.png" width="95%" height="95%"
                              title="Shatachandi" style="padding-right:20px; padding-bottom:20px;">
-                             <img src="assets/img/gallery/2019/SC_page2.png" width="95%" height="95%"
+                        <img src="assets/img/gallery/2019/SC_page2.png" width="95%" height="95%"
                              title="Shatachandi" style="padding-right:20px; padding-bottom:20px;">
                     </div>
                 </section>
             </header>
         </section>
-        <h1>Past Events</h1> <br/>
-        <section class="spotlights">
-            
-            <header class="major"><p>Shri Kanchi MahaPeriyava 125th Jayanthi Maharudram</p>
-                <section class="posts">
-                    <div class="rightColumn">
+        <h1>Activities</h1> <br/>
+        <section class="">
+            <section class="posts">
+                <div class="">
 
-                        <!--<img src="assets/img/gallery/MR-2018/MR-page1.png" width="95%" height="95%"
-                             title="Maharudram" style="padding-right:20px; padding-bottom:20px;">
-                        <img src="assets/img/gallery/MR-2018/MR-page2.png" width="95%" height="95%"
-                             title="Maharudram" style="padding-right:20px; padding-bottom:20px;"> -->
+                    <mat-tab-group>
+                        <mat-tab label="Weekly Classes">
+                            <br/>
+                            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-                    </div>
-                </section>
-            </header>
+                                <!-- Day Column -->
+                                <ng-container matColumnDef="day">
+                                    <th mat-header-cell *matHeaderCellDef> Day</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.day}} </td>
+                                </ng-container>
+
+                                <!-- Time Column -->
+                                <ng-container matColumnDef="time">
+                                    <th mat-header-cell *matHeaderCellDef> Time</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                                </ng-container>
+
+                                <!-- Location Column -->
+                                <ng-container matColumnDef="location">
+                                    <th mat-header-cell *matHeaderCellDef> Location</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+                                </ng-container>
+
+                                <!-- Topic Column -->
+                                <ng-container matColumnDef="topic">
+                                    <th mat-header-cell *matHeaderCellDef> Topic</th>
+                                    <td mat-cell *matCellDef="let element"> {{element.topic}} </td>
+                                </ng-container>
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                            </table>
+
+                        </mat-tab>
+                        <mat-tab label="Monthly Activities"> Content 2</mat-tab>
+                        <mat-tab label="Annual Events"> Content 3</mat-tab>
+                    </mat-tab-group>
+
+
+                </div>
+            </section>
+
         </section>
 
     </div>

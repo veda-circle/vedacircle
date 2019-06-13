@@ -16,6 +16,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EventComponent} from "./containers/events/event.component";
 import { CharityComponent } from './containers/charity/charity.component';
 import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   imports: [
@@ -25,6 +27,8 @@ import { MatListModule } from '@angular/material/list';
     SvgViewerModule,
     NgxPageScrollModule,
     MatListModule,
+    MatTabsModule,
+    MatTableModule,
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
       {

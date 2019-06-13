@@ -5,3 +5,23 @@
   height: 100%;
   /* padding-left: 10px; */
 }
+
+tr.mat-header-row {
+  height: 56px;;
+}
+
+.mat-row:nth-child(even){
+  background-color: rgba(255, 255, 255, 0.065)
+}
+
+.mat-row:nth-child(odd){
+  background-color: #f5f5f5
+}
+
+.mat-row {
+  border: 1px solid #f4f4f4;
+}
+
+.mat-cell {
+  border: none;
+}
