@@ -39,16 +39,23 @@ export class EventComponent {
     dataSource = ELEMENT_DATA;
 
     slide: SlideData[] = [
-        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/Maharudram.jpg', width: 200, dotContent: 'text1', dataHash: 'one'},
-        {text: 'Athirudram 2011', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width: 200, dotContent: 'text2', dataHash: 'two'},
+        {
+            text: 'Sri HH Mahaperiyavva Maharudram 2018',
+            src: 'assets/img/gallery/MR-2018/Maharudram.jpg',
+            width: 450,
+            dotContent: 'text1',
+            dataHash: 'one'
+        },
+        {text: 'Athirudram 2011', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width: 450, dotContent: 'text2', dataHash: 'two'},
     ];
     title = 'owl-carousel-libdemo';
     owlNext = '&rarr;';
     owlPrev = '&larr;';
+    screenWidth = 1000;
 
     customOptions: OwlOptions = {
         loop: true,
-        autoWidth: false,
+        autoWidth: true,
         autoplay: true,
         mouseDrag: false,
         touchDrag: false,
@@ -58,6 +65,7 @@ export class EventComponent {
         navSpeed: 100,
         navText: ['Prev', 'Next'],
         responsive: {
+
             0: {
                 items: 1
             }
@@ -106,4 +114,13 @@ export class EventComponent {
         this.slide.splice(-1, 1);
     }
 
+    getWidth() {
+
+        var width = window.innerWidth;
+        if (width <= 768) {
+            this.screenWidth = width - 200
+        }else {
+            this.screenWidth = width + 100;
+        }
+    }
 }

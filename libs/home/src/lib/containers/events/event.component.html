@@ -4,9 +4,10 @@
             <header class="major"><p>Our Activities</p></header>
         </article>
         <section class="">
+
             <section class="posts">
                 <div class="">
-                    <mat-tab-group>
+                    <mat-tab-group (selectedTabChange)="getWidth($event)">
                         <mat-tab label="Upcoming Events">
                             <section class="">
                                 <header class="title"><br/>
@@ -24,24 +25,23 @@
                             </section>
                         </mat-tab>
                         <mat-tab label="Past Events">
+                            <section class="img-width" style="padding: 25px">
 
-                                <div class="row">
-                                    <div class="col-5 offset-1">
-                                        <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)"
-                                                        #owlCar>
-                                            <ng-container *ngFor="let item of slide; let i=index">
-                                                <ng-template carouselSlide [dataHash]="item.dataHash">
-                                                    <div class="">
-                                                        <p>{{item.text}}</p>
-                                                        <img class="owl-lazy" [src]="[item.src]" width="200px"
-                                                             height="260px" alt="">
-                                                    </div><!-- /.carousel-item team-member -->
-                                                </ng-template>
-                                            </ng-container>
-                                        </owl-carousel-o>
-                                    </div>
-                                </div>
+                                <owl-carousel-o [options]="customOptions" #owlCar>
+                                    <ng-container *ngFor="let item of slide; let i=index">
+                                        <ng-template carouselSlide [width]="this.screenWidth">
+                                            <div class="slider">
+                                                <header class="title"><br/>
+                                                    <p>{{item.text}}</p>
+                                                </header>
+                                                <img class="owl-lazy" [src]="[item.src]" height="350px"
+                                                    alt="">
+                                            </div><!-- /.carousel-item team-member -->
+                                        </ng-template>
+                                    </ng-container>
+                                </owl-carousel-o>
 
+                            </section>
                         </mat-tab>
                     </mat-tab-group>
                 </div>
@@ -81,8 +81,7 @@
     </div> -->
     <div class="inner">
         <article>
-            <header class="major">
-                <h3>Regular Events</h3></header>
+            <header class="title"><p>Regular Events</p></header>
         </article>
         <section class="">
             <section class="posts">
