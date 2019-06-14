@@ -33,6 +33,8 @@ export class LandingComponent {
     loop: true,
     autoWidth: true,
     autoplay: true,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
     mouseDrag: false,
     touchDrag: false,
     autoHeight: false,
