@@ -8,44 +8,47 @@
                 <div class="">
                     <mat-tab-group>
                         <mat-tab label="Upcoming Events">
-                            <section class="spotlights">
-                                <header class="major"><br/><p>Shri ShataChandi Mahayagnam and Maharudram <br/> Sep 28, 2019 - Oct 8, 2019</p> 
-                                    <br/>
-                                    <section class="posts">
-                                        <div class="rightColumn">
-                                            <a href="assets/img/gallery/2019/Shatachandi_Brochure_Final.pdf"
-                                                   style="height: 80px; visibility: visible;">
-                                                   <img src="assets/img/gallery/2019/Shatachandi.png" width="20%" height="30%"
-                                                 title="Shatachandi" style="padding-right:20px; padding-bottom:20px;">
-                                               </a>
-                                        </div>
-                                    </section>
+                            <section class="">
+                                <header class="title"><br/>
+                                    <p>Shri ShataChandi Mahayagnam and Maharudram <br/> Sep 28, 2019 - Oct 8, 2019</p>
+
+                                    <div class="">
+                                        <a href="assets/img/gallery/2019/Shatachandi_Brochure_Final.pdf"
+                                           style="height: 80px; visibility: visible;">
+                                            <img src="assets/img/gallery/2019/Shatachandi.png" width="20%" height="30%"
+                                                 title="Shatachandi">
+                                        </a>
+                                    </div>
+
                                 </header>
                             </section>
                         </mat-tab>
-                        <mat-tab label="Past Events"> 
-                                <section class="posts">
-                                    <div class="leftColumn">
-                                        <div class="col-5 offset-1">
-                                            <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)" #owlCar>
-                                                <ng-container *ngFor="let item of slide; let i=index">
-                                                    <ng-template carouselSlide [dataHash]="item.dataHash" >
-                                                        <div class="">
-                                                            <p>{{item.text}}</p>
-                                                            <img class="owl-lazy" [src]="[item.src]"  width="200px" height="260px" alt="">
-                                                        </div><!-- /.carousel-item team-member -->
-                                                    </ng-template>
-                                                </ng-container>
-                                            </owl-carousel-o>
-                                        </div>
+                        <mat-tab label="Past Events">
+
+                                <div class="row">
+                                    <div class="col-5 offset-1">
+                                        <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)"
+                                                        #owlCar>
+                                            <ng-container *ngFor="let item of slide; let i=index">
+                                                <ng-template carouselSlide [dataHash]="item.dataHash">
+                                                    <div class="">
+                                                        <p>{{item.text}}</p>
+                                                        <img class="owl-lazy" [src]="[item.src]" width="200px"
+                                                             height="260px" alt="">
+                                                    </div><!-- /.carousel-item team-member -->
+                                                </ng-template>
+                                            </ng-container>
+                                        </owl-carousel-o>
                                     </div>
-                            </section>
-                    </mat-tab>
+                                </div>
+
+                        </mat-tab>
                     </mat-tab-group>
                 </div>
             </section>
         </section>
     </div>
+
     <!--<div class="inner">
         <article>
             <header class="major">
@@ -120,7 +123,10 @@
                         <mat-tab label="Monthly Activities"> Content 2</mat-tab>
                         <mat-tab label="Annual Events"> Content 3</mat-tab>
                         <mat-tab label="Participation in Events"> Content 4</mat-tab>
-                        <mat-tab label="Charity Events"> <h2 class="rl_tabs-title nn_tabs-title">Partnership with Sankara Nethralaya conducted fund raise event for treating the blind and visually impaired all over India. Sankara Nethralaya has been on the forefront of the efforts confronting and remedying this situation</h2></mat-tab>
+                        <mat-tab label="Charity Events"><h2 class="rl_tabs-title nn_tabs-title">Partnership with Sankara
+                            Nethralaya conducted fund raise event for treating the blind and visually impaired all over
+                            India. Sankara Nethralaya has been on the forefront of the efforts confronting and remedying
+                            this situation</h2></mat-tab>
                     </mat-tab-group>
                 </div>
             </section>
