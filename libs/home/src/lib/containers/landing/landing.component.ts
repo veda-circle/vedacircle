@@ -23,8 +23,9 @@ export class LandingComponent {
       dataHash: 'one'
     },
     {text: '', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+    {text: '', src: 'assets/img/gallery/2019/IMG_5292.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'two'},
   ];
-  title = 'owl-carousel-libdemo';
+  title = 'VEDA Circle';
   owlNext = '&rarr;';
   owlPrev = '&larr;';
   screenWidth = window.innerWidth;
