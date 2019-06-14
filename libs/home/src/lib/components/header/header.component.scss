@@ -191,7 +191,7 @@ header .header_view_left {
 }
 @media only screen and (max-width: 1000px) {
   .header_view_left, footer.uncover, header {
-    position: relative !important;
+   // position: relative !important;
     left: 0 !important;
     margin-bottom: 0;
   }
@@ -233,7 +233,7 @@ header .header_view_left {
 }
 
 .header_bottom {
-  padding: 0 45px;
+  //padding: 0 45px;
   background-color: #fff;
   -webkit-transition: all .2s ease 0s;
   -moz-transition: all .2s ease 0s;
@@ -265,7 +265,7 @@ header .header_view_left {
     display: table-cell;
     position: relative;
     top: auto;
-    vertical-align: middle;
+  //  vertical-align: middle;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -327,4 +327,23 @@ header.light .vc_logo img.normal{
   float: right;
   position: relative;
   z-index: 110;
+}
+
+
+.logo-title {
+  position: absolute;
+  top: 25px;
+  left: 125px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.slogan {
+  position: absolute;
+  top: 50px;
+  left: 125px;
+  font-style: italic;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: none;
 }

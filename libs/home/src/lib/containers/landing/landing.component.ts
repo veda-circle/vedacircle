@@ -1,5 +1,7 @@
 import { Component, ElementRef, Renderer2, ViewChild } from "@angular/core";
 import { Store } from "@ngxs/store";
+import {SlideData} from '../events/event.component';
+import {OwlOptions} from 'ngx-owl-carousel-o';
 
 
 @Component({
@@ -11,6 +13,49 @@ export class LandingComponent {
 
   @ViewChild("newsheader", null) newsheader: ElementRef;
   @ViewChild("titleBar", null) titleBar: ElementRef;
+
+  slide: SlideData[] = [
+    {
+      text: '',
+      src: 'assets/img/gallery/MR-2018/Maharudram.jpg',
+      width: window.innerWidth,
+      dotContent: 'text1',
+      dataHash: 'one'
+    },
+    {text: '', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+  ];
+  title = 'owl-carousel-libdemo';
+  owlNext = '&rarr;';
+  owlPrev = '&larr;';
+  screenWidth = window.innerWidth;
+
+  customOptions: OwlOptions = {
+    loop: true,
+    autoWidth: true,
+    autoplay: true,
+    mouseDrag: false,
+    touchDrag: false,
+    autoHeight: false,
+    pullDrag: false,
+    items:1,
+    dots: true,
+    navSpeed: 100,
+    navText: ['Prev', 'Next'],
+    responsive: {
+
+      0: {
+        items: 1
+      }
+
+    },
+    nav: true
+  };
+  activeSlides: any;
+
+  classes: { [key: string]: boolean } = {
+    'animated': true,
+    'fadeIn': true
+  };
 
   constructor(private store: Store, private renderer: Renderer2) {
 
@@ -38,6 +83,17 @@ export class LandingComponent {
     this.titleBar.nativeElement.style.display = "block";
     this.titleBar.nativeElement.classList.remove("vc-hidden-large");
     this.titleBar.nativeElement.classList.add("vc-visible-large");
+  }
+
+
+  getWidth() {
+
+    var width = window.innerWidth;
+    if (width <= 768) {
+      this.screenWidth = width - 200
+    }else {
+      this.screenWidth = width + 100;
+    }
   }
 
 }
