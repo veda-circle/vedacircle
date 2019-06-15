@@ -1,22 +1,24 @@
-
 @import '../../../../../../apps/webapp/src/assets/vc/paperkit.css';
 
 .close_btn {
   float: left;
   height: 100px;
   color: #000000;
-  background-color:rgba(74, 55, 50, .5);
+  background-color: rgba(74, 55, 50, .5);
   margin: 10px 0px 0px 30px;
 }
+
 #nav-news-header {
   z-index: 20000000 !important;
   height: 275px !important;
 }
+
 .adjustmargin {
   //position: relative !important;
   /* margin-top: 0px !important; */
   top: auto !important;
 }
+
 .addcolortonav {
   //background-color: #ffffff;
 }
@@ -24,7 +26,8 @@
 .nav--news-header {
   height: auto;
   left: 0;
-  position: fixed; background:orange;
+  position: fixed;
+  background: orange;
   top: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -45,7 +48,7 @@
   margin: auto;
   line-height: 35px;
   text-align: center;
-  color:rgba(74, 55, 50, .5);
+  color: rgba(74, 55, 50, .5);
   font-size: 21px;
   border: 2px solid rgba(74, 55, 50, .5);
   border-radius: 100%;
@@ -67,8 +70,8 @@
   color: #fff;
   background: #9b2;
   border-radius: 4px;
-  box-shadow: 0 0 30px rgba(0,0,0,.15) inset,
-  0 6px 10px rgba(0,0,0,.15);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .15) inset,
+  0 6px 10px rgba(0, 0, 0, .15);
 }
 
 .banner::before,
@@ -95,25 +98,40 @@
   border-right: 30px solid transparent;
   transform: rotate(5deg);
 }
+
 /* Flash class and keyframe animation */
-.flashit{
-  color:yellow;
+.flashit {
+  color: yellow;
   -webkit-animation: flash linear 1s infinite;
   animation: flash linear 1s infinite;
 }
+
 @-webkit-keyframes flash {
-  0% { opacity: 1; }
-  50% { opacity: .1; }
-  100% { opacity: 1; }
-}
-@keyframes flash {
-  0% { opacity: 1; }
-  50% { opacity: .1; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-h3{
-  font-size:20px;
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h3 {
+  font-size: 20px;
 }
 
 .column {
@@ -121,10 +139,12 @@ h3{
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
-.mobile-column{
+
+.mobile-column {
   float: left;
   padding: 10px;
 }
+
 .left, .right {
   width: 20%;
 }
@@ -136,21 +156,23 @@ h3{
 /* Clear floats after the columns */
 .row:after {
   content: "";
-  margin-top:-100px;
+  margin-top: -100px;
   display: table;
   clear: both;
 }
+
 .banner-wrapper {
   display: flex;
   flex-direction: column;
 }
+
 .banner-wrapper > * {
   flex: 1 100%;
 }
 
 .banner-wrapper > div {
   width: 100%;
-  text-align:center;
+  text-align: center;
 }
 
 .modal-view {
@@ -162,9 +184,9 @@ h3{
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color:rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  opacity:0.8 !important;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  opacity: 0.8 !important;
   animation: fadein 3s;
   -moz-animation: fadein 3s; /* Firefox */
   -webkit-animation: fadein 3s; /* Safari and Chrome */
@@ -173,41 +195,45 @@ h3{
 
 /* Modal Content/Box */
 .modal-view-content {
-  background-color:rgba(74, 55, 50, .5);
+  background-color: rgba(74, 55, 50, .5);
   color: #fff;
   margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  height:60%;
+  height: 60%;
   width: 80%; /* Could be more or less, depending on screen size */
 }
+
 @keyframes fadein {
   from {
-    opacity:0;
+    opacity: 0;
   }
   to {
-    opacity:1;
+    opacity: 1;
   }
 }
+
 @-moz-keyframes fadein { /* Firefox */
   from {
-    opacity:0;
+    opacity: 0;
   }
   to {
-    opacity:1;
+    opacity: 1;
   }
 }
+
 @-webkit-keyframes fadein { /* Safari and Chrome */
   from {
-    opacity:0;
+    opacity: 0;
   }
   to {
-    opacity:1;
+    opacity: 1;
   }
 }
+
 @-o-keyframes fadein { /* Opera */
   from {
-    opacity:0;
+    opacity: 0;
   }
   to {
     opacity: 1;
@@ -238,6 +264,7 @@ h3{
   width: 230px;
   height: 270px;
 }
+
 .resp-container {
   position: relative;
   padding-bottom: 26.25%;
@@ -248,7 +275,7 @@ h3{
 
 .resp-container iframe {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: auto;
   height: 300px;
@@ -266,4 +293,19 @@ h3{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-device-width: 480px) {
+
+  img {
+    max-height: 300px;
+  }
+}
+
+/* For devices 400px and larger: */
+@media only screen and (min-device-width: 750px) {
+
+  img {
+    max-height: 1000px;
+  }
 }
