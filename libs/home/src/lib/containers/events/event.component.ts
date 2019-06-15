@@ -41,11 +41,14 @@ export class EventComponent {
     slide: SlideData[] = [
         {
             text: 'Sri HH Mahaperiyavva Maharudram 2018',
-            src: 'assets/img/gallery/MR-2018/Maharudram.jpg',
+            src: 'assets/img/gallery/MR-2018/events/Maharudram.jpg',
             width:  window.innerWidth,
             dotContent: 'text1',
             dataHash: 'one'
         },
+        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4984.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4986.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4989.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
         {text: 'Athirudram 2011', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
     ];
     title = 'owl-carousel-libdemo';

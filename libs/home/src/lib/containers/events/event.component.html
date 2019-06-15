@@ -25,17 +25,21 @@
                             </section>
                         </mat-tab>
                         <mat-tab label="Past Events">
-                            <section class="img-width" style="padding: 25px">
+                            <section  style="padding: 25px">
 
                                 <owl-carousel-o [options]="customOptions" #owlCar>
                                     <ng-container *ngFor="let item of slide; let i=index">
                                         <ng-template carouselSlide [width]="this.screenWidth">
-                                            <div class="slider">
+                                            <div class="">
                                                 <header class="title"><br/>
                                                     <p>{{item.text}}</p>
                                                 </header>
-                                                <img class="owl-lazy" [src]="[item.src]" height="500px"
-                                                    alt="">
+                                                <div class = "event-img">
+                                                    <p id="my-image">
+                                                        <img class="owl-lazy" [src]="[item.src]" alt="">
+                                                    </p>
+                                                </div>
+
                                             </div><!-- /.carousel-item team-member -->
                                         </ng-template>
                                     </ng-container>
