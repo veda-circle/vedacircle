@@ -14,6 +14,7 @@ import { StickyHeaderDirective } from './components/header/sticky-header.directi
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EventComponent} from "./containers/events/event.component";
+import { RegularEventsComponent} from "./containers/regular-events/regular-events.component";
 import { CharityComponent } from './containers/charity/charity.component';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -80,6 +81,7 @@ import { MatIconModule } from '@angular/material';
     AboutComponent,
     CharityComponent,
     EventComponent,
+    RegularEventsComponent,
     FeaturesComponent
   ],
 })
