@@ -61,6 +61,8 @@ export class EventComponent {
         autoWidth: true,
         autoplay: true,
         mouseDrag: false,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
         touchDrag: false,
         autoHeight: false,
         pullDrag: false,
