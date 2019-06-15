@@ -9,19 +9,22 @@
                 <div class="">
                     <mat-tab-group (selectedTabChange)="getWidth()">
                         <mat-tab label="Upcoming Events">
-                            <section class="">
-                                <header class="title"><br/>
-                                    <p>Shri ShataChandi Mahayagnam and Maharudram <br/> Sep 28, 2019 - Oct 8, 2019</p>
+                            <section>
 
-                                    <div class="">
-                                        <a href="assets/img/gallery/2019/Shatachandi_Brochure_Final.pdf"
-                                           style="height: 80px; visibility: visible;">
-                                            <img src="assets/img/gallery/2019/Shatachandi.png" width="20%" height="30%"
-                                                 title="Shatachandi">
-                                        </a>
-                                    </div>
+                                <owl-carousel-o [options]="customOptions" #owlCar>
+                                    <ng-container *ngFor="let item of scSlides; let i=index">
+                                        <ng-template carouselSlide [width]="this.screenWidth">
+                                            <div class="">
+                                                <header class="title"><br/>
+                                                    <p>{{item.text}}</p>
+                                                </header>
+                                                <img class="simg" [src]="[item.src]" alt="" >
 
-                                </header>
+                                            </div><!-- /.carousel-item team-member -->
+                                        </ng-template>
+                                    </ng-container>
+                                </owl-carousel-o>
+
                             </section>
                         </mat-tab>
                         <mat-tab label="Past Events">
@@ -34,7 +37,7 @@
                                                 <header class="title"><br/>
                                                     <p>{{item.text}}</p>
                                                 </header>
-                                                <img class="owl-lazy" [src]="[item.src]" alt="">
+                                                <img class="pimg" [src]="[item.src]" alt="">
 
                                             </div><!-- /.carousel-item team-member -->
                                         </ng-template>

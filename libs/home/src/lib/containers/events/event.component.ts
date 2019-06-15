@@ -38,6 +38,19 @@ export class EventComponent {
     displayedColumns: string[] = ['day', 'time', 'location', 'topic'];
     dataSource = ELEMENT_DATA;
 
+    scSlides: SlideData[] = [
+        {
+            text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]',
+            src: 'assets/img/gallery/2019/SC_1.png',
+            width:  window.innerWidth,
+            dotContent: 'text1',
+            dataHash: 'one'
+        },
+        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_2.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_3.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_4.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_5.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+    ];
     slide: SlideData[] = [
         {
             text: 'Sri HH Mahaperiyavva Maharudram 2018',
@@ -70,11 +83,9 @@ export class EventComponent {
         navSpeed: 100,
         navText: ['Prev', 'Next'],
         responsive: {
-
             0: {
                 items: 1
             }
-
         },
         nav: true
     };
