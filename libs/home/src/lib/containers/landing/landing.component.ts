@@ -23,7 +23,8 @@ export class LandingComponent {
       dataHash: 'one'
     },
     {text: '', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-    {text: '', src: 'assets/img/gallery/2019/IMG_4989.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'five'},
+    {text: '', src: 'assets/img/gallery/MR-2018/events/IMG_4583.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'three'},
+    {text: '', src: 'assets/img/gallery/MR-2018/events/IMG_4989.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'four'},
   ];
   title = 'VEDA Circle';
   owlNext = '&rarr;';

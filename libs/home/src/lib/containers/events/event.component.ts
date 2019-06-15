@@ -38,14 +38,30 @@ export class EventComponent {
     displayedColumns: string[] = ['day', 'time', 'location', 'topic'];
     dataSource = ELEMENT_DATA;
 
-    slide: SlideData[] = [
+    scSlides: SlideData[] = [
         {
-            text: 'Sri HH Mahaperiyavva Maharudram 2018',
-            src: 'assets/img/gallery/MR-2018/Maharudram.jpg',
+            text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]',
+            src: 'assets/img/gallery/2019/SC_1.png',
             width:  window.innerWidth,
             dotContent: 'text1',
             dataHash: 'one'
         },
+        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_2.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_3.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_4.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_5.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+    ];
+    slide: SlideData[] = [
+        {
+            text: 'Sri HH Mahaperiyavva Maharudram 2018',
+            src: 'assets/img/gallery/MR-2018/events/Maharudram.jpg',
+            width:  window.innerWidth,
+            dotContent: 'text1',
+            dataHash: 'one'
+        },
+        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4984.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4986.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
+        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4989.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
         {text: 'Athirudram 2011', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
     ];
     title = 'owl-carousel-libdemo';
@@ -58,6 +74,8 @@ export class EventComponent {
         autoWidth: true,
         autoplay: true,
         mouseDrag: false,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
         touchDrag: false,
         autoHeight: false,
         pullDrag: false,
@@ -65,11 +83,9 @@ export class EventComponent {
         navSpeed: 100,
         navText: ['Prev', 'Next'],
         responsive: {
-
             0: {
                 items: 1
             }
-
         },
         nav: true
     };
