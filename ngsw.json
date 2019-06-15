@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1560574551524,
+  "timestamp": 1560615317560,
   "index": "https://veda-circle.github.io/vedacircle/index.html",
   "assetGroups": [
     {
@@ -8,8 +8,8 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "https://veda-circle.github.io/vedacircle/8-es2015.bebbf5a0d40d79698eaa.js",
-        "https://veda-circle.github.io/vedacircle/8-es5.52d3e8c8eca99df1bb19.js",
+        "https://veda-circle.github.io/vedacircle/8-es2015.cbb26e9fa4285485a32a.js",
+        "https://veda-circle.github.io/vedacircle/8-es5.b5c4a4e14392939d4e05.js",
         "https://veda-circle.github.io/vedacircle/9-es2015.06e27bcb26e7c447f64d.js",
         "https://veda-circle.github.io/vedacircle/9-es5.307b6844be05a6074136.js",
         "https://veda-circle.github.io/vedacircle/favicon.ico",
@@ -18,8 +18,8 @@
         "https://veda-circle.github.io/vedacircle/main-es5.e1e92535ecf6fe9a4074.js",
         "https://veda-circle.github.io/vedacircle/polyfills-es2015.428dfe407dfa0b38485b.js",
         "https://veda-circle.github.io/vedacircle/polyfills-es5.b580a6df355feb270e27.js",
-        "https://veda-circle.github.io/vedacircle/runtime-es2015.ee58a15a0d2eef39e9d4.js",
-        "https://veda-circle.github.io/vedacircle/runtime-es5.430c068ad1f61c3e3b36.js",
+        "https://veda-circle.github.io/vedacircle/runtime-es2015.a92f1e9878fe203e6965.js",
+        "https://veda-circle.github.io/vedacircle/runtime-es5.b46606f3b2f355a7c1a3.js",
         "https://veda-circle.github.io/vedacircle/silent-refresh.html",
         "https://veda-circle.github.io/vedacircle/styles.98099d3effae89e1ba7b.css"
       ],
@@ -221,8 +221,8 @@
     }
   ],
   "hashTable": {
-    "https://veda-circle.github.io/vedacircle/8-es2015.bebbf5a0d40d79698eaa.js": "0783727e446e0e6e30f2a3ead8d56b3db3d98cdf",
-    "https://veda-circle.github.io/vedacircle/8-es5.52d3e8c8eca99df1bb19.js": "28d2d57e83ad345b89a021993ae40b6d1796e298",
+    "https://veda-circle.github.io/vedacircle/8-es2015.cbb26e9fa4285485a32a.js": "362af115eb95d63615aa22148585c2376306c875",
+    "https://veda-circle.github.io/vedacircle/8-es5.b5c4a4e14392939d4e05.js": "6f561ae669bdcf1a713b0be3480d9241415fd90e",
     "https://veda-circle.github.io/vedacircle/9-es2015.06e27bcb26e7c447f64d.js": "26f8ce48ad3245a9c036e35a6b27d7e587ff069f",
     "https://veda-circle.github.io/vedacircle/9-es5.307b6844be05a6074136.js": "915fb8b2445734a7d7537a9d009efef56f983689",
     "https://veda-circle.github.io/vedacircle/Maharudram.0f1a354f59c42dee3d8e.jpg": "454755b9b3b799859fa69a9fac8fbb437b319956",
@@ -369,14 +369,14 @@
     "https://veda-circle.github.io/vedacircle/fontawesome-webfont.af7ae505a9eed503f8b8.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
     "https://veda-circle.github.io/vedacircle/fontawesome-webfont.b06871f281fee6b241d6.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
     "https://veda-circle.github.io/vedacircle/fontawesome-webfont.fee66e712a8a08eef580.woff": "28b782240b3e76db824e12c02754a9731a167527",
-    "https://veda-circle.github.io/vedacircle/index.html": "46929086d587e61a69e66356f2b4d0e5a53ad127",
+    "https://veda-circle.github.io/vedacircle/index.html": "7b2abdf068255c954839964533e29bb0423abdd4",
     "https://veda-circle.github.io/vedacircle/main-es2015.5d5afff3c066995727f8.js": "1bae54d42ddf6d54c1b124ad89429056d13a7b68",
     "https://veda-circle.github.io/vedacircle/main-es5.e1e92535ecf6fe9a4074.js": "02187218864ff81aef0b2697032797bbfe252841",
     "https://veda-circle.github.io/vedacircle/mission-bg.48025aa532f549ee34f2.jpg": "b4a0197dd02476f869ff431b9a6bfb71f1930949",
     "https://veda-circle.github.io/vedacircle/polyfills-es2015.428dfe407dfa0b38485b.js": "ea4844cc6725a68eee7d8aac0602b83840fb5590",
     "https://veda-circle.github.io/vedacircle/polyfills-es5.b580a6df355feb270e27.js": "05f1823ff1232b775ba16d6c2eccf5d8f80d1e96",
-    "https://veda-circle.github.io/vedacircle/runtime-es2015.ee58a15a0d2eef39e9d4.js": "6d92617d75f06ee20e0cbe43273504c0fdad2de2",
-    "https://veda-circle.github.io/vedacircle/runtime-es5.430c068ad1f61c3e3b36.js": "ada35a576707bfdef083d7f06016d878d27c5172",
+    "https://veda-circle.github.io/vedacircle/runtime-es2015.a92f1e9878fe203e6965.js": "e050df599e0eb50d67760d392a4bb9f11b1329bb",
+    "https://veda-circle.github.io/vedacircle/runtime-es5.b46606f3b2f355a7c1a3.js": "4be979c6561f919bddbc6f6e61df8d5fd9293d80",
     "https://veda-circle.github.io/vedacircle/shiva.2ac1138d95abb42b4ae0.jpg": "be32a99e3fd787acfec6287661cb7c812cd12637",
     "https://veda-circle.github.io/vedacircle/silent-refresh.html": "eaa115e4a3b3744cc352cbaae71d0b4cfa21e984",
     "https://veda-circle.github.io/vedacircle/styles.98099d3effae89e1ba7b.css": "1e0f65de0a2c1b6ea776f3e958be1cc0ffb6765e"
