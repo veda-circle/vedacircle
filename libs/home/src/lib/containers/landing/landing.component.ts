@@ -14,6 +14,7 @@ export class LandingComponent {
     @ViewChild('titleBar', null) titleBar: ElementRef;
 
     slide: SlideData[] = [
+
         {
             text: 'Sri HH Mahaperiyavva Maharudram',
             src: 'assets/img/gallery/MR-2018/Maharudram.jpg',
@@ -25,6 +26,13 @@ export class LandingComponent {
         {text: 'Sri HH Mahaperiyavva Maharudram', src: 'assets/img/gallery/MR-2018/events/IMG_4583.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'three'},
         {text: 'Sri HH Mahaperiyavva Maharudram', src: 'assets/img/gallery/MR-2018/events/IMG_4989.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'four'},
         {text: 'Sri HH Mahaperiyavva Maharudram', src: 'assets/img/gallery/MR-2018/events/IMG_4986.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'five'},
+        {
+            text: 'Rama Mahayagnam',
+            src: 'assets/img/gallery/rama-yagnam.gif',
+            width: window.innerWidth,
+            dotContent: 'text1',
+            dataHash: 'zero'
+        },
     ];
 
     constructor(private store: Store, private renderer: Renderer2) {
