@@ -10,63 +10,40 @@
                     <mat-tab-group (selectedTabChange)="getWidth()">
                         <mat-tab label="Upcoming Events">
                             <section>
-                                <div class="row">
-                                    <br/>
-                                    <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">>
-                                        <mdb-carousel-item *ngFor="let item of cards; let i = index">
-                                            <div class="col-md-4" [ngClass]="{'d-none d-md-block': i !== 0}">
-                                                <mdb-card class="my-1">
-                                                    <img class="d-block w-100" [src]="item.src" alt="Card image cap">
-                                                    <mdb-card-body>
 
-                                                        <mdb-card-title>
-                                                            <h4><strong class="title">{{item.text}}</strong></h4>
-                                                        </mdb-card-title>
-                                                        <hr/>
+                                <owl-carousel-o [options]="customOptions" #owlCar>
+                                    <ng-container *ngFor="let item of scSlides; let i=index">
+                                        <ng-template carouselSlide [width]="this.screenWidth">
+                                            <div class="">
+                                                <header class="title"><br/>
+                                                    <p>{{item.text}}</p>
+                                                </header>
+                                                <img class="simg" [src]="[item.src]" alt="" >
 
-                                                        <h5 class="indigo-text">
-                                                            <strong>{{item.subtext}}</strong>
-                                                        </h5>
-                                                    </mdb-card-body>
-                                                    <mdb-card-footer class="mdb-color lighten-3 text-center">
+                                            </div><!-- /.carousel-item team-member -->
+                                        </ng-template>
+                                    </ng-container>
+                                </owl-carousel-o>
 
-                                                        <ul class="list-unstyled list-inline font-small mt-3">
-
-                                                            <li class="list-inline-item pr-2 white-text">
-                                                                <fa-icon icon="clock"></fa-icon>
-                                                                09/28/2019
-                                                            </li>
-
-                                                            <li class="list-inline-item">
-                                                                <a href="#" class="white-text"
-                                                                   style="text-decoration: none">
-                                                                    <fa-icon icon="clock"></fa-icon>
-                                                                    {{getDays()}} days </a>
-                                                            </li>
-                                                        </ul>
-                                                    </mdb-card-footer>
-                                                </mdb-card>
-                                            </div>
-                                        </mdb-carousel-item>
-                                    </mdb-carousel>
-
-                                </div>
                             </section>
                         </mat-tab>
                         <mat-tab label="Past Events">
-                            <section  style="padding: 25px">
-                                <mdb-carousel class="carousel slide autoplay carousel-fade" [animation]="'fade'">
-                                    <mdb-carousel-item *ngFor="let item of slide; let i=index">
+                            <section style="padding: 25px">
 
-                                        <div class="view">
-                                            <img class="d-block w-100"
-                                                 [src]="[item.src]">
-                                            <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-                                        </div>
+                                <owl-carousel-o [options]="customOptions" #owlCar>
+                                    <ng-container *ngFor="let item of slide; let i=index">
+                                        <ng-template carouselSlide [width]="this.screenWidth">
+                                            <div class="">
+                                                <header class="title"><br/>
+                                                    <p>{{item.text}}</p>
+                                                </header>
+                                                <img class="pimg" [src]="[item.src]" alt="">
 
-                                    </mdb-carousel-item>
+                                            </div><!-- /.carousel-item team-member -->
+                                        </ng-template>
+                                    </ng-container>
+                                </owl-carousel-o>
 
-                                </mdb-carousel>
                             </section>
                         </mat-tab>
                     </mat-tab-group>
@@ -74,8 +51,37 @@
             </section>
         </section>
     </div>
-    <<<<<<< HEAD
 
+    <!--<div class="inner">
+        <article>
+            <header class="major">
+                <h1>Past Events</h1></header>
+        </article>
+
+        <section class="">
+
+                <div class="row">
+                    <div class="col-5 offset-1">
+
+                        <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)" #owlCar>
+
+                            <ng-container *ngFor="let item of slide; let i=index">
+                                <ng-template carouselSlide [dataHash]="item.dataHash" >
+                                    <div class="">
+                                        <p>{{item.text}}</p>
+                                        <img class="owl-lazy" [src]="[item.src]"  width="200px" height="260px" alt="">
+
+                                    </div>
+                                </ng-template>
+                            </ng-container>
+
+                        </owl-carousel-o>
+
+                    </div>
+                </div>
+
+        </section>
+    </div> -->
     <div class="inner">
         <article>
             <header class="title"><p>Regular Events</p></header>
@@ -119,50 +125,28 @@
                         <mat-tab label="Monthly Activities">
                             <br/>
                             <p>
-                                <img alt="" src="assets/img/gallery/shiva1.jpg"
-                                     style="width: 100px; height: 90px; float: right; margin: 5px;"/><strong>Somavara
-                                Pooja</strong><br/>
-                                Somavara (Monday) is auspicious day for Shiva pooja. Every Monday, we perform Rudra
-                                Abhishekam followed by Arati and Prasdam.
+                           <img alt="" src="assets/img/gallery/sanatan_shiva.jpg" style="width: 80px; height: 60px; float: right;" /><strong>Somavara Pooja</strong><br />
+                            Somavara (Monday) is auspicious day for Shiva pooja. Every Monday, we perform Rudra Abhishekam followed by Arati and Prasdam.
                             </p>
                             <p>
-                                <img alt="" src="assets/img/gallery/shiva2.jpg"
-                                     style="width: 100px; height: 90px; float: right; margin: 5px;"/><strong>Pradosham
-                                Pooja</strong><br/>
-                                Pradhosha pooja is one of the most important poojas performed to the Graceful Lord
-                                Shiva. The evening of the trayodasi (thirteenth day of the lunar fortnight) is called
-                                Pradhosha. Pradhosha time is especially meant for praying Lord Shiva. Praying in that
-                                time will free us from our sins and gives moksha finally (hence the name Pradhosha).
-                                Pradosha Pooja with Rudrabhishekam and Shiva Ashtothra Archana is held every Pradosham
-                                day from 6:30 pm - 7:30 pm followed by Arati and Prasadam.
+                            <img alt="" src="assets/img/gallery/sanatan_shiva.jpg" style="width: 75px; height: 70px; float: right;" /><strong>Pradosham Pooja</strong><br />
+                            Pradhosha pooja is one of the most important poojas performed to the Graceful Lord Shiva. The evening of the trayodasi (thirteenth day of the lunar fortnight) is called Pradhosha. Pradhosha time is especially meant for praying Lord Shiva. Praying in that time will free us from our sins and gives moksha finally (hence the name Pradhosha). Pradosha Pooja with Rudrabhishekam and Shiva Ashtothra Archana  is held every Pradosham day from 6:30 pm - 7:30 pm followed by Arati and Prasadam.
                             </p>
                             <p>
-                                <img alt="" src="assets/img/gallery/shiva3.jpg"
-                                     style="width: 100px; height: 90px; float: right; margin: 5px;"/><strong>Pournami
-                                Pooja</strong><br/>
-                                Pournami - the day of full moon - is sacred for Hindus. On the evening of Pournami,
-                                poojas are performed to Satyanarayana and Arunachala. Pooja will commence at 5.30 pm.
-                                Vinayaka Pooja will be followed by Satyanarayana Pooja and Arunachala pradakshinam(Giri
-                                Valam) which is done here as circumbulation of the temple with main deity Shiva.
-                                Followed by Arati and Prasadam.
+                            <img alt="" src="assets/img/gallery/satyanarayan.jpg" style="width: 80px; height: 80px; float: right;" /><strong>Pournami Pooja</strong><br />
+                            Pournami - the day of full moon - is sacred for Hindus. On the evening of Pournami, poojas are performed to Satyanarayana and Arunachala. Pooja will commence at 5.30 pm. Vinayaka Pooja will be followed by Satyanarayana Pooja and Arunachala pradakshinam(Giri Valam) which is done here as circumbulation of the temple with main deity Shiva. Followed by Arati and Prasadam.
                             </p>
                             <p>
-                                <img alt="" src="assets/img/gallery/shiva4.jpg"
-                                     style="width: 100px; height: 90px; float: right; margin: 5px;"/><strong>Sankatahara
-                                Chaturthi Pooja</strong><br/>
-                                Sankashti Chaturthi vrat and puja are described in the Bavishyat Purana and Narasimha
-                                Purana. Lord Krishna narrated the efficacy of Sankashti Chaturthi to Yudhishtira. Pooja
-                                is performed with Ganapathi Homam, Abhishekam, Ayappa Padi paatu & deepam followed by
-                                Arati and Prasdam.
+                            <img alt="" src="assets/img/gallery/karpaga_vinayaga.jpeg" style="width: 80px; height: 80px; float: right;" /><strong>Sankatahara Chaturthi Pooja</strong><br />
+                            Sankashti Chaturthi vrat and puja are described in the Bavishyat Purana and Narasimha Purana. Lord Krishna narrated the efficacy of Sankashti Chaturthi to Yudhishtira. Pooja is performed with Ganapathi Homam, Abhishekam, Ayappa Padi paatu & deepam followed by Arati and Prasdam.
 
                             </p>
                             <p>
-                                <img alt="" src="assets/img/gallery/shiva5.jpg"
-                                     style="width: 100px; height: 90px; float: right; margin: 5px;"/><strong>Shukla
-                                Sashti Pooja</strong><br/>
-                                Shukla Shashti is the name for the 6th Tithi (lunar day). It's the 6th Tithi of
-                                Shuklapaksha. Lord Karttikeya (Lord of valor) presides over this day. Pooja is performed
-                                with Abhishekam and Alankaram to Lord Muruga followed by Arari and Prasadam.
+                            <img alt="" src="assets/img/gallery/murugan.jpeg" style="width: 75px; height: 80px; float: right;" /><strong>Shukla Sashti Pooja</strong><br />
+                            Shukla Shashti is the name for the 6th Tithi (lunar day). It's the 6th Tithi of Shuklapaksha. Lord Karttikeya (Lord of valor) presides over this day. Pooja is performed with Abhishekam and Alankaram to Lord Muruga followed by Arari and Prasadam.
+                            <p>
+                            <img alt="" src="assets/img/gallery/anusham_periyava.jpg" style="width: 80px; height: 80px; float: right;" /><strong>Anusham Pooja</strong><br />
+                            Anusham is the birth star of Kanchi Mahaperiyava. Rudra Abhisheka is performed to Mahaperiya paduka and vigraham followed by Thotaka astakam, Bhajan, Arati and Prasadam.
                             </p>
                         </mat-tab>
                         <mat-tab label="Annual Events">
@@ -215,7 +199,8 @@
                                 Jayanthi</strong><br/>
                                 Hanuman Jayanthi is observed either in Chaitra (usually on the day of Chaitra Pournimaa)
                                 or in Dhanu (called Margazhi in Tamil). Hanuman is the symbol of strength and energy.
-                                Chanting of Hanuman Chalisa, it removes all obstacles in life.</p>
+                                Chanting of Hanuman Chalisa, it removes all obstacles in life.
+                            </p>
                             <p>
                                 <strong><img alt="" src="assets/img/gallery/avani-avittam.jpg"
                                              style="width: 99px; height: 80px; float: right; "/>Upakarma, Gayatri Japam
@@ -232,17 +217,24 @@
                                 Japam, the Gayatri mantra is chanted 1008 times, as a prayaschitta (atonement) for
                                 faults that one has knowlingly and unknowingly committed. Performing the Gayatri Homam,
                                 enhances the power of the mantra to bestow clarity of intellect.
-                                &nbsp;</p>
+                                &nbsp;
+                            </p>
+                            <p>
+                                <img alt="" src="assets/img/gallery/lord-krishna-jhula.jpeg"
+                                     style="width: 100px; height: 90px; float: right; margin:"/><strong>Krishna Janmashtami Pooja</strong><br/>
+                                Krishna Janmashtami, also known Gokulashtami, is festival that celebrates the birth of Lord Krishna, the eighth avatar of Vishnu. It is observed on the eighth day (Ashtami) of the Krishna Paksha (dark fortnight) in Shraavana maasa and which overlaps with August and September. It is celeberated with abhishekam, archana, arati and prasadam followed by devotional singing through the midnight. 
+                            </p>
                             <p>
                                 <img alt="" src="assets/img/gallery/vyasa.jpeg"
-                                     style="width: 100px; height: 100px; float: right; margin: 5px;"/><strong>Guru
+                                     style="width: 100px; height: 95px; float: right; margin: 5px;"/><strong>Guru
                                 Poornima Pooja</strong><br/>
                                 The Full Moon Day in the month of Ashadha (July-August) is known as Guru Purnima.This
                                 was the day, when Krishna-Dwaipayana Vyasa was born to sage Parashara and Satyavati,
                                 thus this day is also celebrated as Vyasa Purnima. This day is celebrated in honour of
                                 the great sage Vyasa, who is seen as one of the greatest gurus in ancient Hindu
                                 traditions and a symbol of the Guru-shishya tradition. This day is observed by offering
-                                puja to one&rsquo;s guru and the guru parampara.</p>
+                                puja to one&rsquo;s guru and the guru parampara.
+                            </p>
                             <div>
                                 <img alt="" src="assets/img/gallery/vinayagar.jpg"
                                      style="width: 100px; height: 90px; float: right; margin: 5px;"/><strong>Vinayaka

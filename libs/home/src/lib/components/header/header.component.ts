@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
     { link: '#events', label: 'Our Activities', active: '', routerLink: '/home' },
     { link: '#gallery', label: 'Gallery', active: '', routerLink: '/home' },
     { link: '#about', label: 'Organization', active: '', routerLink: '/home' },
-    { link: '#events', label: 'Charity', active: '', routerLink: '/home' },
+    { link: '#regular-events', label: 'Charity', active: '', routerLink: '/home' },
     { link: '#donate', label: 'Donate', active: '', routerLink: '/home' },
   ];
 
