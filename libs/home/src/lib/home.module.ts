@@ -28,6 +28,7 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import {far} from '@fortawesome/free-regular-svg-icons';
 import {CarouselModule} from 'angular-bootstrap-md';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
     imports: [
@@ -49,6 +50,7 @@ import {CarouselModule} from 'angular-bootstrap-md';
         FontAwesomeModule,
         ButtonsModule,
         IconsModule,
+        LightboxModule,
         RouterModule.forChild([
             /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
             {

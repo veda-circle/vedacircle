@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import * as moment from 'moment';
+import {Lightbox} from 'ngx-lightbox';
 
 export interface ActivityElement {
     day: string;
@@ -62,7 +63,7 @@ export class EventComponent {
             dotContent: 'text2',
             dataHash: 'two'
         },
-       	{
+        {
             text: 'Deepa Pooja',
             src: 'assets/img/gallery/dp2015/5.JPG',
             width: window.innerWidth,
@@ -116,10 +117,26 @@ export class EventComponent {
             id: 'five'
         },
     ];
+    private _albums: any = [];
 
-
-    constructor() {
+    constructor(private _lightbox: Lightbox) {
         this.slides = this.chunk(this.cards, 1);
+        this.loadLightBoxImages();
+    }
+
+    loadLightBoxImages() {
+        for (let i = 1; i <= 5; i++) {
+            const src = 'assets/img/gallery/2019/SC_' + i + '.png';
+            const caption = 'Shri ShataChandi Mahayagnam and Maharudram';
+            const thumb = 'assets/img/gallery/2019/SC_' + i + '.png';
+            const album = {
+                src: src,
+                caption: caption,
+                thumb: thumb
+            };
+
+            this._albums.push(album);
+        }
     }
 
     chunk(arr, chunkSize) {
@@ -147,5 +164,15 @@ export class EventComponent {
         var end = moment('2019-09-28'); // another date
         var duration = moment.duration(end.diff(now));
         return duration.asDays().toFixed();
+    }
+
+    open(index: number): void {
+        // open lightbox
+        this._lightbox.open(this._albums, index);
+    }
+
+    close(): void {
+        // close lightbox programmatically
+        this._lightbox.close();
     }
 }

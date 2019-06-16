@@ -165,6 +165,7 @@
     "keycloak-js": "^6.0.1",
     "moment": "^2.24.0",
     "ngx-filepond": "^5.0.1",
+    "ngx-lightbox": "^2.0.0",
     "ngx-page-scroll": "^6.0.2",
     "ngx-page-scroll-core": "^6.0.2",
     "ngx-perfect-scrollbar": "^7.2.0",
