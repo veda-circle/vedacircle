@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {OwlOptions} from 'ngx-owl-carousel-o';
+import * as moment from 'moment';
 
 export interface ActivityElement {
     day: string;
@@ -11,6 +11,7 @@ export interface ActivityElement {
 export class SlideData {
     id?: string;
     text: string;
+    subtext?: string;
     dataMerge?: number;
     width?: number;
     dotContent?: string;
@@ -38,105 +39,133 @@ export class EventComponent {
     displayedColumns: string[] = ['day', 'time', 'location', 'topic'];
     dataSource = ELEMENT_DATA;
 
-    scSlides: SlideData[] = [
-        {
-            text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]',
-            src: 'assets/img/gallery/2019/SC_1.png',
-            width:  window.innerWidth,
-            dotContent: 'text1',
-            dataHash: 'one'
-        },
-        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_2.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_3.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_4.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-        {text: 'Shri ShataChandi Mahayagnam and Maharudram [ Sep 28, 2019 - Oct 8, 2019 ]', src: 'assets/img/gallery/2019/SC_5.png', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-    ];
+
     slide: SlideData[] = [
         {
             text: 'Sri HH Mahaperiyavva Maharudram 2018',
-            src: 'assets/img/gallery/MR-2018/events/Maharudram.jpg',
-            width:  window.innerWidth,
+            src: 'assets/img/gallery/MR-2018/thumb-nails/Maharudram.jpg',
+            width: window.innerWidth,
             dotContent: 'text1',
             dataHash: 'one'
         },
-        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4984.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4986.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-        {text: 'Sri HH Mahaperiyavva Maharudram 2018', src: 'assets/img/gallery/MR-2018/events/IMG_4989.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-        {text: 'Athirudram 2011', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-    ];
-    title = 'owl-carousel-libdemo';
-    owlNext = '&rarr;';
-    owlPrev = '&larr;';
-    screenWidth =  window.innerWidth;
-
-    customOptions: OwlOptions = {
-        loop: true,
-        autoWidth: true,
-        autoplay: true,
-        mouseDrag: false,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        touchDrag: false,
-        autoHeight: false,
-        pullDrag: false,
-        dots: true,
-        navSpeed: 100,
-        navText: ['Prev', 'Next'],
-        responsive: {
-            0: {
-                items: 1
-            }
+        {
+            text: 'Sri HH Mahaperiyavva Maharudram 2018',
+            src: 'assets/img/gallery/MR-2018/thumb-nails/IMG_4989.jpg',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            dataHash: 'two'
         },
-        nav: true
-    };
-    activeSlides: any;
+        {
+            text: 'Deepa Pooja',
+            src: 'assets/img/gallery/dp2015/1.JPG',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            dataHash: 'two'
+        },
+        {
+            text: 'Deepa Pooja',
+            src: 'assets/img/gallery/dp2015/2.JPG',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            dataHash: 'two'
+        },
+        {
+            text: 'Deepa Pooja',
+            src: 'assets/img/gallery/dp2015/3.JPG',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            dataHash: 'two'
+        },
+        {
+            text: 'Deepa Pooja',
+            src: 'assets/img/gallery/dp2015/4.JPG',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            dataHash: 'two'
+        }, {
+            text: 'Deepa Pooja',
+            src: 'assets/img/gallery/dp2015/5.JPG',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            dataHash: 'two'
+        },
 
-    classes: { [key: string]: boolean } = {
-        'animated': true,
-        'fadeIn': true
-    };
+    ];
+
+
+    slides: any = [[]];
+    cards: SlideData[] = [
+        {
+            text: 'Shri ShataChandi Mahayagnam and Maharudram',
+            subtext: 'Sep 28, 2019 - Oct 8, 2019',
+            src: 'assets/img/gallery/2019/SC_1.png',
+            width: window.innerWidth,
+            dotContent: 'text1',
+            id: 'one'
+        },
+        {
+            text: 'Shri ShataChandi Mahayagnam and Maharudram',
+            subtext: 'Sep 28, 2019 - Oct 8, 2019',
+            src: 'assets/img/gallery/2019/SC_2.png',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            id: 'two'
+        },
+        {
+            text: 'Shri ShataChandi Mahayagnam and Maharudram',
+            subtext: 'Sep 28, 2019 - Oct 8, 2019',
+            src: 'assets/img/gallery/2019/SC_3.png',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            id: 'three'
+        },
+        {
+            text: 'Shri ShataChandi Mahayagnam and Maharudram',
+            subtext: 'Sep 28, 2019 - Oct 8, 2019',
+            src: 'assets/img/gallery/2019/SC_4.png',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            id: 'four'
+        },
+        {
+            text: 'Shri ShataChandi Mahayagnam and Maharudram',
+            subtext: 'Sep 28, 2019 - Oct 8, 2019',
+            src: 'assets/img/gallery/2019/SC_5.png',
+            width: window.innerWidth,
+            dotContent: 'text2',
+            id: 'five'
+        },
+    ];
 
 
     constructor() {
+        this.slides = this.chunk(this.cards, 1);
     }
 
-
-    getPassedData(data: any) {
-        this.activeSlides = data;
-        console.log(this.activeSlides);
-    }
-
-    addClassObj() {
-        const startClasses: any = {...this.classes};
-        startClasses['fade-spin'] = true;
-        this.classes = startClasses;
-    }
-
-    deleteOneClass() {
-        const startClasses: any = {...this.classes};
-        delete startClasses['fade-spin'];
-        this.classes = startClasses;
-    }
-
-    getChangeData(data: any) {
-        this.activeSlides = data;
-    }
-
-    getChangedData(data: any) {
-        this.activeSlides = data;
-    }
-
-    removeLastSlide() {
-        this.slide.splice(-1, 1);
+    chunk(arr, chunkSize) {
+        let R = [];
+        for (let i = 0, len = arr.length; i < len; i += chunkSize) {
+            R.push(arr.slice(i, i + chunkSize));
+        }
+        return R;
     }
 
     getWidth() {
 
         var width = window.innerWidth;
         if (width <= 768) {
-            this.screenWidth = width - 200
-        }else {
-            this.screenWidth = width + 100;
+            width = width;
+        } else {
+            width = width - 550;
         }
+        return width;
+    }
+
+    getDays() {
+
+        var now = moment(new Date()); //todays date
+        var end = moment('2019-09-28'); // another date
+        var duration = moment.duration(end.diff(now));
+        return duration.asDays().toFixed();
     }
 }

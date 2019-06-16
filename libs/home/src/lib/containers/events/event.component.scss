@@ -1,6 +1,9 @@
 $fa-font-path: "~font-awesome/fonts";
+
 @import "~font-awesome/scss/font-awesome.scss";
 @import '../../../../../../apps/webapp/src/assets/vc/vc.css';
+
+
 .rightColumn {
   border-left: 1px solid #CCCCCC;
   height: 100%;
@@ -59,6 +62,7 @@ tr.mat-header-row {
   font-weight: 700;
   margin-bottom: 0.25em;
   text-transform: uppercase;
+  color: #39a288;
 }
 
 header p {
@@ -81,5 +85,5 @@ header p {
 .simg {
   height: auto;
   width: auto;
-  max-width: 350px;
+  max-width: 250px;
 }

@@ -10,40 +10,63 @@
                     <mat-tab-group (selectedTabChange)="getWidth()">
                         <mat-tab label="Upcoming Events">
                             <section>
+                                <div class="row">
+                                    <br/>
+                                    <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">>
+                                        <mdb-carousel-item *ngFor="let item of cards; let i = index">
+                                            <div class="col-md-4" [ngClass]="{'d-none d-md-block': i !== 0}">
+                                                <mdb-card class="my-1">
+                                                    <img class="d-block w-100" [src]="item.src" alt="Card image cap">
+                                                    <mdb-card-body>
 
-                                <owl-carousel-o [options]="customOptions" #owlCar>
-                                    <ng-container *ngFor="let item of scSlides; let i=index">
-                                        <ng-template carouselSlide [width]="this.screenWidth">
-                                            <div class="">
-                                                <header class="title"><br/>
-                                                    <p>{{item.text}}</p>
-                                                </header>
-                                                <img class="simg" [src]="[item.src]" alt="" >
+                                                        <mdb-card-title>
+                                                            <h4><strong class="title">{{item.text}}</strong></h4>
+                                                        </mdb-card-title>
+                                                        <hr/>
 
-                                            </div><!-- /.carousel-item team-member -->
-                                        </ng-template>
-                                    </ng-container>
-                                </owl-carousel-o>
+                                                        <h5 class="indigo-text">
+                                                            <strong>{{item.subtext}}</strong>
+                                                        </h5>
+                                                    </mdb-card-body>
+                                                    <mdb-card-footer class="mdb-color lighten-3 text-center">
 
+                                                        <ul class="list-unstyled list-inline font-small mt-3">
+
+                                                            <li class="list-inline-item pr-2 white-text">
+                                                                <fa-icon icon="clock"></fa-icon>
+                                                                09/28/2019
+                                                            </li>
+
+                                                            <li class="list-inline-item">
+                                                                <a href="#" class="white-text"
+                                                                   style="text-decoration: none">
+                                                                    <fa-icon icon="clock"></fa-icon>
+                                                                    {{getDays()}} days </a>
+                                                            </li>
+                                                        </ul>
+                                                    </mdb-card-footer>
+                                                </mdb-card>
+                                            </div>
+                                        </mdb-carousel-item>
+                                    </mdb-carousel>
+
+                                </div>
                             </section>
                         </mat-tab>
                         <mat-tab label="Past Events">
-                            <section style="padding: 25px">
+                            <section  style="padding: 25px">
+                                <mdb-carousel class="carousel slide autoplay carousel-fade" [animation]="'fade'">
+                                    <mdb-carousel-item *ngFor="let item of slide; let i=index">
 
-                                <owl-carousel-o [options]="customOptions" #owlCar>
-                                    <ng-container *ngFor="let item of slide; let i=index">
-                                        <ng-template carouselSlide [width]="this.screenWidth">
-                                            <div class="">
-                                                <header class="title"><br/>
-                                                    <p>{{item.text}}</p>
-                                                </header>
-                                                <img class="pimg" [src]="[item.src]" alt="">
+                                        <div class="view">
+                                            <img class="d-block w-100"
+                                                 [src]="[item.src]">
+                                            <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+                                        </div>
 
-                                            </div><!-- /.carousel-item team-member -->
-                                        </ng-template>
-                                    </ng-container>
-                                </owl-carousel-o>
+                                    </mdb-carousel-item>
 
+                                </mdb-carousel>
                             </section>
                         </mat-tab>
                     </mat-tab-group>
@@ -52,36 +75,6 @@
         </section>
     </div>
 
-    <!--<div class="inner">
-        <article>
-            <header class="major">
-                <h1>Past Events</h1></header>
-        </article>
-
-        <section class="">
-
-                <div class="row">
-                    <div class="col-5 offset-1">
-
-                        <owl-carousel-o [options]="customOptions" (translated)="getPassedData($event)" #owlCar>
-
-                            <ng-container *ngFor="let item of slide; let i=index">
-                                <ng-template carouselSlide [dataHash]="item.dataHash" >
-                                    <div class="">
-                                        <p>{{item.text}}</p>
-                                        <img class="owl-lazy" [src]="[item.src]"  width="200px" height="260px" alt="">
-
-                                    </div>
-                                </ng-template>
-                            </ng-container>
-
-                        </owl-carousel-o>
-
-                    </div>
-                </div>
-
-        </section>
-    </div> -->
     <div class="inner">
         <article>
             <header class="title"><p>Regular Events</p></header>

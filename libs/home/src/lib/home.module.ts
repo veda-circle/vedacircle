@@ -18,8 +18,15 @@ import { CharityComponent } from './containers/charity/charity.component';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatIconModule } from '@angular/material';
+import { StickyHeaderModule, NavbarModule } from 'angular-bootstrap-md';
+// MDB Angular Pro
+import { ButtonsModule, WavesModule, CardsFreeModule } from 'angular-bootstrap-md';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { CarouselModule } from 'angular-bootstrap-md'
 
 @NgModule({
   imports: [
@@ -33,6 +40,12 @@ import { MatIconModule } from '@angular/material';
     MatIconModule,
     MatTableModule,
     CarouselModule,
+    StickyHeaderModule,
+    NavbarModule,
+    ButtonsModule,
+    WavesModule,
+    CardsFreeModule,
+    FontAwesomeModule,
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
       {
@@ -83,4 +96,9 @@ import { MatIconModule } from '@angular/material';
     FeaturesComponent
   ],
 })
-export class HomeModule {}
+export class HomeModule {
+  constructor() {
+    // Add an icon to the library for convenient access in other components
+    library.add(fas, far);
+  }
+}

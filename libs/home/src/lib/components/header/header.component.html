@@ -15,12 +15,15 @@
                 Awareness</div>
             <span fxFlex><!-- fill space --></span>
 
-            <mat-nav-list>
+            <ul class="nav">
+
                 <a pageScroll mat-button class="nav-link" fxShow fxHide.lt-md *ngFor="let item of menus"
                    [routerLink]="[item.routerLink]" href="{{item.link}}" routerLinkActive="{{item.active}}">
                     {{item.label}}
                 </a>
-            </mat-nav-list>
+
+            </ul>
+
         </header>
 
     </div>

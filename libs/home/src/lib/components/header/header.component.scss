@@ -33,7 +33,7 @@ mat-nav-list {
   color: #fff;
 }
 .nav-link:hover {
-  border-bottom: 2px solid #5e5e5e;
+  border-bottom: 2px solid #fff;
 }
 .nav-link.cdk-focused {
   border-bottom: 2px solid #fff;
@@ -346,4 +346,10 @@ header.light .vc_logo img.normal{
   font-size: 10px;
   font-weight: 700;
   text-transform: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: orange;
+  text-decoration: none;
 }

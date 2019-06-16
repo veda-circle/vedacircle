@@ -110,7 +110,7 @@
 -->
 
 <section id="banner">
-
+<!--
     <owl-carousel-o [options]="customOptions" #owlCar>
         <ng-container *ngFor="let item of slide; let i=index">
             <ng-template carouselSlide [width]="this.screenWidth">
@@ -119,12 +119,25 @@
                     <img class="owl-lazy" [src]="[item.src]"
                          alt="">
 
-                </div><!-- /.carousel-item team-member -->
+                </div>
 
             </ng-template>
         </ng-container>
     </owl-carousel-o>
+-->
+    <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+        <mdb-carousel-item  *ngFor="let item of slide; let i=index">
+            <div class="view w-100">
+                <img class="d-block w-100" [src]="[item.src]" >
+                <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+            </div>
+            <div class="carousel-caption">
 
+                <p class="h3-responsive" style="color:white">{{item.text}}</p>
+            </div>
+        </mdb-carousel-item>
+
+    </mdb-carousel>
     <div pageScroll [routerLink]="['/home']" href="#events" class="vc-icon-angle-down container_arrow">
 <!--
         <div pageScroll [routerLink]="['/home']" href="#donate"
