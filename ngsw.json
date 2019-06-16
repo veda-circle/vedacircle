@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1560659471724,
+  "timestamp": 1560659737642,
   "index": "https://veda-circle.github.io/vedacircle/index.html",
   "assetGroups": [
     {
@@ -65,6 +65,9 @@
         "https://veda-circle.github.io/vedacircle/arrow_left.270f72df47e036d9cfa1.svg",
         "https://veda-circle.github.io/vedacircle/arrow_right.d9ccc77c8240ad0dc272.svg",
         "https://veda-circle.github.io/vedacircle/assets/data/accounts.json",
+        "https://veda-circle.github.io/vedacircle/assets/data/notifications.json",
+        "https://veda-circle.github.io/vedacircle/assets/data/notifications.user.json",
+        "https://veda-circle.github.io/vedacircle/assets/data/subscription.json",
         "https://veda-circle.github.io/vedacircle/assets/data/ui-config.json",
         "https://veda-circle.github.io/vedacircle/assets/i18n/en.json",
         "https://veda-circle.github.io/vedacircle/assets/i18n/es.json",
@@ -307,6 +310,9 @@
     "https://veda-circle.github.io/vedacircle/arrow_left.270f72df47e036d9cfa1.svg": "fb5b615955042a7c6aa16b1f0e8dcbdb279a8ac0",
     "https://veda-circle.github.io/vedacircle/arrow_right.d9ccc77c8240ad0dc272.svg": "fac5123a15d035a642b74740b89636e2ace09810",
     "https://veda-circle.github.io/vedacircle/assets/data/accounts.json": "c2e89b716078d190da318ae1f1298e515dd25d74",
+    "https://veda-circle.github.io/vedacircle/assets/data/notifications.json": "d525110702a23853f318440b5545af5a428cb0f7",
+    "https://veda-circle.github.io/vedacircle/assets/data/notifications.user.json": "b532ff50dfa792cc6ccf21ac9534b81ef6e0f74b",
+    "https://veda-circle.github.io/vedacircle/assets/data/subscription.json": "a991b2246bd82e5451e1043234fe20b73c9aabb8",
     "https://veda-circle.github.io/vedacircle/assets/data/ui-config.json": "08bc0923d54a3b41b9063ab75e768340ad9820f6",
     "https://veda-circle.github.io/vedacircle/assets/i18n/en.json": "fa6814d5c2000096cf22e2b307ac686e6677ba36",
     "https://veda-circle.github.io/vedacircle/assets/i18n/es.json": "081fd1d553e051220372ae977b3a28b6f1ba1721",
