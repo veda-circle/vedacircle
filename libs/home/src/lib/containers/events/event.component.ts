@@ -49,20 +49,6 @@ export class EventComponent {
             dataHash: 'one'
         },
         {
-            text: 'Sri HH Mahaperiyavva Maharudram 2018',
-            src: 'assets/img/gallery/MR-2018/thumb-nails/IMG_4989.jpg',
-            width: window.innerWidth,
-            dotContent: 'text2',
-            dataHash: 'two'
-        },
-        {
-            text: 'Deepa Pooja',
-            src: 'assets/img/gallery/dp2015/1.JPG',
-            width: window.innerWidth,
-            dotContent: 'text2',
-            dataHash: 'two'
-        },
-        {
             text: 'Deepa Pooja',
             src: 'assets/img/gallery/dp2015/2.JPG',
             width: window.innerWidth,
@@ -76,13 +62,7 @@ export class EventComponent {
             dotContent: 'text2',
             dataHash: 'two'
         },
-        {
-            text: 'Deepa Pooja',
-            src: 'assets/img/gallery/dp2015/4.JPG',
-            width: window.innerWidth,
-            dotContent: 'text2',
-            dataHash: 'two'
-        }, {
+       	{
             text: 'Deepa Pooja',
             src: 'assets/img/gallery/dp2015/5.JPG',
             width: window.innerWidth,
