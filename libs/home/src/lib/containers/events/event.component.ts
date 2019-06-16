@@ -117,10 +117,23 @@ export class EventComponent {
             id: 'five'
         },
     ];
+    eventcards: SlideData[] = [
+        {
+            text: 'Upcoming Events',
+            subtext: 'June - July, 2019',
+            src: 'assets/img/gallery/upcomingevents/June-July.png',
+            width: window.innerWidth,
+            dotContent: 'text1',
+            id: 'one'
+        },
+    ];
     private _albums: any = [];
+    private _eventalbums: any = [];
+
 
     constructor(private _lightbox: Lightbox) {
         this.slides = this.chunk(this.cards, 1);
+        this.eventslides = this.chunk(this.eventcards, 1);
         this.loadLightBoxImages();
     }
 
@@ -138,6 +151,21 @@ export class EventComponent {
             this._albums.push(album);
         }
     }
+
+    /*loadLightBoxImages() {
+        for (let i = 1; i <= 2; i++) {
+            const src = 'assets/img/gallery/upcomingevents/June-July.png';
+            const caption = 'Upcoming Events';
+            const thumb = 'assets/img/gallery/upcomingevents/June-July.png';
+            const eventalbum = {
+                src: src,
+                caption: caption,
+                thumb: thumb
+            };
+
+            this._eventalbums.push(eventalbum);
+        }
+    }*/
 
     chunk(arr, chunkSize) {
         let R = [];
@@ -169,6 +197,11 @@ export class EventComponent {
     open(index: number): void {
         // open lightbox
         this._lightbox.open(this._albums, index);
+    }
+
+    openEvent(index: number): void {
+        // open lightbox
+        this._lightbox.open(this._eventalbums, index);
     }
 
     close(): void {

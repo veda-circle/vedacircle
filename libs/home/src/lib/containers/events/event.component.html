@@ -9,6 +9,42 @@
                 <div class="">
                     <mat-tab-group (selectedTabChange)="getWidth()">
                         <mat-tab label="Upcoming Events">
+                            <!--<section>
+                                <div class="row">
+                                    <br/>
+                                    <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">>
+                                        <mdb-carousel-item *ngFor="let item of eventslides; let i = index">
+                                            <div class="col-md-4" [ngClass]="{'d-none d-md-block': eventcardIndex !== 0}"
+                                                 *ngFor="let eventcard of item; let eventcardIndex = index">
+                                                <mdb-card class="my-1">
+                                                    <img class="d-block w-100" (click)="openEvent(i)" [src]="eventcard.src" alt="Card image cap">
+                                                    <mdb-card-body>
+                                                        <mdb-card-title>
+                                                            <h4><strong class="title">{{eventcard.text}}</strong></h4>
+                                                        </mdb-card-title>
+                                                        <hr>
+                                                        <h5 class="indigo-text">
+                                                            <strong>{{eventcard.subtext}}</strong>
+                                                        </h5>
+                                                    </mdb-card-body>
+                                                </mdb-card>
+                                            </div>
+                                        </mdb-carousel-item>
+                                    </mdb-carousel>
+                                </div>
+                            </section>-->
+                            <section class="spotlights">   
+                            <header class="major"><p></p> <br/> <br/>
+                                <section class="posts">
+                                    <div class="rightColumn">
+                                         <img src="assets/img/gallery/upcomingevents/June-July.png" width="95%" height="95%"
+                                             title="Shatachandi" style="padding-right:20px; padding-bottom:20px;">
+                                    </div>
+                                </section>
+                            </header>
+                        </section>
+                        </mat-tab>
+                        <mat-tab label="Special Events">
                             <section>
                                 <div class="row">
                                     <br/>
@@ -50,7 +86,6 @@
                                             </div>
                                         </mdb-carousel-item>
                                     </mdb-carousel>
-
                                 </div>
                             </section>
                         </mat-tab>
