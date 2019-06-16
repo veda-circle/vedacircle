@@ -13,19 +13,20 @@
                                 <div class="row">
                                     <br/>
                                     <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">>
-                                        <mdb-carousel-item *ngFor="let item of cards; let i = index">
-                                            <div class="col-md-4" [ngClass]="{'d-none d-md-block': i !== 0}">
+                                        <mdb-carousel-item *ngFor="let item of slides; let i = index">
+                                            <div class="col-md-4" [ngClass]="{'d-none d-md-block': cardIndex !== 0}"
+                                                 *ngFor="let card of item; let cardIndex = index">
                                                 <mdb-card class="my-1">
-                                                    <img class="d-block w-100" [src]="item.src" alt="Card image cap">
+                                                    <img class="d-block w-100" [src]="card.src" alt="Card image cap">
                                                     <mdb-card-body>
 
                                                         <mdb-card-title>
-                                                            <h4><strong class="title">{{item.text}}</strong></h4>
+                                                            <h4><strong class="title">{{card.text}}</strong></h4>
                                                         </mdb-card-title>
-                                                        <hr/>
+                                                        <hr>
 
                                                         <h5 class="indigo-text">
-                                                            <strong>{{item.subtext}}</strong>
+                                                            <strong>{{card.subtext}}</strong>
                                                         </h5>
                                                     </mdb-card-body>
                                                     <mdb-card-footer class="mdb-color lighten-3 text-center">
