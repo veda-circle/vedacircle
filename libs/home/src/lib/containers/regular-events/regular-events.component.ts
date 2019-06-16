@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {OwlOptions} from 'ngx-owl-carousel-o';
 
 export interface ActivityElement {
     day: string;
@@ -65,31 +64,7 @@ export class RegularEventsComponent {
         {text: 'Athirudram 2011', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width:  window.innerWidth, dotContent: 'text2', dataHash: 'two'},
     ];
     title = 'owl-carousel-libdemo';
-    owlNext = '&rarr;';
-    owlPrev = '&larr;';
-    screenWidth =  window.innerWidth;
 
-    customOptions: OwlOptions = {
-        loop: true,
-        autoWidth: true,
-        autoplay: true,
-        mouseDrag: false,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        touchDrag: false,
-        autoHeight: false,
-        pullDrag: false,
-        dots: true,
-        navSpeed: 100,
-        navText: ['Prev', 'Next'],
-        responsive: {
-            0: {
-                items: 1
-            }
-        },
-        nav: true
-    };
-    activeSlides: any;
 
     classes: { [key: string]: boolean } = {
         'animated': true,
@@ -101,42 +76,4 @@ export class RegularEventsComponent {
     }
 
 
-    getPassedData(data: any) {
-        this.activeSlides = data;
-        console.log(this.activeSlides);
-    }
-
-    addClassObj() {
-        const startClasses: any = {...this.classes};
-        startClasses['fade-spin'] = true;
-        this.classes = startClasses;
-    }
-
-    deleteOneClass() {
-        const startClasses: any = {...this.classes};
-        delete startClasses['fade-spin'];
-        this.classes = startClasses;
-    }
-
-    getChangeData(data: any) {
-        this.activeSlides = data;
-    }
-
-    getChangedData(data: any) {
-        this.activeSlides = data;
-    }
-
-    removeLastSlide() {
-        this.slide.splice(-1, 1);
-    }
-
-    getWidth() {
-
-        var width = window.innerWidth;
-        if (width <= 768) {
-            this.screenWidth = width - 200
-        }else {
-            this.screenWidth = width + 100;
-        }
-    }
 }
