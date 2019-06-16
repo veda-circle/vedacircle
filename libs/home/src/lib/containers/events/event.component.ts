@@ -43,7 +43,7 @@ export class EventComponent {
 
     slide: SlideData[] = [
         {
-            text: 'Sri HH Mahaperiyavva Maharudram 2018',
+            text: 'Sri HH Mahaperiyava 125th Jayanthi Maharudram 2018',
             src: 'assets/img/gallery/MR-2018/thumb-nails/Maharudram.jpg',
             width: window.innerWidth,
             dotContent: 'text1',

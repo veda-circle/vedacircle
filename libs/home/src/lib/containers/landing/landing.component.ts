@@ -16,16 +16,16 @@ export class LandingComponent {
     slide: SlideData[] = [
 
         {
-            text: 'Sri HH Mahaperiyavva Maharudram',
+            text: 'Sri HH Mahaperiyava 125th Jayanthi Maharudram',
             src: 'assets/img/gallery/MR-2018/Maharudram.jpg',
             width: window.innerWidth,
             dotContent: 'text1',
             dataHash: 'one'
         },
         {text: 'Lord Shiva Athitrudram', src: 'assets/img/gallery/athirudram2011/IMG_4002.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'two'},
-        {text: 'Sri HH Mahaperiyavva Maharudram', src: 'assets/img/gallery/MR-2018/events/IMG_4583.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'three'},
-        {text: 'Sri HH Mahaperiyavva Maharudram', src: 'assets/img/gallery/MR-2018/events/IMG_4989.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'four'},
-        {text: 'Sri HH Mahaperiyavva Maharudram', src: 'assets/img/gallery/MR-2018/events/IMG_4986.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'five'},
+        {text: 'Arupadai Veedu Utsavam - Thiruchendur Soora Samharam', src: 'assets/img/gallery/MR-2018/events/IMG_4583.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'three'},
+        {text: 'Sri HH Mahaperiyava 125th Jayanthi Maharudram', src: 'assets/img/gallery/MR-2018/events/IMG_4989.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'four'},
+        {text: 'Sri HH Mahaperiyava 125th Jayanthi Maharudram', src: 'assets/img/gallery/MR-2018/events/IMG_4986.jpg', width: window.innerWidth, dotContent: 'text2', dataHash: 'five'},
         {
             text: 'Rama Mahayagnam',
             src: 'assets/img/gallery/rama-yagnam.gif',
