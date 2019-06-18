@@ -121,7 +121,7 @@ export class EventComponent {
         {
             text: 'Upcoming Events',
             subtext: 'June - July, 2019',
-            src: 'assets/img/gallery/upcomingevents/June-July.png',
+            src: 'assets/img/gallery/upcomingevents/June_Calendar.png',
             width: window.innerWidth,
             dotContent: 'text1',
             id: 'one'
