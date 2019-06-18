@@ -133,7 +133,9 @@ export class EventComponent {
 
     constructor(private _lightbox: Lightbox) {
         this.slides = this.chunk(this.cards, 1);
+
         //this.eventslides = this.chunk(this.eventcards, 1);
+
         this.loadLightBoxImages();
     }
 
