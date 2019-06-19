@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1560882689129,
+  "timestamp": 1560973303441,
   "index": "https://veda-circle.github.io/vedacircle/index.html",
   "assetGroups": [
     {
@@ -179,6 +179,7 @@
         "https://veda-circle.github.io/vedacircle/assets/img/gallery/upcomingevents/July Calendar.docx",
         "https://veda-circle.github.io/vedacircle/assets/img/gallery/upcomingevents/June_Calendar.png",
         "https://veda-circle.github.io/vedacircle/assets/img/gallery/upcomingevents/Sample_Calendar.docx",
+        "https://veda-circle.github.io/vedacircle/assets/img/gallery/vc_logo.PNG",
         "https://veda-circle.github.io/vedacircle/assets/img/gallery/vinayagar.jpg",
         "https://veda-circle.github.io/vedacircle/assets/img/gallery/vyasa.jpeg",
         "https://veda-circle.github.io/vedacircle/assets/img/logo.png",
@@ -430,8 +431,9 @@
     "https://veda-circle.github.io/vedacircle/assets/img/gallery/sdt.png": "22684e2dc1f6a8c012cbdfbe932443d762d99cb4",
     "https://veda-circle.github.io/vedacircle/assets/img/gallery/shiva.jpg": "2b976e96080012da5ebb9634dd59c2a5b9d0dc52",
     "https://veda-circle.github.io/vedacircle/assets/img/gallery/upcomingevents/July Calendar.docx": "06ddc9002680c1ecfcaa4320b21cfe792172d542",
-    "https://veda-circle.github.io/vedacircle/assets/img/gallery/upcomingevents/June_Calendar.png": "8bc42e23d6a7af6550b7428299f903846fe01a31",
-    "https://veda-circle.github.io/vedacircle/assets/img/gallery/upcomingevents/Sample_Calendar.docx": "0d51bed2e1f1873f38970f7ef950e906bd487a4a",
+    "https://veda-circle.github.io/vedacircle/assets/img/gallery/upcomingevents/June_Calendar.png": "c10bb44bac00ae3f16c8803fe56172d747cd6df3",
+    "https://veda-circle.github.io/vedacircle/assets/img/gallery/upcomingevents/Sample_Calendar.docx": "6904da22614d4cee9704412b56b49ab529f6dfe5",
+    "https://veda-circle.github.io/vedacircle/assets/img/gallery/vc_logo.PNG": "330678cadef3cc52bf0b546aaa6a5aeaea9673f9",
     "https://veda-circle.github.io/vedacircle/assets/img/gallery/vinayagar.jpg": "7c15cc915e55a38b412fc50e20f0a44293b31e76",
     "https://veda-circle.github.io/vedacircle/assets/img/gallery/vyasa.jpeg": "4b362c6642a7fb690770da6ef58d045094311c6a",
     "https://veda-circle.github.io/vedacircle/assets/img/logo.png": "330678cadef3cc52bf0b546aaa6a5aeaea9673f9",
