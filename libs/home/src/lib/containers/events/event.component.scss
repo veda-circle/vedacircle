@@ -87,3 +87,29 @@ header p {
   width: auto;
   max-width: 250px;
 }
+
+.widget-wrap, td {
+  border-color: #d2d2d2;
+}
+
+.widget-wrap {
+  background-color: #fff;
+}
+.widget-wrap {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 12px;
+  overflow: hidden;
+}
+.widget.widget_media_image {
+  overflow: hidden;
+}
+
+.widget.widget_media_image img {
+  height: auto;
+  max-width: 100%;
+}
+.widget-wrap  h3.widgettitle {
+  font-style: normal;
+  font-weight: 400;
+}
