@@ -1,6 +1,6 @@
 <section id="banner">
 
-    <div class="view" style="height: 750px">
+    <div class="banner-height" >
         <img class="d-block w-100" src="./assets/img/gallery/sdt.png" >
         <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
     </div>
@@ -16,7 +16,7 @@
                 <div class="masonry-wrapper" id="recent-excerpts" style="position: relative; height: 750px;">
                     <article id="post-{{data[0].postId}}"
                              class="odd"
-                             style="position: absolute; left: 0%; top: 0px;">
+                             style="">
                         <div class="thumb-wrap">
 
                             <img width="120" height="120"
@@ -35,24 +35,22 @@
 
                             </p>
                             <section class="entry">
+                                <br/>
                                 <audio controls>
                                     <source src="{{data[0].fileLink}}" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
-
+                                <br/>
                                 <p>Namaste, Sankashti Chaturthi is an auspicious day dedicated to Ganesha. This day is
                                     observed in every lunar month of
                                     the Hindu calendar on the fourth day of Krishna Paksha (dark lunar phase or the
                                     waning phase). If this Chaturthi
-                                    falls on a Tuesday it is called Angaraki Sankashti Chaturthi. <a href=""
-                                                                                                     class="read-more">Read
-                                        More ›</a></p>
+                                    falls on a Tuesday it is called Angaraki Sankashti Chaturthi.</p>
                             </section>
                         </div>
                     </article>
                     <article id="post-{{data[1].postId}}"
-                             class="even"
-                             style="position: absolute; left: 49.4264%; top: 0px;">
+                             class="audio-section-even">
                         <div class="thumb-wrap">
 
                             <img width="120" height="120"
@@ -99,9 +97,7 @@
                                     Aham nirvikalpo nirakara rupo
                                     Vibhut vatcha sarvatra sarvendriyanam
                                     Na cha sangatham na muktir na meyaha
-                                    Chidananda rupah shivo'ham shivo'ham<a
-                                            href=""
-                                            class="read-more">Read More ›</a></p>
+                                    Chidananda rupah shivo'ham shivo'ham
                             </section>
                         </div>
                     </article>
