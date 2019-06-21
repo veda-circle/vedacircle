@@ -1,20 +1,11 @@
-<!-- <div class="blog">
-     <div class="container">
-         <ul *ngFor="let data of allBlogs;  let i = index">
-             <div class="blog-image">
-                 <a href="{{data.fileLink}}"><img src="{{data.blogImage}}" height=200px width=200px></a>
-             </div>
-             <h3>{{data.title}}</h3>
-             <p>Author: {{data.author}}</p>
+<section id="banner">
 
-             <div class="blog-content">
-                 <p [innerHTML]=data.description></p>
-                 <a class="btn btn-success">Read more...</a>
-             </div>
-         </ul>
-     </div>
-     -->
+    <div class="view" style="height: 750px">
+        <img class="d-block w-100" src="./assets/img/gallery/sdt.png" >
+        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+    </div>
 
+</section>
 <section class="audio-wrapper">
 
     <section id="main">
@@ -44,7 +35,11 @@
 
                             </p>
                             <section class="entry">
-                                <mat-basic-audio-player audioUrl="[data[idx].fileLink]" title="Ganapathi Song"></mat-basic-audio-player>
+                                <audio controls>
+                                    <source src="{{data[0].fileLink}}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+
                                 <p>Namaste, Sankashti Chaturthi is an auspicious day dedicated to Ganesha. This day is
                                     observed in every lunar month of
                                     the Hindu calendar on the fourth day of Krishna Paksha (dark lunar phase or the

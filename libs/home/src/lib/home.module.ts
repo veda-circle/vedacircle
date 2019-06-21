@@ -31,8 +31,6 @@ import {CarouselModule} from 'angular-bootstrap-md';
 import {LightboxModule} from 'ngx-lightbox';
 import {AudioComponent} from './containers/audio/audio.component';
 
-import { NgxAudioPlayerModule } from 'ngx-audio-player';
-
 @NgModule({
     imports: [
         SharedModule,
@@ -54,7 +52,6 @@ import { NgxAudioPlayerModule } from 'ngx-audio-player';
         ButtonsModule,
         IconsModule,
         LightboxModule,
-        NgxAudioPlayerModule,
         RouterModule.forChild([
             /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
             {

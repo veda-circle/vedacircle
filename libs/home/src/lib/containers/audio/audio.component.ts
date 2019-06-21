@@ -24,7 +24,7 @@ export class AudioComponent implements OnInit {
         {
             postId: '001',
             blogImage: 'assets/img/gallery/audio/vinayaka-chaturthi.jpg',
-            fileLink: '7:00 - 8:00pm',
+            fileLink: 'assets/audio/AUDIO-2019-05-29-11-14-40.mp3',
             title: 'Sanatan Dharma Temple, Norwalk',
             author: 'Pandit Sivaramakrishnan',
             description: 'ddd'
