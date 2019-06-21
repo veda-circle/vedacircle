@@ -1,0 +1,118 @@
+<!-- <div class="blog">
+     <div class="container">
+         <ul *ngFor="let data of allBlogs;  let i = index">
+             <div class="blog-image">
+                 <a href="{{data.fileLink}}"><img src="{{data.blogImage}}" height=200px width=200px></a>
+             </div>
+             <h3>{{data.title}}</h3>
+             <p>Author: {{data.author}}</p>
+
+             <div class="blog-content">
+                 <p [innerHTML]=data.description></p>
+                 <a class="btn btn-success">Read more...</a>
+             </div>
+         </ul>
+     </div>
+     -->
+
+<section class="audio-wrapper">
+
+    <section id="main">
+
+        <section class="audio-row">
+            <div class="eightcol full-width">
+                <h1 class="pagetitle">Audio Content</h1>
+                <div class="masonry-wrapper" id="recent-excerpts" style="position: relative; height: 750px;">
+                    <article id="post-{{data[0].postId}}"
+                             class="odd"
+                             style="position: absolute; left: 0%; top: 0px;">
+                        <div class="thumb-wrap">
+
+                            <img width="120" height="120"
+                                 src="{{data[0].blogImage}}" class="wp-post-image"
+                                 sizes="(max-width: 120px) 100vw, 120px">
+
+                        </div>
+                        <div class="excerpt-wrap">
+                            <h2 class="posttitle">
+                                Sankata Hara Chaturti Special – Audio and lyrics in&nbsp;Tamizh
+                            </h2>
+                            <p class="postmetadata">
+                                <span class="byline">By <span class="author vcard">Pandit Sivaramkrishnan</span></span>
+                                &nbsp;<em>on</em>&nbsp;
+                                <time class="entry-date" datetime="2019-06-21T05:37:04-05:00">June 21, 2019</time>
+
+                            </p>
+                            <section class="entry">
+                                <mat-basic-audio-player audioUrl="[data[idx].fileLink]" title="Ganapathi Song"></mat-basic-audio-player>
+                                <p>Namaste, Sankashti Chaturthi is an auspicious day dedicated to Ganesha. This day is
+                                    observed in every lunar month of
+                                    the Hindu calendar on the fourth day of Krishna Paksha (dark lunar phase or the
+                                    waning phase). If this Chaturthi
+                                    falls on a Tuesday it is called Angaraki Sankashti Chaturthi. <a href=""
+                                                                                                     class="read-more">Read
+                                        More ›</a></p>
+                            </section>
+                        </div>
+                    </article>
+                    <article id="post-{{data[1].postId}}"
+                             class="even"
+                             style="position: absolute; left: 49.4264%; top: 0px;">
+                        <div class="thumb-wrap">
+
+                            <img width="120" height="120"
+                                 src="{{data[1].blogImage}}" class="wp-post-image"
+                                 sizes="(max-width: 120px) 100vw, 120px">
+
+                        </div>
+                        <div class="excerpt-wrap">
+                            <h2 class="posttitle">
+                                Nirvana Shatkam – Audio and lyrics in&nbsp;Tamizh
+                            </h2>
+                            <p class="postmetadata">
+                                <span class="byline">By <span class="author vcard">Pandit Sivaramkrishnan</span></span>
+                                &nbsp;<em>on</em>&nbsp;
+                                <time class="entry-date" datetime="2019-02-09T05:37:04-05:00">Feb 09, 2019</time>
+
+                            </p>
+                            <section class="entry">
+                                <p class="audio-text">Mano buddhi ahankara chittani naham
+                                    Na cha shrotravjihve na cha ghraana netre
+                                    Na cha vyoma bhumir na tejo na vayuhu
+                                    Chidananda rupah shivo'ham shivo'ham
+
+                                    Na cha prana sangyo na vai pancha vayuhu
+                                    Na va sapta dhatur na va pancha koshah
+                                    Na vak pani padam na chopastha payu
+                                    Chidananda rupah shivo'ham shivo'ham
+
+                                    Na me dvesha ragau na me lobha mohau
+                                    Na me vai mado naiva matsarya bhavaha
+                                    Na dharmo na chartho na kamo na mokshaha
+                                    Chidananda rupah shivo'ham shivo'ham
+
+                                    Na punyam na papam na saukhyam na duhkham
+                                    Na mantro na tirtham na vedah na yajnah
+                                    Aham bhojanam naiva bhojyam na bhotka
+                                    Chidananda rupah shivo'ham shivo'ham
+
+                                    Na me mrtyu shanka na mejati bhedaha
+                                    Pita naiva me naiva mataa na janmaha
+                                    Na bandhur na mitram gurur naiva shisyaha
+                                    Chidananda rupah shivo'ham shivo'ham
+
+                                    Aham nirvikalpo nirakara rupo
+                                    Vibhut vatcha sarvatra sarvendriyanam
+                                    Na cha sangatham na muktir na meyaha
+                                    Chidananda rupah shivo'ham shivo'ham<a
+                                            href=""
+                                            class="read-more">Read More ›</a></p>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+    </section>
+</section>

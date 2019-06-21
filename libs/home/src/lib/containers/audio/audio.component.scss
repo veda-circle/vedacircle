@@ -1,0 +1,230 @@
+
+.blog {
+  width: 100%;
+  float: left;
+  margin: 30px 0;
+}
+
+.blog ul {
+  width: 100%;
+  display: block;
+  margin: 0 0 30px;
+  float: left;
+  padding: 0;
+}
+
+.blog .blog-image {
+  float: left;
+  margin-right: 25px;
+  border: 8px solid #f2f2f2;
+  padding: 20px;
+}
+
+.blog .blog-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.blog .btn-success {
+  border-radius: 0;
+  background: #3c8dbc;
+  border: 2px solid #3c8dbc;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.blog .btn-success:hover {
+  background: none;
+  border: 2px solid #3c8dbc;
+  color: #3c8dbc;
+}
+
+.right {
+  float: right;
+  margin-right: 15px;
+  color: #3c8dbc;
+}
+
+.pointer {
+  cursor: pointer
+}
+
+
+/* Responsive start here  */
+
+@media (max-width: 767px) {
+  .blog .blog-image {
+    float: none;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+  }
+}
+
+.audio-wrapper {
+  max-width: 1140px;
+  margin: 70px auto;
+  overflow: hidden;
+  clear: both;
+  background: #fff;
+}
+
+#main {
+  margin: 0 20px;
+}
+
+#main {
+  padding: 16px 0 32px;
+  clear: both;
+}
+
+.row {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#recent-excerpts {
+  margin-top: 16px;
+}
+
+h1.pagetitle, .archive article, .search article, a:visited {
+  border-color: #d2d2d2;
+}
+
+h1.pagetitle, h1.posttitle {
+  margin-top: 4px;
+}
+
+h1.pagetitle {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  font-size: 1.4em;
+}
+
+.excerpt-wrap h2.posttitle {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.excerpt-wrap h2.posttitle, .excerpt-wrap h2.pagetitle {
+  font-size: 1.15em;
+  letter-spacing: 0;
+}
+
+h2.posttitle {
+  margin: 0;
+  font-size: 1.6em;
+  line-height: 1;
+  margin-bottom: 4px;
+  font-family: "fertigo-pro-1", "fertigo-pro-2", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.audio-row .eightcol {
+  border-color: #d2d2d2;
+}
+
+.audio-row .eightcol {
+  float: left;
+  margin: 1% 0;
+  border: 1px solid #d6d6d6;
+  padding: 24px 32px 32px;
+  overflow: hidden;
+  //width: 64%;
+}
+
+.eightcol {
+  width: 100%;
+}
+
+.threecol, .fourcol, .eightcol, .ninecol {
+  margin-right: 3.8%;
+  float: left;
+  min-height: 1px;
+}
+
+article {
+  border-bottom: 1px solid #ccc;
+  padding: 20px 20px 4px;
+  overflow: hidden;
+  float: left;
+  width: 49.5%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 6.5em;
+  display: block;
+}
+
+.thumb-wrap img {
+  float: left;
+  margin: 4px 16px 20px 4px;
+}
+
+.avatar, .entry img, .wp-post-image {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+  border: 2px solid #fff;
+}
+
+.audio-row {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.masonry-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0
+}
+
+p.postmetadata {
+  font-style: normal;
+  font-weight: 400;
+  font-size: .75em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+p.postmetadata em {
+  text-transform: lowercase;
+}
+
+.entry {
+  overflow: hidden;
+}
+
+p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+avatar, .entry img, .wp-post-image {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+  border: 2px solid #fff;
+}
+
+.thumb-wrap img {
+  float: left;
+  margin: 4px 16px 20px 4px;
+}
+.audio-text{
+  text-overflow: ellipsis;
+  cursor: pointer;
+  overflow:hidden;
+  white-space: nowrap;
+}
+.audio-text:hover{
+  overflow: visible;
+  white-space: initial;
+  height:auto;  /* just added this line */
+}

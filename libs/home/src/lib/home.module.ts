@@ -28,7 +28,10 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import {far} from '@fortawesome/free-regular-svg-icons';
 import {CarouselModule} from 'angular-bootstrap-md';
-import { LightboxModule } from 'ngx-lightbox';
+import {LightboxModule} from 'ngx-lightbox';
+import {AudioComponent} from './containers/audio/audio.component';
+
+import { NgxAudioPlayerModule } from 'ngx-audio-player';
 
 @NgModule({
     imports: [
@@ -51,6 +54,7 @@ import { LightboxModule } from 'ngx-lightbox';
         ButtonsModule,
         IconsModule,
         LightboxModule,
+        NgxAudioPlayerModule,
         RouterModule.forChild([
             /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
             {
@@ -64,25 +68,10 @@ import { LightboxModule } from 'ngx-lightbox';
                         data: {animation: 'home'},
                     },
                     {
-                        path: 'blog',
-                        component: ContactComponent,
-                        data: {animation: 'blog'},
-                    },
-                    {
-                        path: 'about',
-                        component: AboutComponent,
-                        data: {animation: 'about'},
-                    },
-                    {
-                        path: 'features',
-                        component: FeaturesComponent,
-                        data: {animation: 'features'},
-                    },
-                    {
-                        path: 'charity',
-                        component: CharityComponent,
-                        data: {animation: 'charity'},
-                    },
+                        path: 'audio',
+                        component: AudioComponent,
+                        data: {animation: 'audio'},
+                    }
                 ],
             },
         ]),
@@ -99,7 +88,8 @@ import { LightboxModule } from 'ngx-lightbox';
         CharityComponent,
         EventComponent,
         RegularEventsComponent,
-        FeaturesComponent
+        FeaturesComponent,
+        AudioComponent
     ],
 })
 export class HomeModule {
