@@ -12,9 +12,9 @@ export class AppComponent implements OnInit {
   constructor(private sw: ServiceWorkerService, public meta: Meta) {
     meta.addTags([
       { charset: 'UTF-8' },
-      { name: 'description', content: 'NGX Starter Kit' },
+      { name: 'description', content: 'VEDA Circle' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'keywords', content: 'TypeScript, Angular' },
+      { name: 'keywords', content: 'VEDA Circle' },
     ]);
   }
 
