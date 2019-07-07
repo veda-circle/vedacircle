@@ -1,0 +1,38 @@
+<section id="banner">
+
+    <div class="banner-height" >
+        <img class="d-block w-100 banner-img"  src="./assets/img/gallery/sdt.png" >
+        <div class="mask rgba-black-light waves-light" mdbWavesEffect>
+        </div>
+    </div>
+
+ 
+
+    <div class="masonry-wrapper" id="recent-excerpts" style="position: relative; height: 1050px;" >
+        <div class="vc-width-medium-1-3 animated">
+            <header class="" style="float:right;">
+                <a href="https://smile.amazon.com/ch/27-3794048">
+                    <img style="margin-top:200px;width:40%"
+                      src="assets/img/gallery/supportvc.png"
+                      alt="" class="supp-vc-wrap"></a>
+            </header>
+        </div>
+
+            
+        <div class="vc-width-medium-1-3 animated">
+                <form [formGroup]="paypalForm" action="https://www.paypal.com/cgi-bin/webscr"
+                      method="post"
+                      target="_blank">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="JKBBQNKVAVZGL">
+                    <input type="image" style="margin-top:200px;border-left:300px;width:20%"
+                           src="./assets/img/gallery/paypal.png"
+                           border="0" name="submit"
+                           alt="PayPal - The safer, easier way to pay online!">
+                </form>
+        </div>
+        
+    </div>
+
+
+</section>

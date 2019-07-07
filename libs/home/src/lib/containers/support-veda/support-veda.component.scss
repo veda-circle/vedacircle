@@ -1,0 +1,259 @@
+
+.audio-wrapper {
+  max-width: 1140px;
+  margin: 225px auto;
+  overflow: hidden;
+  clear: both;
+  background: #fff;
+}
+
+#main {
+  margin: 0 20px;
+}
+
+#main {
+  padding: 16px 0 32px;
+  clear: both;
+}
+
+.row {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#recent-excerpts {
+  margin-top: 16px;
+}
+
+h1.pagetitle, .archive article, .search article, a:visited {
+  border-color: #d2d2d2;
+}
+
+h1.pagetitle, h1.posttitle {
+  margin-top: 4px;
+}
+
+h1.pagetitle {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  font-size: 1.4em;
+}
+
+.excerpt-wrap h2.posttitle {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.excerpt-wrap h2.posttitle, .excerpt-wrap h2.pagetitle {
+  font-size: 1.15em;
+  letter-spacing: 0;
+}
+
+h2.posttitle {
+  margin: 0;
+  font-size: 1.6em;
+  line-height: 1;
+  margin-bottom: 4px;
+  font-family: "fertigo-pro-1", "fertigo-pro-2", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.audio-row .eightcol {
+  border-color: #d2d2d2;
+}
+
+.audio-row .eightcol {
+  float: left;
+  margin: 1% 0;
+  border: 1px solid #d6d6d6;
+  padding: 24px 32px 32px;
+  overflow: hidden;
+  //width: 64%;
+}
+
+.eightcol {
+  width: 100%;
+}
+
+.threecol, .fourcol, .eightcol, .ninecol {
+  margin-right: 3.8%;
+  float: left;
+  min-height: 1px;
+}
+
+article {
+  border-bottom: 1px solid #ccc;
+  padding: 20px 20px 4px;
+  overflow: hidden;
+  float: left;
+  width: 49.5%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 6.5em;
+  display: block;
+}
+
+.thumb-wrap img {
+  float: left;
+  margin: 4px 16px 20px 4px;
+}
+
+.avatar, .entry img, .wp-post-image {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+  border: 2px solid #fff;
+}
+
+.audio-row {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.masonry-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0
+}
+
+p.postmetadata {
+  font-style: normal;
+  font-weight: 400;
+  font-size: .75em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+p.postmetadata em {
+  text-transform: lowercase;
+}
+
+
+p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+avatar, .entry img, .wp-post-image {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+  border: 2px solid #fff;
+}
+
+.thumb-wrap img {
+  float: left;
+  margin: 4px 16px 20px 4px;
+}
+
+.audio-text {
+  text-overflow: ellipsis;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.audio-text:hover {
+  overflow: visible;
+  white-space: initial;
+  height: auto; /* just added this line */
+}
+
+.audio-section-even {
+  position: absolute;
+  left: 49.4264%;
+  top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  article.even, article.odd {
+    float: none;
+    width: 100%;
+    height: auto;
+    position: static;
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  article.odd, article.odd {
+    float: none;
+    width: auto;
+    height: auto;
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #recent-excerpts .wp-post-image {
+    margin: 16px 12px 8px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #recent-excerpts p.postmetadata {
+    margin-bottom: -12px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .row .eightcol {
+    padding: 0;
+    margin: 0 2%;
+    border: none;
+  }
+  .audio-section-even {
+    position: absolute;
+    left: 0%;
+    top: 500px;
+  }
+  .audio-section-odd {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #recent-excerpts {
+    margin-bottom: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.banner-height{
+  height: 450px;
+}
+.banner-img {
+  height: 650px;
+}
+@media only screen and (max-width: 768px) {
+  p.postmetadata {
+    font-size: .9em;
+  }
+  .banner-height{
+    height: 250px;
+  }
+  .banner-img {
+    height: 200px;
+  }
+  .audio-wrapper {
+    max-width: 1140px;
+    margin: 0px auto;
+    overflow: hidden;
+    clear: both;
+    background: #fff;
+  }
+}

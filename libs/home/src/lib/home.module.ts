@@ -30,6 +30,8 @@ import {far} from '@fortawesome/free-regular-svg-icons';
 import {CarouselModule} from 'angular-bootstrap-md';
 import {LightboxModule} from 'ngx-lightbox';
 import {AudioComponent} from './containers/audio/audio.component';
+import {SupportVEDAComponent} from './containers/support-veda/support-veda.component';
+
 
 @NgModule({
     imports: [
@@ -68,6 +70,11 @@ import {AudioComponent} from './containers/audio/audio.component';
                         path: 'audio',
                         component: AudioComponent,
                         data: {animation: 'audio'},
+                    },
+                    {
+                        path: 'supportVEDA',
+                        component: SupportVEDAComponent,
+                        data: {animation: 'supportVEDA'},
                     }
                 ],
             },
@@ -86,7 +93,8 @@ import {AudioComponent} from './containers/audio/audio.component';
         EventComponent,
         RegularEventsComponent,
         FeaturesComponent,
-        AudioComponent
+        AudioComponent,
+        SupportVEDAComponent
     ],
 })
 export class HomeModule {

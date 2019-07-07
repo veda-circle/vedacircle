@@ -18,7 +18,8 @@ export class HeaderComponent implements OnInit {
     { link: '#about', label: 'Organization', active: '', routerLink: '/home' },
     { link: '', label: 'Audio', active: '', routerLink: '/home/audio' },
     { link: '#regular-events', label: 'Charity', active: '', routerLink: '/home' },
-    { link: '#donate', label: 'Donate', active: '', routerLink: '/home' },
+    //{ link: '#donate', label: 'Donate', active: '', routerLink: '/home' },
+    { link: '', label: 'Support VEDA', active: '', routerLink: '/home/supportVEDA' },
   ];
 
   constructor(private store: Store, private renderer: Renderer2) {
