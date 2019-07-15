@@ -14,13 +14,21 @@
         <article>
             <header class="major"><p>Our Activities</p></header>
         </article>
-
+        <section>
+            <strong>Monthly Calendar</strong>
+            <div>
+                <br/><br/>
+                     <img src="assets/img/gallery/upcomingevents/July_Calendar.png" width="35%"
+                     height="30%"
+                     title="VC-Calendar">
+            </div>
+        </section>
+        <br/><br/>
         <section class="">
-
             <section class="posts">
                 <div class="">
                     <mat-tab-group (selectedTabChange)="getWidth()">
-                        <mat-tab label="Upcoming Events">
+                        <!--<mat-tab label="Upcoming Events">
                             <section>
                                 <section class="posts"><br/><br/>
                                     <div>
@@ -30,18 +38,14 @@
                                     </div>
                                 </section>
                             </section>
-                        </mat-tab>
-                        <mat-tab label="Special Events">
+                        </mat-tab>-->
+                        <mat-tab label="Upcoming Events">
                             <section>
-                                <div class="row">
-                                    <br/>
-                                    <p>
-                                    VEDA Circle is performing ShataChandi and MahaRudram Mahayagnam at SDT temple , Norwalk during Navarathri from Sep 28 to Oct 8, 2019.
+                                <br/>
+                                    <h3>VEDA Circle is performing ShataChandi and MahaRudram Mahayagnam at SDT temple , Norwalk during Navarathri from Sep 28 to Oct 8, 2019.
                                     <br/> Requesting Ritwik participation for chanting Ekadasa Rudram and Chandi Parayanam daily during this Navarathri time.
-                                    <br/>Please visit this link for Ritwik Registration - 
-                                    <a href="https://forms.gle/yVNRhxKZM5sWDdvT9"> <h4>Ritwik Registration </h4> </a>
-                                    </p>
-                                    <br/>
+                                    <br/> Please visit this link for </h3> <a href="https://forms.gle/yVNRhxKZM5sWDdvT9" style="display: inline;">  <h2>Ritwik Registration </h2> </a> 
+                                <div class="row">   
                                     <mdb-carousel [isControls]="true" class="carousel slide carousel-fade"
                                                   [animation]="'fade'">>
                                         <mdb-carousel-item *ngFor="let item of slides; let i = index">
